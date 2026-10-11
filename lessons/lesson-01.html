@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заняття 1-2. Числові функції | Математика 10 клас</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- MathJax для формул -->
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">📖</span>
+                <div class="logo-text">
+                    <h1>Математика 10-11</h1>
+                    <p>КЗ СОР "Путивльський педагогічний фаховий коледж</p>
+                    <p>імені С. В. Руднєва"</p>
+                </div>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html">Головна</a></li>
+                    <li><a href="../about.html">Про викладача</a></li>
+                    <li><a href="../schedule.html" class="active">Розклад і теми</a></li>
+                    <li><a href="../matherials.html">Матеріали</a></li>
+                    <li><a href="../contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+            <button class="burger" onclick="toggleMenu()" aria-label="Меню">☰</button>
+        </div>
+    </header>
+
+    <!-- Хлібні крихти -->
+    <div class="breadcrumbs-wrap">
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="../index.html">Головна</a>
+                <span>›</span>
+                <a href="../schedule.html">Розклад і теми</a>
+                <span>›</span>
+                <span>Заняття 1-2</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container lesson-page">
+
+        <!-- ЗАГОЛОВОК -->
+        <div class="lesson-header">
+            <div class="lesson-meta-badges">
+                <span class="badge badge-num">Заняття 1-2</span>
+
+                <span class="badge badge-lecture">Лекція</span>
+                <span class="badge badge-hours">2 год.</span>
+            </div>
+            <h1>Числові функції та їх властивості</h1>
+            <p class="lesson-subtitle">Розділ І. Функції, їхні властивості і графіки</p>
+        </div>
+
+        <!-- ШВИДКА НАВІГАЦІЯ -->
+        <nav class="lesson-nav">
+            <a href="#meta">Мета</a>
+            <a href="#plan">План</a>
+            <a href="#theory">Теорія</a>
+            <a href="#examples">Приклади</a>
+            <a href="#tasks">Завдання</a>
+            <a href="#homework">Домашнє</a>
+            <a href="#literature">Література</a>
+        </nav>
+
+        <!-- МЕТА -->
+        <section id="meta" class="lesson-section">
+            <h2>🎯 Мета заняття</h2>
+            <div class="meta-grid">
+                <div class="meta-card">
+                    <h4>Навчальна</h4>
+                    <p>Ознайомити студентів з поняттям числової функції, областю визначення та областю значень;
+                        сформувати вміння знаходити область визначення функції за її аналітичним виразом.</p>
+                </div>
+                <div class="meta-card">
+                    <h4>Розвивальна</h4>
+                    <p>Розвивати логічне мислення, вміння аналізувати та узагальнювати; формувати математичну культуру
+                        мовлення.</p>
+                </div>
+                <div class="meta-card">
+                    <h4>Виховна</h4>
+                    <p>Виховувати наполегливість, уважність, самостійність; формувати інтерес до математики як науки.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ПЛАН -->
+        <section id="plan" class="lesson-section">
+            <h2>📋 План заняття</h2>
+            <ol class="lesson-plan-list">
+                <li>Означення функції <span class="time">...</span></li>
+                <li>Область визначення і область значень <span class="time">...</span></li>
+                <li>Способи задання функції <span class="time">...</span></li>
+            </ol>
+        </section>
+
+        <!-- ТЕОРІЯ -->
+        <section id="theory" class="lesson-section">
+            <h2>📖 Теоретичний матеріал</h2>
+
+            <h3>1. Означення функції</h3>
+            <div class="definition">
+                <strong>Числовою функцією</strong> називається залежність, при якій кожному числу $x$ з деякої множини
+                $D$ відповідає єдине число $y$ з множини $E$.
+            </div>
+            <p>Записують: $$y = f(x),$$</p>
+            <p>де $x$ — незалежна змінна (аргумент),</p>
+            <p>$y$ — залежна змінна (функція).</p>
+
+
+            <h3>Позначення функцій</h3>
+            <p>Функції позначають латинськими (інколи грецькими) літерами: $f$, $g$, $h$,
+                $\varphi$, $\psi$ тощо.</p>
+
+            <h3>Приклад</h3>
+
+            <p>Розглянемо функцію $f$, у якої кожному натуральному значенню $x$ від $1$ до $5$ відповідає число $y$,
+                удвічі більше за $x$ (мал. 1.1). Стрілка вказує на число $y$, яке відповідає числу $x$.</p>
+
+            <!-- ІЛЮСТРАЦІЯ 1.1 -->
+            <div class="illustration-block">
+                <svg viewBox="0 0 520 240" width="320" height="130" "xmlns=" http://www.w3.org/2000/svg"
+                    class="illustration-svg" role="img" aria-label="Схема відповідності x → y для функції y = 2x">
+                    <!-- Сітка -->
+                    <defs>
+                        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="1" />
+                        </pattern>
+                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                            <path d="M0,0 L8,3 L0,6 z" fill="#2563eb" />
+                        </marker>
+                    </defs>
+                    <rect width="520" height="260" fill="url(#grid)" />
+
+                    <!-- Лівий овал (x) -->
+                    <ellipse cx="130" cy="130" rx="70" ry="100" fill="white" stroke="#1e293b" stroke-width="2" />
+                    <text x="130" y="35" text-anchor="middle" font-family="Montserrat" font-size="26" stroke="white"
+                        stroke-width="15px" paint-order="stroke fill" fill="#1e293b" font-weight="700"
+                        font-style="italic" fill="#1e293b">x</text>
+
+                    <!-- Правий овал (y) -->
+                    <ellipse cx="390" cy="130" rx="70" ry="110" fill="white" stroke="#1e293b" stroke-width="2" />
+                    <text x="390" y="25" text-anchor="middle" font-family="Montserrat" font-size="26" font-weight="700"
+                        font-style="italic" stroke="white" stroke-width="15px" paint-order="stroke fill"
+                        fill="#1e293b">y</text>
+
+                    <!-- Мітка f над стрілками -->
+                    <text x="260" y="55" text-anchor="middle" font-family="Montserrat" font-size="24" font-weight="700"
+                        font-style="italic" fill="#2563eb">f</text>
+
+                    <!-- Числа x -->
+                    <text x="110" y="80" text-anchor="middle" font-family="Montserrat" font-size="24" font-weight="600"
+                        fill="#1e293b">1</text>
+                    <text x="110" y="110" text-anchor="middle" font-family="Montserrat" font-size="24" font-weight="600"
+                        fill="#1e293b">2</text>
+                    <text x="110" y="140" text-anchor="middle" font-family="Montserrat" font-size="24" font-weight="600"
+                        fill="#1e293b">3</text>
+                    <text x="110" y="170" text-anchor="middle" font-family="Montserrat" font-size="24" font-weight="600"
+                        fill="#1e293b">4</text>
+                    <text x="110" y="200" text-anchor="middle" font-family="Montserrat" font-size="24" font-weight="600"
+                        fill="#1e293b">5</text>
+
+                    <!-- Числа y -->
+                    <text x="410" y="70" text-anchor="middle" font-family="Montserrat" font-size="24" font-weight="600"
+                        fill="#1e293b">2</text>
+                    <text x="410" y="100" text-anchor="middle" font-family="Montserrat" font-size="24" font-weight="600"
+                        fill="#1e293b">4</text>
+                    <text x="410" y="130" text-anchor="middle" font-family="Montserrat" font-size="24" font-weight="600"
+                        fill="#1e293b">6</text>
+                    <text x="410" y="160" text-anchor="middle" font-family="Montserrat" font-size="24" font-weight="600"
+                        fill="#1e293b">8</text>
+                    <text x="410" y="190" text-anchor="middle" font-family="Montserrat" font-size="24" font-weight="600"
+                        fill="#1e293b">10</text>
+
+                    <!-- Стрілки -->
+                    <line x1="130" y1="75" x2="375" y2="65" stroke="#2563eb" stroke-width="2"
+                        marker-end="url(#arrow)" />
+                    <line x1="130" y1="105" x2="375" y2="95" stroke="#2563eb" stroke-width="2"
+                        marker-end="url(#arrow)" />
+                    <line x1="130" y1="135" x2="375" y2="125" stroke="#2563eb" stroke-width="2"
+                        marker-end="url(#arrow)" />
+                    <line x1="130" y1="165" x2="375" y2="155" stroke="#2563eb" stroke-width="2"
+                        marker-end="url(#arrow)" />
+                    <line x1="130" y1="195" x2="375" y2="185" stroke="#2563eb" stroke-width="2"
+                        marker-end="url(#arrow)" />
+                </svg>
+                <p class="illustration-caption"><strong>Мал. 1.1.</strong> Відповідність між $x$ та $y$ для функції $y =
+                    2x$</p>
+            </div>
+
+            <p>Число $y$ називають <strong><em>значенням функції</em></strong> $f$ <strong><em>у точці</em></strong> $x$
+                і позначають через $f(x)$.</p>
+            <p>На малюнку 1.1, зокрема, $f(3) = 6$.</p>
+
+            <h3>2. Аргумент і функція</h3>
+            <div class="definition">
+                <p>Нагадаємо, що незалежну змінну $x$ ще називають <strong><em>аргументом функції</em></strong>, а про
+                    залежну змінну $y$ кажуть, що вона є <strong><em>функцією від цього аргументу</em></strong>.</p>
+            </div>
+
+
+            <h3>3. Область визначення і область значень</h3>
+            <ul class="def-list">
+                <li><strong>Область визначення</strong> $D(f)$ — множина всіх значень аргументу $x$, при яких функція
+                    існує.</li>
+                <li><strong>Область значень</strong> $E(f)$ — множина всіх значень $y$, які набуває функція.</li>
+            </ul>
+
+            <div class="example-box">
+                <p><strong>Приклад 1.</strong> Знайти область визначення функції $y = \dfrac{1}{x - 3}$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>Знаменник не може дорівнювати нулю:</p>
+                <p> $x - 3 \neq 0 \Rightarrow x \neq 3$.</p>
+                <p>Отже, $D(y) = (-\infty; 3) \cup (3; +\infty)$.</p>
+            </div>
+
+            <h3>4. Способи задання функції</h3>
+            <ol class="number-list">
+                <li><strong>Аналітичний:</strong> $y = 2x + 1$</li>
+                <li><strong>Табличний:</strong> таблиця відповідності</li>
+                <li><strong>Графічний:</strong> графік на координатній площині</li>
+                <li><strong>Словесний:</strong> опис словами</li>
+            </ol>
+        </section>
+
+        <!-- ПРИКЛАДИ -->
+        <section id="examples" class="lesson-section">
+            <h2>💡 Приклади</h2>
+
+            <div class="example-box">
+                <p><strong>Приклад 2.</strong> Знайти $D(y)$, якщо $y = \sqrt{x - 2}$.</p>
+                <p><strong>Розв'язання:</strong> Підкореневий вираз має бути невід'ємним: $x - 2 \geq 0 \Rightarrow x
+                    \geq 2$.</p>
+                <p>$D(y) = [2; +\infty)$.</p>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Приклад 3.</strong> Знайти $D(y)$ для $y = \dfrac{\sqrt{x + 4}}{x - 1}$.</p>
+                <p><strong>Розв'язання:</strong></p>
+                <p>1) $x + 4 \geq 0 \Rightarrow x \geq -4$</p>
+                <p>2) $x - 1 \neq 0 \Rightarrow x \neq 1$</p>
+                <p>$D(y) = [-4; 1) \cup (1; +\infty)$.</p>
+            </div>
+        </section>
+
+        <!-- ЗАВДАННЯ -->
+        <section id="tasks" class="lesson-section">
+            <h2>✏️ Завдання для самостійної роботи</h2>
+            <ol class="tasks-list">
+                <li>Знайдіть область визначення функції: $y = \dfrac{2}{x + 5}$.</li>
+                <li>Знайдіть $D(y)$ для $y = \sqrt{3 - x}$.</li>
+                <li>Знайдіть $D(y)$ для $y = \dfrac{1}{\sqrt{x - 1}}$.</li>
+                <li>Знайдіть $D(y)$ для $y = \dfrac{x + 2}{x^2 - 9}$.</li>
+                <li>Обчисліть $f(2)$, якщо $f(x) = x^2 - 3x + 1$.</li>
+            </ol>
+        </section>
+
+        <!-- ДОМАШНЄ -->
+        <section id="homework" class="lesson-section">
+            <h2>🏠 Домашнє завдання</h2>
+            <div class="homework-box">
+                <p>1. Опрацювати §1 підручника (Істер О. С., с. 5–12).</p>
+                <p>2. Виконати вправи № 1.5, 1.8, 1.12 (письмово).</p>
+                <p>3. Скласти таблицю значень функції $y = x^2 - 4$ для $x \in [-3; 3]$ з кроком 1.</p>
+            </div>
+        </section>
+
+        <!-- ЛІТЕРАТУРА -->
+        <section id="literature" class="lesson-section">
+            <h2>📚 Література</h2>
+            <ul class="lit-list-lesson">
+                <li>Мерзляк А. Г., Номіровський Д. А., Полонський В. Б., Якір М. С. Математика : алгебра і початки
+                    аналізу та геометрія : рівень стандарту : підручник для 10 класу ЗЗСО. Харків : Гімназія, 2018.</li>
+                <li>Істер О. С. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10
+                    кл. Київ : Генеза, 2018. 384 с.</li>
+                <li>Бевз Г. П., Бевз В. Г. Математика : алгебра і початки аналізу та геометрія, рівень стандарту :
+                    підруч. для 10 кл. Київ : Освіта, 2018. 288 с.</li>
+            </ul>
+        </section>
+
+        <!-- НАВІГАЦІЯ МІЖ ЗАНЯТТЯМИ -->
+        <nav class="lesson-pager">
+            <a href="../schedule.html" class="pager-btn pager-prev">
+                <span>← До розкладу</span>
+                <strong>Усі заняття</strong>
+            </a>
+            <a href="lesson-03.html" class="pager-btn pager-next">
+                <span>Наступне заняття →</span>
+                <strong>Способи задання функції</strong>
+            </a>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <div>
+                <p><strong>КЗ СОР «Путивльський педагогічний фаховий коледж імені С. В. Руднєва»</strong></p>
+                <p>м. Путивль, Сумська область</p>
+            </div>
+            <div>
+                <p>© 2025 Сайт викладача математики</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

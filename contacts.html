@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти | Математика 10-11</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">📖</span>
+                <div class="logo-text">
+                    <h1>Математика 10-11</h1>
+                    <p>КЗ СОР "Путивльський педагогічний фаховий коледж</p>
+                    <p>імені С. В. Руднєва"</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про викладача</a></li>
+                    <li><a href="schedule.html">Розклад і теми</a></li>
+                    <li><a href="matherials.html">Матеріали</a></li>
+                    <li><a href="contacts.html" class="active">Контакти</a></li>
+                </ul>
+            </nav>
+            <button class="burger" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <main class="container page">
+        <h2 class="page-title">Контакти</h2>
+        <div class="contacts-grid">
+            <div class="contact-info">
+                <h3>Зв'язок з викладачем</h3>
+                <p><strong>📧 Email:</strong> <a href="mailto:math@putped.edu.ua">math@putped.edu.ua</a></p>
+                <p><br></p>
+                <p><strong>🏫 Навчальний заклад:</strong><br>КЗ СОР «Путивльський педагогічний фаховий коледж імені С. В. Руднєва»<br>м. Путивль, Сумська область</p>
+                <br>
+                <p><strong>🕐 Графік консультацій:</strong><br>Пн–Пт: 14:00 – 16:00<br>Сб: за домовленістю</p>
+                <br>
+                <p><strong>💬 Месенджери:</strong> Telegram, Viber</p>
+            </div>
+
+            <form class="contact-form" onsubmit="sendMessage(event)">
+                <h3>Написати повідомлення</h3>
+                <label>
+                    Ваше ім'я
+                    <input type="text" required placeholder="Ім'я та прізвище">
+                </label>
+                <label>
+                    Email
+                    <input type="email" required placeholder="your-email@putped.edu.ua">
+                </label>
+                <label>
+                    Група
+                    <input type="text" placeholder="Наприклад, 1-А">
+                </label>
+                <label>
+                    Повідомлення
+                    <textarea required rows="5" placeholder="Ваше питання..."></textarea>
+                </label>
+                <button type="submit" class="btn btn-primary">Надіслати</button>
+                <p id="form-message" class="form-message"></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <div>
+                <p><strong>КЗ СОР «Путивльський педагогічний фаховий коледж імені С. В. Руднєва»</strong></p>
+                <p>м. Путивль, Сумська область</p>
+            </div>
+            <div>
+                <p>© 2025 Сайт викладача математики</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

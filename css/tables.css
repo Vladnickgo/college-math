@@ -1,0 +1,242 @@
+/* ===== ЗАГОЛОВОК СТОРІНКИ ===== */
+.tables-header {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-left: 6px solid var(--primary);
+    border-radius: 14px;
+    padding: 32px 35px;
+    margin-bottom: 30px;
+}
+.tables-header h1 {
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+.tables-header p {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 800px;
+}
+
+/* ===== НАВІГАЦІЯ ===== */
+.tables-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 40px;
+    position: sticky;
+    top: 85px;
+    z-index: 50;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+.tables-nav a {
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gray);
+    transition: all 0.2s;
+}
+.tables-nav a:hover {
+    background: var(--light);
+    color: var(--primary);
+    text-decoration: none;
+}
+
+/* ===== СЕКЦІЇ ===== */
+.table-section {
+    margin-bottom: 60px;
+    scroll-margin-top: 140px;
+}
+.table-section h2 {
+    font-size: 1.6rem;
+    color: var(--primary-dark);
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--accent);
+    display: inline-block;
+}
+.table-section h3 {
+    font-size: 1.15rem;
+    color: var(--dark);
+    margin: 30px 0 15px;
+    padding-left: 14px;
+    border-left: 4px solid var(--primary);
+}
+.table-section h3:first-of-type { margin-top: 20px; }
+
+/* ===== ТАБЛИЦІ ===== */
+.table-wrap {
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: white;
+    margin-bottom: 15px;
+}
+
+.ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    min-width: 600px;
+}
+.ref-table thead {
+    background: var(--primary);
+    color: white;
+}
+.ref-table th {
+    padding: 12px 14px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+.ref-table th:last-child { border-right: none; }
+
+.ref-table tbody td,
+.ref-table tbody th {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    text-align: center;
+    vertical-align: middle;
+}
+.ref-table tbody th {
+    background: var(--light);
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-align: left;
+    white-space: nowrap;
+}
+.ref-table tbody tr:last-child td,
+.ref-table tbody tr:last-child th {
+    border-bottom: none;
+}
+.ref-table tbody tr:hover { background: #f8fafc; }
+
+.small-table { font-size: 0.85rem; }
+.small-table th, .small-table td { padding: 10px 12px; }
+
+.derivative-table {
+    min-width: 800px;
+}
+.derivative-table tbody td:nth-child(2),
+.derivative-table tbody td:nth-child(5) {
+    text-align: left;
+    font-weight: 600;
+}
+
+.table-note {
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-style: italic;
+    padding: 10px 14px;
+    background: var(--light);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* ===== ФОРМУЛИ-КАРТКИ ===== */
+.formula-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.formula-card {
+    background: var(--light);
+    border-radius: 10px;
+    padding: 20px 18px;
+    border-left: 4px solid var(--primary);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow-x: auto;
+}
+.formula-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37,99,235,0.1);
+}
+.formula-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+.formula {
+    font-size: 1.05rem;
+    text-align: center;
+    padding: 4px 0;
+}
+
+/* ===== ВИЗНАЧЕННЯ ===== */
+.definition {
+    background: #eff6ff;
+    border-left: 5px solid var(--primary);
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin: 15px 0 25px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.definition p { margin-bottom: 8px; }
+.definition p:last-child { margin-bottom: 0; }
+
+/* ===== CTA ===== */
+.cta-inline {
+    background: var(--dark);
+    color: white;
+    padding: 45px 35px;
+    border-radius: 16px;
+    text-align: center;
+    margin-top: 40px;
+}
+.cta-inline h3 {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 10px;
+}
+.cta-inline p {
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* ===== ДРУК ===== */
+@media print {
+    header, footer, .breadcrumbs-wrap, .tables-nav,
+    .cta-inline, .burger { display: none !important; }
+    .table-section { page-break-inside: avoid; }
+    .formula-card { border: 1px solid #ccc; page-break-inside: avoid; }
+    .ref-table { font-size: 0.75rem; }
+    body { font-size: 11pt; }
+    .page { padding: 0; }
+}
+
+/* ===== АДАПТИВНІСТЬ ===== */
+@media (max-width: 900px) {
+    .tables-header { padding: 24px 22px; }
+    .tables-header h1 { font-size: 1.5rem; }
+    .tables-nav {
+        position: static;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 12px 15px;
+    }
+    .tables-nav a { white-space: nowrap; }
+    .table-section h2 { font-size: 1.3rem; }
+    .table-section h3 { font-size: 1rem; }
+    .formula-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .tables-header h1 { font-size: 1.2rem; }
+    .tables-header p { font-size: 0.9rem; }
+    .ref-table { font-size: 0.8rem; }
+    .ref-table th, .ref-table td { padding: 8px 10px; }
+    .cta-inline { padding: 30px 20px; }
+}

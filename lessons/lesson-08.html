@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заняття №1. Корінь n-го степеня. Арифметика коренів n-го степеня | Математика 10-11</title>
+    <meta name="description"
+        content="Конспект лекційного заняття з математики для студентів педагогічного коледжу. Тема: Степінь з натуральним показником, функція y=x^n, корінь n-го степеня та його властивості.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">📖</span>
+                <div class="logo-text">
+                    <h1>Математика 10-11</h1>
+                    <p>КЗ СОР "Путивльський педагогічний фаховий коледж</p>
+                    <p>імені С. В. Руднєва"</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Головна</a></li>
+                    <li><a href="../about.html">Про викладача</a></li>
+                    <li><a href="../schedule.html">Розклад і теми</a></li>
+                    <li><a href="../matherials.html" class="active">Матеріали</a></li>
+                    <li><a href="../contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+            <button class="burger" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <!-- ХЛІБНІ КРИХТИ -->
+    <div class="breadcrumbs-wrap">
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="../index.html">Головна</a>
+                <span>›</span>
+                <a href="../schedule.html">Розклад і теми</a>
+                <span>›</span>
+                <span>Заняття №1</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container lesson-page">
+
+        <!-- ЗАГОЛОВОК ЗАНЯТТЯ -->
+        <div class="lesson-header">
+            <div class="lesson-meta-badges">
+                <p>
+                    <span class="badge badge-num">Заняття № (13-14)</span>
+                    <span class="badge badge-date">19.10</span>
+                    <span class="badge badge-hours">2 години</span>
+                    <span class="badge badge-lecture">Лекція</span>
+                </p>
+            </div>
+            <p class="lesson-subtitle">Розділ 1. Функції, їх властивості та графіки (§ 3)</p>
+            <h1>Корінь n-го степеня.</h1>
+        </div>
+
+        <!-- ШВИДКА НАВІГАЦІЯ -->
+        <nav class="lesson-nav">
+            <a href="#meta">🎯 Мета</a>
+            <a href="#plan">📋 План</a>
+            <a href="#theory">📖 Теорія</a>
+            <a href="#examples">💡 Приклади</a>
+            <a href="#tasks">✏️ Завдання</a>
+            <a href="#homework">🏠 Домашнє</a>
+            <a href="#literature">📚 Література</a>
+        </nav>
+
+        <!-- 1. МЕТА ЗАНЯТТЯ -->
+        <section id="meta" class="lesson-section">
+            <h2>🎯 Мета заняття</h2>
+            <div class="meta-grid">
+                <div class="meta-card">
+                    <h4>Навчальна</h4>
+                    <p>Сформувати поняття степеня з натуральним показником $y=x^n$, дослідити його властивості для
+                        парного та непарного $n$. Засвоїти означення кореня $n$-го степеня та арифметичного кореня
+                        $n$-го степеня, розглянути існування коренів та розв'язування рівняння $x^n=a$.</p>
+                </div>
+                <div class="meta-card">
+                    <h4>Розвивальна</h4>
+                    <p>Сприяти розвитку аналітичного мислення, графічної культури, математичної мови, вміння порівнювати
+                        властивості функцій при парних і непарних показниках та робити узагальнення.</p>
+                </div>
+                <div class="meta-card">
+                    <h4>Виховна / Методична</h4>
+                    <p>Виховувати професійну інтересованість майбутніх учителів математики, формувати методичні навички
+                        пояснення складних понять алгебри учням ЗЗСО через графічну ілюстрацію та систематизацію.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ПЛАН ЗАНЯТТЯ -->
+        <section id="plan" class="lesson-section">
+            <h2>📋 План заняття</h2>
+            <ol class="lesson-plan-list">
+
+                <li>
+                    <span>Степенева функція $y=x^n$ ($n \in \mathbb{N}$), її властивості та графіки</span>
+                    <span class="time">25 хв</span>
+                </li>
+                <li>
+                    <span>Корінь $n$-го степеня</span>
+                    <span class="time">25 хв</span>
+                </li>
+                <li>
+                    <span>Арифметичний корінь $n$-го степеня. Рівняння $x^n=a$</span>
+                    <span class="time">20 хв</span>
+                </li>
+
+            </ol>
+        </section>
+
+        <!-- 3. ТЕОРЕТИЧНИЙ МАТЕРІАЛ -->
+        <section id="theory" class="lesson-section">
+            <h2>📖 Теоретичний матеріал</h2>
+
+            <h3>1. Степенева функція $y=x^n$, де $n \in \mathbb{N}$</h3>
+            <div class="definition">
+                <p>Функцію вигляду $$y=x^n,$$ де $n$ — натуральне число, називають <strong>степеневою функцією з
+                        натуральним показником</strong>.</p>
+            </div>
+            <p>Властивості та вигляд графіка функції $y=x^n$ істотно залежать від того, є показник $n$ парним чи
+                непарним числом.</p>
+
+            <h3><strong>Випадок 1:</strong></h3>
+            <h4><strong> $n$ — парне натуральне число ($n = 2, 4, 6, 8, \dots$)</strong></h4><br>
+            <p>Оскільки $(-x)^n = x^n$ для будь-якого парного $n$, функція $y=x^n$ є <strong>парною</strong>.</p>
+            <p>
+                Її графік симетричний відносно осі ординат ($Oy$).
+            </p>
+            При $n=2$ маємо класичну параболу, при $n \ge 4$ графік має
+            схожу форму («парабола $n$-го степеня»), але більш «плескату» біля початку координат на проміжку $(-1;
+            1)$ та більш стрімко зростає при $|x| > 1$.</p>
+            <iframe src="https://www.desmos.com/calculator/swaopddihe?lang=uk" width="80%" height="400px"
+                style="border: 1px solid #ccc; border-radius: 8px;" frameborder="0">
+            </iframe>
+
+            </div>
+
+            <h3><strong>Випадок 2:</strong></h3>
+            <h4>
+                <strong>$n$ — непарне натуральне число ($n = 1, 3, 5, 7, \dots$)</strong>
+            </h4>
+
+            <p>Оскільки $(-x)^n = -x^n$ для будь-якого непарного $n$, функція $y=x^n$ є <strong>непарною</strong>. </p>
+            <p>
+                Її графік симетричний відносно початку координат $(0;0)$.</p>
+            <p>При $n=1$ маємо пряму $y=x$,</p>
+            <p> при $n=3$ — кубічну параболу.
+            </p>
+
+
+            </div>
+
+            <!-- Зведена таблиця властивостей -->
+            <p><strong>Зведена таблиця властивостей функції $y=x^n$, $n \in \mathbb{N}$</strong></p>
+            <div class="table-wrap">
+                <table class="plan-table" style="width:100%; text-align:center;">
+                    <thead>
+                        <tr style="background:#f1f5f9;">
+                            <th style="width:5%;">№</th>
+                            <th style="width:35%;">Властивість</th>
+                            <th style="width:30%;">$n$ — парне</th>
+                            <th style="width:30%;">$n$ — непарне</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td style="text-align:left;">Область визначення, $D(y)$</td>
+                            <td>$(-\infty; +\infty)$</td>
+                            <td>$(-\infty; +\infty)$</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td style="text-align:left;">Область значень, $E(y)$</td>
+                            <td>$[0; +\infty)$</td>
+                            <td>$(-\infty; +\infty)$</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td style="text-align:left;">Нулі функції</td>
+                            <td>$x = 0$</td>
+                            <td>$x = 0$</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td style="text-align:left;">Проміжки знакосталості</td>
+                            <td>$y > 0$ при $x \in (-\infty; 0) \cup (0; +\infty)$</td>
+                            <td>$y > 0$ при $x > 0$;<br>$y < 0$ при $x < 0$</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td style="text-align:left;">Парність / непарність</td>
+                            <td>Парна ($(-x)^n = x^n$)</td>
+                            <td>Непарна ($(-x)^n = -x^n$)</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td style="text-align:left;">Монотонність (проміжки)</td>
+                            <td>Спадає на $(-\infty; 0]$,<br>зростає на $[0; +\infty)$</td>
+                            <td>Зростає на всьому $D(y)$<br>$(-\infty; +\infty)$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>2. Поняття кореня $n$-го степеня та арифметичного кореня $n$-го степеня</h3>
+
+            <div class="definition">
+                <strong>Означення кореня $n$-го степеня:</strong><br>
+                Коренем $n$-го степеня ($n \in \mathbb{N}, n > 1$) із числа $a$ називають таке число, $n$-й степінь
+                якого дорівнює $a$.
+            </div>
+
+            <p><em>Приклади:</em></p>
+            <ul class="def-list">
+                <li>Коренем 3-го степеня з 64 є число $4$, бо $4^3 = 64$.</li>
+                <li>Коренями 4-го степеня з 81 є числа $3$ та $-3$, бо $3^4 = 81$ і $(-3)^4 = 81$.</li>
+                <li>Коренем 5-го степеня з $-32$ є число $-2$, бо $(-2)^5 = -32$.</li>
+            </ul>
+
+            <div class="definition">
+                <strong>Означення арифметичного кореня $n$-го степеня:</strong><br>
+                Арифметичним коренем $n$-го степеня з невід'ємного числа $a$ називають таке <strong>невід'ємне</strong>
+                число, $n$-й степінь якого дорівнює $a$.
+            </div>
+
+            <p>Позначення: $\sqrt[n]{a}$, де $n$ — показник кореня, $a$ — підкореневий вираз. Якщо $n=2$, пишуть просто
+                $\sqrt{a}$.</p>
+            <p>За означенням рівність $\sqrt[n]{a} = b$ ($a \ge 0$) є правильною, якщо виконуються дві умови:</p>
+            <ol class="number-list">
+                <li>$b \ge 0$;</li>
+                <li>$b^n = a$.</li>
+            </ol>
+
+            <p><strong>Основні тотожності для арифметичного кореня $n$-го степеня:</strong></p>
+            <div class="definition">
+                1) Для будь-якого $a \ge 0$ та $n \in \mathbb{N}, n \ge 2$:
+                $$(\sqrt[n]{a})^n = a$$
+                2) Для непарного $n$ ($n \ge 3$) корінь визначений для будь-якого $a \in \mathbb{R}$, причому:
+                $$\sqrt[n]{-a} = -\sqrt[n]{a}$$
+                3) Область існування виразу $\sqrt[n]{a}$:
+                <ul>
+                    <li>При <strong>парному $n$</strong> вираз має зміст тільки при $a \ge 0$.</li>
+                    <li>При <strong>непарному $n$</strong> вираз має зміст при будь-якому $a \in \mathbb{R}$.</li>
+                </ul>
+            </div>
+
+            <h3>3. Розв'язування рівняння $x^n = a$ ($n \in \mathbb{N}, n \ge 2$)</h3>
+            <p>Кількість коренів рівняння $x^n = a$ залежить від парності показника $n$ та знака числа $a$:</p>
+
+            <div class="table-wrap">
+                <table class="plan-table" style="width:100%; text-align:center;">
+                    <thead>
+                        <tr style="background:#f1f5f9;">
+                            <th>Значення $a$</th>
+                            <th>$n$ — парне ($n=2, 4, 6, \dots$)</th>
+                            <th>$n$ — непарне ($n=3, 5, 7, \dots$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>$a > 0$</strong></td>
+                            <td>Два корені: $x_1 = \sqrt[n]{a}$, $x_2 = -\sqrt[n]{a}$</td>
+                            <td>Один корінь: $x = \sqrt[n]{a}$</td>
+                        </tr>
+                        <tr>
+                            <td><strong>$a = 0$</strong></td>
+                            <td>Один корінь: $x = 0$</td>
+                            <td>Один корінь: $x = 0$</td>
+                        </tr>
+                        <tr>
+                            <td><strong>$a < 0$</strong>
+                            </td>
+                            <td>Коренів немає ($\varnothing$)</td>
+                            <td>Один корінь: $x = \sqrt[n]{a} = -\sqrt[n]{|a|}$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="example-box" style="border-left-color: #2563eb; background: #f0f9ff; margin-top: 25px;">
+                <p><strong>💡 Методичний коментар для майбутнього вчителя:</strong></p>
+                <p><em>«Як пояснити це учням?»</em> Пояснюючи тему учням 10 класу, важливо розмежовувати загальне
+                    поняття «корінь $n$-го степеня» (відповідь на питання «яке число в степені $n$ дає $a$») та
+                    «арифметичний корінь $n$-го степеня» (значок $\sqrt[n]{a}$, який за домовленістю математиків є
+                    строго однозначним і невід'ємним для парних степенів). Графічна ілюстрація перетину графіків $y=x^n$
+                    та прямої $y=a$ ідеально наочнює кількість розв'язків рівняння $x^n=a$.</p>
+            </div>
+        </section>
+
+        <!-- 4. ПРИКЛАДИ РОЗВ'ЯЗУВАННЯ ЗАДАЧ -->
+        <section id="examples" class="lesson-section">
+            <h2>💡 Приклади розв'язування типових задач</h2>
+
+            <div class="example-box">
+                <p><strong>Приклад 1.</strong> Обчисліть значення виразу:</p>
+                <p>1) $\sqrt[3]{-0,027} + \sqrt[4]{81} - \sqrt[5]{1}$; &nbsp;&nbsp;&nbsp;&nbsp; 2) $(-2\sqrt[5]{3})^5 +
+                    \sqrt[4]{7\frac{58}{81}}$.</p>
+                <details>
+                    <summary>Переглянути розв'язання</summary>
+                    <div style="margin-top: 10px; padding-top: 10px; border-top: 1px stroke #e2e8f0;">
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>1) $\sqrt[3]{-0,027} = -0,3$, бо $(-0,3)^3 = -0,027$;<br>
+                            $\sqrt[4]{81} = 3$, бо $3 \ge 0$ і $3^4 = 81$;<br>
+                            $\sqrt[5]{1} = 1$.<br>
+                            Отже, $-0,3 + 3 - 1 = 1,7$.</p>
+                        <p>2) Використовуючи тотожність $(\sqrt[n]{a})^n = a$:<br>
+                            $(-2\sqrt[5]{3})^5 = (-2)^5 \cdot (\sqrt[5]{3})^5 = -32 \cdot 3 = -96$.<br>
+                            Перетворимо мішане число в неправильний дріб: $7\frac{58}{81} = \frac{7 \cdot 81 + 58}{81} =
+                            \frac{567 + 58}{81} = \frac{625}{81}$.<br>
+                            $\sqrt[4]{\frac{625}{81}} = \frac{\sqrt[4]{625}}{\sqrt[4]{81}} = \frac{5}{3}$.<br>
+                            Отже, $-96 + \frac{5}{3} = -96 + 1\frac{2}{3} = -94\frac{1}{3}$.</p>
+                        <p><strong>Відповідь:</strong> 1) $1,7$; 2) $-94\frac{1}{3}$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Приклад 2.</strong> Знайдіть область визначення функції (ОДЗ):</p>
+                <p>1) $y = \sqrt[6]{2x - 10}$; &nbsp;&nbsp;&nbsp;&nbsp; 2) $y = \sqrt[5]{x + 3} + \frac{1}{\sqrt[4]{x^2
+                    - 4}}$.</p>
+                <details>
+                    <summary>Переглянути розв'язання</summary>
+                    <div style="margin-top: 10px; padding-top: 10px; border-top: 1px stroke #e2e8f0;">
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>1) Показник кореня $n=6$ — парне число. Вираз має зміст, коли підкореневий вираз
+                            невід'ємний:<br>
+                            $2x - 10 \ge 0 \implies 2x \ge 10 \implies x \ge 5$.<br>
+                            Отже, $D(y) = [5; +\infty)$.</p>
+                        <p>2) Перший доданок містить корінь непарного степеня ($n=5$), який існує при всіх $x \in
+                            \mathbb{R}$.<br>
+                            Другий доданок містить корінь парного степеня ($n=4$) у знаменнику. Знаменник не може
+                            дорівнювати нулю, тому підкореневий вираз має бути строго додатним:<br>
+                            $x^2 - 4 > 0 \implies (x-2)(x+2) > 0$.<br>
+                            За методом інтервалів отримуємо: $x \in (-\infty; -2) \cup (2; +\infty)$.</p>
+                        <p><strong>Відповідь:</strong> 1) $[5; +\infty)$; 2) $(-\infty; -2) \cup (2; +\infty)$.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Приклад 3.</strong> Розв'яжіть рівняння:</p>
+                <p>1) $x^4 = 81$; &nbsp;&nbsp;&nbsp;&nbsp; 2) $x^5 = -17$; &nbsp;&nbsp;&nbsp;&nbsp; 3) $(x-2)^6 = 64$.
+                </p>
+                <details>
+                    <summary>Переглянути розв'язання</summary>
+                    <div style="margin-top: 10px; padding-top: 10px; border-top: 1px stroke #e2e8f0;">
+                        <p><strong>Розв'язання:</strong></p>
+                        <p>1) Показник $n=4$ парний, $a=81 > 0$. Рівняння має два корені:<br>
+                            $x = \pm \sqrt[4]{81} = \pm 3$.</p>
+                        <p>2) Показник $n=5$ непарний, $a=-17$. Рівняння має один корінь:<br>
+                            $x = \sqrt[5]{-17} = -\sqrt[5]{17}$.</p>
+                        <p>3) Показник парний ($n=6$), робимо заміну чи розкриваємо модуль:<br>
+                            $x - 2 = \sqrt[6]{64}$ або $x - 2 = -\sqrt[6]{64}$.<br>
+                            Оскільки $2^6 = 64$, маємо:<br>
+                            $x - 2 = 2 \implies x_1 = 4$;<br>
+                            $x - 2 = -2 \implies x_2 = 0$.</p>
+                        <p><strong>Відповідь:</strong> 1) $3; -3$; 2) $-\sqrt[5]{17}$; 3) $0; 4$.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- 5. ЗАВДАННЯ ДЛЯ КЛАСНОЇ РОБОТИ -->
+        <section id="tasks" class="lesson-section">
+            <h2>✏️ Завдання для аудиторної роботи</h2>
+            <p>Вправи за підручником: <em>Істер О. С. Математика, 10 кл., 2018. § 3 (стор. 32–35)</em></p>
+            <ol class="tasks-list">
+                <li>Обчисліть арифметичний корінь: <br>
+                    а) $\sqrt[3]{0,125}$; &nbsp;&nbsp; б) $\sqrt[4]{\frac{16}{625}}$; &nbsp;&nbsp; в) $\sqrt[5]{-32}$;
+                    &nbsp;&nbsp; г) $\sqrt[7]{0}$.
+                </li>
+                <li>Знайдіть значення виразу: <br>
+                    а) $2\sqrt[3]{0,008} - \sqrt[4]{0,0016}$; &nbsp;&nbsp; б) $(-\sqrt[6]{5})^6 + \sqrt[3]{-27}$.
+                </li>
+                <li>Знайдіть допустимі значення змінної $x$ у виразі: <br>
+                    а) $\sqrt[4]{x+3}$; &nbsp;&nbsp; б) $\sqrt[5]{x-7}$; &nbsp;&nbsp; в) $\sqrt[8]{12 - 3x}$;
+                    &nbsp;&nbsp; г) $\frac{1}{\sqrt[6]{x^2 - 9}}$.
+                </li>
+                <li>Розв'яжіть рівняння: <br>
+                    а) $x^3 = 27$; &nbsp;&nbsp; б) $x^4 = 16$; &nbsp;&nbsp; в) $x^4 = -5$; &nbsp;&nbsp; г) $x^5 = 7$.
+                </li>
+                <li>Розв'яжіть рівняння методом введення нової змінної: <br>
+                    а) $(x+3)^4 = 81$; &nbsp;&nbsp; б) $x^8 - 15x^4 - 16 = 0$.
+                </li>
+                <li>Визначте, між якими двома послідовними цілими числами міститься число: <br>
+                    а) $\sqrt[3]{10}$; &nbsp;&nbsp; б) $-\sqrt[4]{20}$.
+                </li>
+                <li>Побудуйте схематично графік функції $y=x^4$ та за його допомогою знайдіть область значень функції на
+                    проміжку $x \in [-1; 2]$.</li>
+            </ol>
+        </section>
+
+        <!-- 6. ДОМАШНЄ ЗАВДАННЯ -->
+        <section id="homework" class="lesson-section">
+            <h2>🏠 Домашнє завдання</h2>
+            <div class="homework-box">
+                <p><strong>Опрацювати теоретичний матеріал:</strong> підручник Істер О. С. «Математика (10 клас)», § 3,
+                    стор. 26–32.</p>
+                <p><strong>Виконати письмові вправи:</strong></p>
+                <ul>
+                    <li><strong>Рівень 1-2 (початковий та середній):</strong> № 3.6 (1, 3), № 3.10 (1, 2), № 3.15 (1,
+                        3).</li>
+                    <li><strong>Рівень 3 (достатній):</strong> № 3.22 (1), № 3.28 (1, 4), № 3.31 (приклад на кубічний
+                        бак).</li>
+                    <li><strong>Рівень 4 (високий):</strong> № 3.34 (1) — рівняння, що зводиться до квадратного.</li>
+                </ul>
+                <p><strong>Творче/методичне завдання для студентів:</strong> Скласти опорну конспект-схему (або
+                    ментальну карту) за темою «Степенева функція та її властивості» для роздруковки учням 10 класу.</p>
+            </div>
+        </section>
+
+        <!-- 7. ЛІТЕРАТУРА -->
+        <section id="literature" class="lesson-section">
+            <h2>📚 Література та джерела</h2>
+            <ul class="lit-list-lesson">
+                <li>Істер О. С. Математика : (алгебра і початки аналізу та геометрія, рівень стандарту) : підруч. для
+                    10-го кл. закл. заг. серед. освіти / О. С. Істер. — Київ : Генеза, 2018. — С. 26–35.</li>
+                <li>Мерзляк А. Г., Номіровський Д. А., Полонський В. Б., Якір М. С. Алгебра і початки аналізу : підруч.
+                    для 10 кл. загальноосвіт. навч. закладів (профільний рівень). — Х. : Гімназія, 2018.</li>
+                <li>Навчальна програма з математики для 10-11 класів закладів загальної середньої освіти (рівень
+                    стандарту), затверджена МОН України.</li>
+            </ul>
+        </section>
+
+        <!-- ПЕЙДЖЕР -->
+        <div class="lesson-pager">
+            <a href="lesson-07.html" class="pager-btn pager-prev">
+                <span>← Попереднє заняття</span>
+                <strong>Заняття №7. Властивості функцій</strong>
+            </a>
+            <a href="lesson-02.html" class="pager-btn pager-next">
+                <span>Наступне заняття →</span>
+                <strong>Заняття №2. Властивості арифметичного кореня n-го степеня</strong>
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <div>
+                <p><strong>КЗ СОР «Путивльський педагогічний фаховий коледж імені С. В. Руднєва»</strong></p>
+                <p>м. Путивль, Сумська область</p>
+            </div>
+            <div>
+                <p>© 2026/2027 Сайт викладача математики</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

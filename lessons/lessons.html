@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конспекти занять | Математика 10-11</title>
+    <meta name="description" content="Усі конспекти занять з математики для 10-11 класів: лекції, практичні роботи, тематичні заліки. КЗ СОР Путивльський педагогічний фаховий коледж імені С. В. Руднєва.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lessons-nav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">📖</span>
+                <div class="logo-text">
+                    <h1>Математика 10-11</h1>
+                    <p>КЗ СОР "Путивльський педагогічний фаховий коледж</p>
+                    <p>імені С. В. Руднєва"</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Головна</a></li>
+                    <li><a href="../about.html">Про викладача</a></li>
+                    <li><a href="../schedule.html">Розклад і теми</a></li>
+                    <li><a href="../matherials.html" class="active">Матеріали</a></li>
+                    <li><a href="../contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+            <button class="burger" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <!-- ХЛІБНІ КРИХТИ -->
+    <div class="breadcrumbs-wrap">
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="../index.html">Головна</a>
+                <span>›</span>
+                <a href="../matherials.html">Матеріали</a>
+                <span>›</span>
+                <span>Конспекти занять</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container page">
+
+        <!-- ЗАГОЛОВОК -->
+        <div class="lessons-hero">
+            <h1>📐 Конспекти занять</h1>
+            <p>Повний набір конспектів до кожного заняття курсу математики 10–11 класів: лекції, практичні заняття та тематичні заліки. Обирай клас, семестр і переходь до потрібної теми.</p>
+            <div class="lessons-hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-num">20+</div>
+                    <div class="hero-stat-label">занять з конспектами</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">2</div>
+                    <div class="hero-stat-label">класи (10 і 11)</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">100%</div>
+                    <div class="hero-stat-label">відповідність програмі</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ФІЛЬТРИ -->
+        <section class="lessons-filters">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="lessonSearch" placeholder="Пошук заняття за темою..." oninput="filterLessons()">
+            </div>
+
+            <div class="filter-group">
+                <span class="filter-label">Клас:</span>
+                <div class="filter-chips">
+                    <button class="chip active" data-filter="grade" data-value="all" onclick="setFilter('grade', 'all', this)">Усі</button>
+                    <button class="chip" data-filter="grade" data-value="10" onclick="setFilter('grade', '10', this)">10 клас</button>
+                    <button class="chip" data-filter="grade" data-value="11" onclick="setFilter('grade', '11', this)">11 клас</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <span class="filter-label">Семестр:</span>
+                <div class="filter-chips">
+                    <button class="chip active" data-filter="sem" data-value="all" onclick="setFilter('sem', 'all', this)">Усі</button>
+                    <button class="chip" data-filter="sem" data-value="1" onclick="setFilter('sem', '1', this)">І семестр</button>
+                    <button class="chip" data-filter="sem" data-value="2" onclick="setFilter('sem', '2', this)">ІІ семестр</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <span class="filter-label">Тип заняття:</span>
+                <div class="filter-chips">
+                    <button class="chip active" data-filter="type" data-value="all" onclick="setFilter('type', 'all', this)">Усі</button>
+                    <button class="chip" data-filter="type" data-value="lecture" onclick="setFilter('type', 'lecture', this)">Лекції</button>
+                    <button class="chip" data-filter="type" data-value="practice" onclick="setFilter('type', 'practice', this)">Практичні</button>
+                    <button class="chip" data-filter="type" data-value="test" onclick="setFilter('type', 'test', this)">Заліки</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- РЕЗУЛЬТАТИ -->
+        <div class="results-info">
+            <span id="resultsCount">Показано всі заняття</span>
+        </div>
+
+        <!-- ===== 10 КЛАС · І СЕМЕСТР ===== -->
+        <section class="lesson-group" data-grade="10" data-sem="1">
+            <div class="group-header">
+                <h2>10 клас · І семестр</h2>
+                <span class="group-badge">34 год.</span>
+            </div>
+
+            <h3 class="subsection-heading">І. Функції, їхні властивості і графіки</h3>
+            <div class="lessons-grid">
+
+                <a href="lesson-01.html" class="lesson-card" data-grade="10" data-sem="1" data-type="lecture" data-title="числові функції властивості">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">1-2</span>
+                        <span class="badge badge-lecture">Лекція</span>
+                    </div>
+                    <h4>Числові функції та їх властивості</h4>
+                    <p>Поняття числової функції, область визначення та значень.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">07.09</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-02.html" class="lesson-card" data-grade="10" data-sem="1" data-type="lecture" data-title="способи задання функції">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">3-4</span>
+                        <span class="badge badge-lecture">Лекція</span>
+                    </div>
+                    <h4>Способи задання функції</h4>
+                    <p>Аналітичний, табличний, графічний, словесний способи.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">14.09</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-03.html" class="lesson-card" data-grade="10" data-sem="1" data-type="practice" data-title="способи задання функцій розв'язування вправ">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">5-6</span>
+                        <span class="badge badge-practice">Практичне</span>
+                    </div>
+                    <h4>Способи задання функцій. Розв'язування вправ</h4>
+                    <p>Відпрацювання практичних навичок задання функцій.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">21.09</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-04.html" class="lesson-card" data-grade="10" data-sem="1" data-type="practice" data-title="властивості функцій розв'язування вправ">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">7-8</span>
+                        <span class="badge badge-practice">Практичне</span>
+                    </div>
+                    <h4>Властивості функцій</h4>
+                    <p>Монотонність, нулі функції, проміжки знакосталості.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">28.09</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-05.html" class="lesson-card" data-grade="10" data-sem="1" data-type="practice" data-title="парні непарні функції самостійна робота">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">9-10</span>
+                        <span class="badge badge-practice">Практичне</span>
+                    </div>
+                    <h4>Парні і непарні функції. Самостійна робота</h4>
+                    <p>Означення парності, графічна інтерпретація.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">05.10</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-06.html" class="lesson-card" data-grade="10" data-sem="1" data-type="practice" data-title="розв'язування вправ функції">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">11</span>
+                        <span class="badge badge-practice">Практичне</span>
+                    </div>
+                    <h4>Розв'язування вправ</h4>
+                    <p>Закріплення теми «Функції та їх властивості».</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">12.10</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-07.html" class="lesson-card lesson-card-test" data-grade="10" data-sem="1" data-type="test" data-title="тематичний залік контрольна робота функції">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">12</span>
+                        <span class="badge badge-test">Залік</span>
+                    </div>
+                    <h4>Тематичний залік. Контрольна робота</h4>
+                    <p>Підсумковий контроль за розділом І.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">—</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-08.html" class="lesson-card" data-grade="10" data-sem="1" data-type="lecture" data-title="корінь n-го степеня">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">13-14</span>
+                        <span class="badge badge-lecture">Лекція</span>
+                    </div>
+                    <h4>Корінь n-го степеня</h4>
+                    <p>Означення, властивості, приклади.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">19.10</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-09.html" class="lesson-card" data-grade="10" data-sem="1" data-type="practice" data-title="арифметичний корінь n-го степеня властивості">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">15-16</span>
+                        <span class="badge badge-practice">Практичне</span>
+                    </div>
+                    <h4>Арифметичний корінь n-го степеня</h4>
+                    <p>Властивості коренів, розв'язування вправ.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">26.10</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-10.html" class="lesson-card" data-grade="10" data-sem="1" data-type="lecture" data-title="степінь з раціональним показником">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">17-18</span>
+                        <span class="badge badge-lecture">Лекція</span>
+                    </div>
+                    <h4>Степінь з раціональним показником</h4>
+                    <p>Означення та властивості степеня.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">02.11</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-11.html" class="lesson-card" data-grade="10" data-sem="1" data-type="lecture" data-title="степеневі функції графіки">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">19-20</span>
+                        <span class="badge badge-lecture">Лекція</span>
+                    </div>
+                    <h4>Степеневі функції, їхні властивості і графіки</h4>
+                    <p>Графіки степеневих функцій, їх аналіз.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">09.11</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-12.html" class="lesson-card" data-grade="10" data-sem="1" data-type="practice" data-title="розв'язування вправ степеневі функції">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">21</span>
+                        <span class="badge badge-practice">Практичне</span>
+                    </div>
+                    <h4>Розв'язування вправ</h4>
+                    <p>Закріплення теми «Степеневі функції».</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">16.11</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-13.html" class="lesson-card lesson-card-test" data-grade="10" data-sem="1" data-type="test" data-title="тематичний залік контрольна робота корені степені">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">22</span>
+                        <span class="badge badge-test">Залік</span>
+                    </div>
+                    <h4>Тематичний залік. Контрольна робота</h4>
+                    <p>Підсумковий контроль за темами «Корені. Степені».</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">—</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <h3 class="subsection-heading">ІІ. Паралельність прямих і площин у просторі</h3>
+            <div class="lessons-grid">
+
+                <a href="lesson-14.html" class="lesson-card" data-grade="10" data-sem="1" data-type="lecture" data-title="аксіоми стереометрії наслідки">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">23-24</span>
+                        <span class="badge badge-lecture">Лекція</span>
+                    </div>
+                    <h4>Аксіоми стереометрії та наслідки</h4>
+                    <p>Основні поняття стереометрії, аксіоми, найпростіші наслідки.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">23.11</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-15.html" class="lesson-card" data-grade="10" data-sem="1" data-type="lecture" data-title="паралельне проектування зображення фігур">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">25-26</span>
+                        <span class="badge badge-lecture">Лекція</span>
+                    </div>
+                    <h4>Паралельне проектування</h4>
+                    <p>Властивості паралельного проектування, зображення фігур.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">30.11</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-16.html" class="lesson-card" data-grade="10" data-sem="1" data-type="practice" data-title="взаємне розміщення прямих простір">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">27-28</span>
+                        <span class="badge badge-practice">Практичне</span>
+                    </div>
+                    <h4>Взаємне розміщення прямих у просторі</h4>
+                    <p>Паралельні, мимобіжні, перетинні прямі.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">07.12</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-17.html" class="lesson-card" data-grade="10" data-sem="1" data-type="lecture" data-title="паралельність прямої та площини">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">29-30</span>
+                        <span class="badge badge-lecture">Лекція</span>
+                    </div>
+                    <h4>Паралельність прямої та площини</h4>
+                    <p>Ознака паралельності прямої та площини.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">14.12</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-18.html" class="lesson-card" data-grade="10" data-sem="1" data-type="practice" data-title="паралельність площин">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">31-32</span>
+                        <span class="badge badge-practice">Практичне</span>
+                    </div>
+                    <h4>Паралельність площин</h4>
+                    <p>Ознака паралельності площин, розв'язування задач.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">21.12</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-19.html" class="lesson-card" data-grade="10" data-sem="1" data-type="practice" data-title="розв'язування задач стереометрія">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">33</span>
+                        <span class="badge badge-practice">Практичне</span>
+                    </div>
+                    <h4>Розв'язування задач і вправ</h4>
+                    <p>Узагальнення теми «Паралельність у просторі».</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">28.12</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="lesson-20.html" class="lesson-card lesson-card-test" data-grade="10" data-sem="1" data-type="test" data-title="тематичний залік контрольна робота стереометрія">
+                    <div class="lesson-card-header">
+                        <span class="lesson-num">34</span>
+                        <span class="badge badge-test">Залік</span>
+                    </div>
+                    <h4>Тематичний залік. Контрольна робота</h4>
+                    <p>Підсумковий контроль за розділом ІІ.</p>
+                    <div class="lesson-card-footer">
+                        <span class="lesson-date">04.01</span>
+                        <span class="lesson-arrow">→</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ===== 10 КЛАС · ІІ СЕМЕСТР ===== -->
+        <section class="lesson-group" data-grade="10" data-sem="2">
+            <div class="group-header">
+                <h2>10 клас · ІІ семестр</h2>
+                <span class="group-badge soon">готується</span>
+            </div>
+            <div class="placeholder-block">
+                <p>📅 Конспекти занять для ІІ семестру 10 класу будуть додані найближчим часом.</p>
+            </div>
+        </section>
+
+        <!-- ===== 11 КЛАС · І СЕМЕСТР ===== -->
+        <section class="lesson-group" data-grade="11" data-sem="1">
+            <div class="group-header">
+                <h2>11 клас · І семестр</h2>
+                <span class="group-badge soon">готується</span>
+            </div>
+            <div class="placeholder-block">
+                <p>📅 Конспекти занять для І семестру 11 класу будуть додані найближчим часом.</p>
+            </div>
+        </section>
+
+        <!-- ===== 11 КЛАС · ІІ СЕМЕСТР ===== -->
+        <section class="lesson-group" data-grade="11" data-sem="2">
+            <div class="group-header">
+                <h2>11 клас · ІІ семестр</h2>
+                <span class="group-badge soon">готується</span>
+            </div>
+            <div class="placeholder-block">
+                <p>📅 Конспекти занять для ІІ семестру 11 класу будуть додані найближчим часом.</p>
+            </div>
+        </section>
+
+        <!-- ПОВІДОМЛЕННЯ ПРО ПОРОЖНІЙ РЕЗУЛЬТАТ -->
+        <div id="emptyResult" class="empty-result" style="display: none;">
+            <p style="font-size: 3rem; margin-bottom: 15px;">🔍</p>
+            <h3>Нічого не знайдено</h3>
+            <p>Спробуйте змінити запит або скинути фільтри.</p>
+            <button class="btn btn-primary" onclick="resetFilters()">Скинути фільтри</button>
+        </div>
+
+        <!-- CTA -->
+        <section class="cta-inline">
+            <h3>Потрібен конспект до конкретної теми?</h3>
+            <p>Напишіть мені — я додам заняття на сайт найближчим часом.</p>
+            <a href="../contacts.html" class="btn btn-primary">Написати викладачу</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <div>
+                <p><strong>КЗ СОР «Путивльський педагогічний фаховий коледж імені С. В. Руднєва»</strong></p>
+                <p>м. Путивль, Сумська область</p>
+            </div>
+            <div>
+                <p>© 2025 Сайт викладача математики</p>
+                <p><a href="mailto:math.rudnev@example.com">math.rudnev@example.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/lessons-nav.js"></script>
+</body>
+</html>

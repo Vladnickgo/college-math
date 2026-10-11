@@ -1,0 +1,10 @@
+{
+    "name": "college-math",
+    "version": "1.0.0",
+    "description": "Сайт викладача математики — КЗ СОР Путивльський педагогічний фаховий коледж",
+    "scripts": {
+      "generate": "node build/generate-lessons.js",
+      "regenerate": "node build/generate-lessons.js --force",
+      "serve": "npx serve ."
+    }
+  }

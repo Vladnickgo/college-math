@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розклад і теми | Математика 10-11</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">📖</span>
+                <div class="logo-text">
+                    <h1>Математика 10-11</h1>
+                    <p>КЗ СОР "Путивльський педагогічний фаховий коледж</p>
+                    <p>імені С. В. Руднєва"</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про викладача</a></li>
+                    <li><a href="schedule.html" class="active">Розклад і теми</a></li>
+                    <li><a href="matherials.html">Матеріали</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+            <button class="burger" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <main class="container page">
+        <h2 class="page-title">Календарно-тематичний план</h2>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('sem1-10')">І семестр</button>
+            <button class="tab" onclick="showTab('sem2-10')">ІІ семестр</button>
+            <button class="tab" onclick="showTab('sem1-11')">IIІ семестр</button>
+            <button class="tab" onclick="showTab('sem2-11')">IV семестр</button>
+        </div>
+
+        <!-- 10 КЛАС, І СЕМЕСТР -->
+        <div id="sem1-10" class="tab-content active">
+
+            <div class="semester-header">
+                <h3>І семестр (34 год.)</h3>
+            </div>
+
+            <!-- Розділ I -->
+            <div class="section-block">
+                <h4 class="section-heading">І. Функції, їхні властивості і графіки <span class="hours-badge">22
+                        год.</span></h4>
+
+                <div class="table-wrap">
+                    <table class="plan-table">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Дата</th>
+                                <th>Тема заняття</th>
+                                <th>Год.</th>
+                                <th>Вид заняття</th>
+                                <th>Контроль</th>
+                                <th>Література</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1-2</td>
+                                <td>07.09</td>
+                                <td>
+                                    <strong>Числові функції та їх властивості</strong>
+                                    <span class="topic-desc">Поняття числової функції, області визначення та
+                                        значень.</span>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-lecture">Лекція</span></td>
+                                <td>Усне опитування</td>
+                                <td>Мерзляк А. Г. та ін. Математика : алгебра і початки аналізу та геометрія : рівень
+                                    стандарту : підручник для 10 кл. Харків : Гімназія, 2018.</td>
+                            </tr>
+                            <tr>
+                                <td>3-4</td>
+                                <td>14.09</td>
+                                <td>
+                                    <strong>Числові функції та їх властивості. Способи задання функції</strong>
+                                    <span class="topic-desc">Аналітичний, табличний, графічний, словесний
+                                        способи.</span>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-lecture">Лекція</span></td>
+                                <td>Розв'язування вправ</td>
+                                <td>Істер О. С. Математика : алгебра і початки аналізу та геометрія, рівень стандарту :
+                                    підруч. для 10 кл. Київ : Генеза, 2018. 384 с.</td>
+                            </tr>
+                            <tr>
+                                <td>5-6</td>
+                                <td>21.09</td>
+                                <td>
+                                    <strong>Способи задання функцій. Розв'язування вправ</strong>
+                                    <span class="topic-desc">Відпрацювання практичних навичок.</span>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-practice">Практичне</span></td>
+                                <td>Усне опитування</td>
+                                <td>Мерзляк А. Г. та ін. Математика : алгебра і початки аналізу та геометрія : рівень
+                                    стандарту : підручник для 10 кл. Харків : Гімназія, 2018.</td>
+                            </tr>
+                            <tr>
+                                <td>7-8</td>
+                                <td>28.09</td>
+                                <td>
+                                    <strong>Властивості функцій. Розв'язування вправ на застосування властивостей
+                                        функцій</strong>
+                                    <span class="topic-desc">Монотонність, нулі функції, проміжки знакосталості.</span>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-practice">Практичне</span></td>
+                                <td>Математичний диктант</td>
+                                <td>Істер О. С. Математика : алгебра і початки аналізу та геометрія, рівень стандарту :
+                                    підруч. для 10 кл. Київ : Генеза, 2018. 384 с.</td>
+                            </tr>
+                            <tr>
+                                <td>9-10</td>
+                                <td>05.10</td>
+                                <td>
+                                    <strong>Парні і непарні функції. Самостійна робота</strong>
+                                    <span class="topic-desc">Означення парності, графічна інтерпретація.</span>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-practice">Практичне</span></td>
+                                <td>Тестування</td>
+                                <td>Бевз Г. П., Бевз В. Г. Математика : алгебра і початки аналізу та геометрія, рівень
+                                    стандарту : підруч. для 10 кл. Київ : Освіта, 2018. 288 с.</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>12.10</td>
+                                <td>
+                                    <strong>Розв'язування вправ</strong>
+                                </td>
+                                <td>1</td>
+                                <td><span class="badge badge-practice">Практичне</span></td>
+                                <td>Усне опитування</td>
+                                <td>Істер О. С. Математика : алгебра і початки аналізу та геометрія, рівень стандарту :
+                                    підруч. для 10 кл. Київ : Генеза, 2018. 384 с.</td>
+                            </tr>
+                            <tr class="row-assessment">
+                                <td>12</td>
+                                <td>—</td>
+                                <td>
+                                    <strong>Тематичний залік. Контрольна робота</strong>
+                                </td>
+                                <td>1</td>
+                                <td><span class="badge badge-practice">Практичне</span></td>
+                                <td><strong>Контрольна робота</strong></td>
+                                <td>Бевз Г. П., Бевз В. Г. Математика, рівень стандарту : підруч. для 10 кл. Київ :
+                                    Освіта, 2018. 288 с.</td>
+                            </tr>
+                            <tr class="row-subtotal">
+                                <td colspan="3"><strong>Разом за розділом І</strong></td>
+                                <td><strong>22</strong></td>
+                                <td colspan="3">лекцій — 10, практичних — 12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Продовження розділу: корені і степені -->
+                <div class="table-wrap" style="margin-top: 24px;">
+                    <table class="plan-table">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Дата</th>
+                                <th>Тема заняття</th>
+                                <th>Год.</th>
+                                <th>Вид заняття</th>
+                                <th>Контроль</th>
+                                <th>Література</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>13-14</td>
+                                <td>19.10</td>
+                                <td>
+                                    <strong>Корінь n-го степеня</strong>
+                                    <span class="topic-desc">Означення, властивості.</span>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-lecture">Лекція</span></td>
+                                <td>Усне опитування</td>
+                                <td>ЗНО та ДПА 2024. Математика. Комплексне видання. Капеняк І., Гринчишин Я.</td>
+                            </tr>
+                            <tr>
+                                <td>15-16</td>
+                                <td>26.10</td>
+                                <td>
+                                    <strong>Арифметичний корінь n-го степеня, його властивості. Розв'язування
+                                        вправ</strong>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-practice">Практичне</span></td>
+                                <td>Розв'язування вправ</td>
+                                <td>Істер О. С. Математика, рівень стандарту : підруч. для 10 кл. Київ : Генеза, 2018.
+                                    384 с.</td>
+                            </tr>
+                            <tr>
+                                <td>17-18</td>
+                                <td>02.11</td>
+                                <td>
+                                    <strong>Степінь з раціональним показником та його властивості</strong>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-lecture">Лекція</span></td>
+                                <td>Усне опитування</td>
+                                <td>Бевз Г. П., Бевз В. Г. Математика, рівень стандарту : підруч. для 10 кл. Київ :
+                                    Освіта, 2018. 288 с.</td>
+                            </tr>
+                            <tr>
+                                <td>19-20</td>
+                                <td>09.11</td>
+                                <td>
+                                    <strong>Степеневі функції, їхні властивості і графіки</strong>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-lecture">Лекція</span></td>
+                                <td>Розв'язування вправ</td>
+                                <td>Істер О. С. Математика, рівень стандарту : підруч. для 10 кл. Київ : Генеза, 2018.
+                                    384 с.</td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>16.11</td>
+                                <td><strong>Розв'язування вправ</strong></td>
+                                <td>1</td>
+                                <td><span class="badge badge-practice">Практичне</span></td>
+                                <td>Розв'язування вправ</td>
+                                <td>Математика : збірник завдань для підготовки до НМТ / уклад. О. В. Школьний. Київ :
+                                    УЦОЯО, 2024.</td>
+                            </tr>
+                            <tr class="row-assessment">
+                                <td>22</td>
+                                <td>—</td>
+                                <td><strong>Тематичний залік. Контрольна робота</strong></td>
+                                <td>1</td>
+                                <td><span class="badge badge-practice">Практичне</span></td>
+                                <td><strong>Контрольна робота</strong></td>
+                                <td>Істер О. С. Математика, рівень стандарту : підруч. для 10 кл. Київ : Генеза, 2018.
+                                    384 с.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Розділ II -->
+            <div class="section-block">
+                <h4 class="section-heading">ІІ. Паралельність прямих і площин у просторі <span class="hours-badge">12
+                        год.</span></h4>
+
+                <div class="table-wrap">
+                    <table class="plan-table">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Дата</th>
+                                <th>Тема заняття</th>
+                                <th>Год.</th>
+                                <th>Вид заняття</th>
+                                <th>Контроль</th>
+                                <th>Література</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>23-24</td>
+                                <td>23.11</td>
+                                <td>
+                                    <strong>Основні поняття, аксіоми стереометрії. Найпростіші наслідки з аксіом
+                                        стереометрії</strong>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-lecture">Лекція</span></td>
+                                <td>Усне опитування</td>
+                                <td>Нелін Є. П. Математика : алгебра і початки аналізу та геометрія, рівень стандарту :
+                                    підруч. для 10 кл. Харків : Ранок, 2018. 328 с.</td>
+                            </tr>
+                            <tr>
+                                <td>25-26</td>
+                                <td>30.11</td>
+                                <td>
+                                    <strong>Паралельне проектування і його властивості. Зображення фігур у
+                                        стереометрії</strong>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-lecture">Лекція</span></td>
+                                <td>Розв'язування вправ</td>
+                                <td>Нелін Є. П. Математика, рівень стандарту : підруч. для 10 кл. Харків : Ранок, 2018.
+                                    328 с.</td>
+                            </tr>
+                            <tr>
+                                <td>27-28</td>
+                                <td>07.12</td>
+                                <td>
+                                    <strong>Взаємне розміщення прямих у просторі</strong>
+                                    <span class="topic-desc">Паралельні, мимобіжні, перетинні прямі.</span>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-practice">Практичне</span></td>
+                                <td>Тестування</td>
+                                <td>Нелін Є. П. Математика, рівень стандарту : підруч. для 10 кл. Харків : Ранок, 2018.
+                                    328 с.</td>
+                            </tr>
+                            <tr>
+                                <td>29-30</td>
+                                <td>14.12</td>
+                                <td>
+                                    <strong>Паралельність прямої та площини</strong>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-lecture">Лекція</span></td>
+                                <td>Усне опитування</td>
+                                <td>Істер О. С. Математика : збірник задач для підготовки до НМТ. Київ : Генеза, 2024.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>31-32</td>
+                                <td>21.12</td>
+                                <td>
+                                    <strong>Паралельність площин</strong>
+                                </td>
+                                <td>2</td>
+                                <td><span class="badge badge-practice">Практичне</span></td>
+                                <td>Усне опитування</td>
+                                <td>Істер О. С. Математика : збірник задач для підготовки до НМТ. Київ : Генеза, 2024.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>33</td>
+                                <td>28.12</td>
+                                <td><strong>Розв'язування задач і вправ</strong></td>
+                                <td>1</td>
+                                <td><span class="badge badge-practice">Практичне</span></td>
+                                <td>Тестування</td>
+                                <td>Істер О. С. Математика : збірник задач для підготовки до НМТ. Київ : Генеза, 2024.
+                                </td>
+                            </tr>
+                            <tr class="row-assessment">
+                                <td>34</td>
+                                <td>04.01</td>
+                                <td><strong>Тематичний залік. Контрольна робота</strong></td>
+                                <td>1</td>
+                                <td><span class="badge badge-practice">Практичне</span></td>
+                                <td><strong>Контрольна робота</strong></td>
+                                <td>Істер О. С. Математика : збірник задач для підготовки до НМТ. Київ : Генеза, 2024.
+                                </td>
+                            </tr>
+                            <tr class="row-subtotal">
+                                <td colspan="3"><strong>Разом за розділом ІІ</strong></td>
+                                <td><strong>12</strong></td>
+                                <td colspan="3">лекцій — 6, практичних — 6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="semester-summary">
+                <p><strong>Разом за І семестр:</strong> 34 години, з них лекцій — 16, практичних — 18.</p>
+            </div>
+        </div>
+
+        <!-- ІНШІ ВКЛАДКИ (заглушки, легко наповнити) -->
+        <div id="sem2-10" class="tab-content">
+            <div class="placeholder-block">
+                <p>📅 Матеріали для ІІ семестру 10 класу будуть додані найближчим часом.</p>
+            </div>
+        </div>
+
+        <div id="sem1-11" class="tab-content">
+            <div class="placeholder-block">
+                <p>📅 Матеріали для І семестру 11 класу будуть додані найближчим часом.</p>
+            </div>
+        </div>
+
+        <div id="sem2-11" class="tab-content">
+            <div class="placeholder-block">
+                <p>📅 Матеріали для ІІ семестру 11 класу будуть додані найближчим часом.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <div>
+                <p><strong>КЗ СОР «Путивльський педагогічний фаховий коледж імені С. В. Руднєва»</strong></p>
+                <p>м. Путивль, Сумська область</p>
+            </div>
+            <div>
+                <p>© 2026/2027 н.р. </p>
+                <p>Сайт викладача математики</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
