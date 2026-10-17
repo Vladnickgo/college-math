@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакти | Математика 10-11</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/certificates.css">
 </head>
+
 <body>
     <header>
         <div class="container header-inner">
-          <div class="logo">
-            <span class="logo-icon">📖</span>
-            <div class="logo-text">
-                <h1>Математика 10-11</h1>
-                <p>КЗ СОР "Путивльський педагогічний фаховий коледж</p>
-                <p>імені С. В. Руднєва"</p>
+            <div class="logo">
+                <span class="logo-icon">📖</span>
+                <div class="logo-text">
+                    <h1>Математика 10-11</h1>
+                    <p>КЗ СОР "Путивльський педагогічний фаховий коледж</p>
+                    <p>імені С. В. Руднєва"</p>
+                </div>
             </div>
-        </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Головна</a></li>
@@ -31,8 +34,389 @@
     </header>
 
     <main class="container page">
- <p>Викладач КЗ СОР "Путивльський педагогічний фаховий коледж імені С. В. Руднєва"</p>
- <p>Володимир Миколайович Голубков</p>
+        <p>Викладач КЗ СОР "Путивльський педагогічний фаховий коледж імені С. В. Руднєва"</p>
+        <p>Володимир Миколайович Голубков</p>
+        <!-- СЕКЦІЯ: СЕРТИФІКАТИ ЗА РОКАМИ -->
+        <section class="certs-section">
+            <div class="certs-header">
+                <h2>🎓 Сертифікати та підвищення кваліфікації</h2>
+                <p>Постійно вдосконалюю кваліфікацію: курси, вебінари, семінари від провідних освітніх платформ України.
+                    Натисніть на рік, щоб переглянути сертифікати.</p>
+
+                <div class="certs-summary">
+                    <div class="certs-summary-item">
+                        <strong id="certsTotal">0</strong>
+                        <span>сертифікатів</span>
+                    </div>
+                    <div class="certs-summary-item">
+                        <strong id="certsYears">0</strong>
+                        <span>років навчання</span>
+                    </div>
+                    <div class="certs-summary-item">
+                        <strong id="certsHours">0</strong>
+                        <span>годин підвищення</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certs-accordion" id="certsAccordion">
+
+                <!-- ============ 2026 ============ -->
+                <div class="cert-year open" data-year="2026">
+                    <button class="cert-year-toggle" onclick="toggleYear(this)" aria-expanded="true">
+                        <span class="cert-year-label">
+                            <span class="cert-year-num">2026</span>
+                            <span class="cert-year-meta">4 сертифікати · 63 год.</span>
+                        </span>
+                        <span class="cert-year-icon">▾</span>
+                    </button>
+
+                    <div class="cert-year-content">
+                        <div class="cert-mini-grid">
+
+                            <article class="cert-mini" data-full="certificates/2026/full/cert-2026-08-17-mriia.png"
+                                data-title="Мрія для освітян: Практичний гід по роботі з системою"
+                                data-org="Зрозуміло! Освітня онлайн-платформа" data-hours="45" data-date="Серпень 2026">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2026/thumbs/cert-2026-08-17-mriia-thumb.png"
+                                        alt="Сертифікат: Мрія для освітян" loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Мрія для освітян: Практичний гід по роботі з системою</h4>
+                                    <p>Зрозуміло! Освітня онлайн-платформа</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 45</span>
+                                        <span>📅 Серпень 2026</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="cert-mini" data-full="certificates/2026/full/cert-2026-08-17-I.png"
+                                data-title="Базовий курс із цифрової грамотності (початковий рівень)"
+                                data-org="Дія. Освіта." data-hours="6" data-date="Серпень 2026">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2026/thumbs/cert-2026-08-17-I-thumb.png"
+                                        alt="Базовий курс із цифрової грамотності" loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Базовий курс із цифрової грамотності (початковий рівень)</h4>
+                                    <p>Дія. Освіта.</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 6 год.</span>
+                                        <span>📅 Серпень 2026</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="cert-mini" data-full="certificates/2026/full/cert-2026-08-21.png"
+                                data-title="Базовий курс із цифрової грамотності (середній рівень)"
+                                data-org="Дія. Освіта." data-hours="6" data-date="Серпень 2026">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2026/thumbs/cert-2026-08-21-thumb.png"
+                                        alt="Сертифікат: Сучасний урок математики" loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Базовий курс із цифрової грамотності (середній рівень)</h4>
+                                    <p>Дія. Освіта.</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 6 год.</span>
+                                        <span>📅 Серпень 2026</span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="cert-mini" data-full="certificates/2026/full/cert-2026-08-17.png"
+                                data-title="Базовий курс із цифрової грамотності (просунутий рівень)"
+                                data-org="Дія. Освіта." data-hours="6" data-date="Серпень 2026">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2026/thumbs/cert-2026-08-17-thumb.png"
+                                        alt="Сертифікат: Сучасний урок математики" loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Базовий курс із цифрової грамотності (просунутий рівень)</h4>
+                                    <p>Дія. Освіта.</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 6 год.</span>
+                                        <span>📅 Серпень 2026</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="cert-mini" data-full="certificates/2026/full/cert-2026-08-17.png"
+                                data-title="Протимінна безпека"
+                                data-org="Дія. Освіта." data-hours="3" data-date="Вересень 2026">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2026/thumbs/cert-2026-09-28-thumb.png"
+                                        alt="Сертифікат: Сучасний урок математики" loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Протимінна безпека</h4>
+                                    <p>Дія. Освіта.</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 3 год.</span>
+                                        <span>📅 Вересень 2026</span>
+                                    </div>
+                                </div>
+                            </article>
+
+
+
+                            <article class="cert-mini" data-full="certificates/2026/full/cert-2026-10-15.png"
+                                data-title="Кіберграм" data-org="Дія. Освіта." data-hours="" data-date="Жовтень 2026">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2026/thumbs/cert-2026-10-15-thumb.png"
+                                        alt="Сертифікат: Сучасний урок математики" loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Кіберграм</h4>
+                                    <p>Дія. Освіта.</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ </span>
+                                        <span>📅 Жовтень 2026</span>
+                                    </div>
+                                </div>
+                            </article>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- ============ 2025 ============ -->
+                <div class="cert-year" data-year="2025">
+                    <button class="cert-year-toggle" onclick="toggleYear(this)" aria-expanded="false">
+                        <span class="cert-year-label">
+                            <span class="cert-year-num">2025</span>
+                            <span class="cert-year-meta">3 сертифікати · 68 год.</span>
+                        </span>
+                        <span class="cert-year-icon">▾</span>
+                    </button>
+
+                    <div class="cert-year-content">
+                        <div class="cert-mini-grid">
+
+                            <article class="cert-mini" data-full="certificates/full/cert-2025-03.jpg"
+                                data-title="Семінар «Сучасний урок математики в 10–11 класах»" data-org="Сумський ОІППО"
+                                data-hours="0" data-date="Лютий 2025">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/thumbs/cert-2025-03-thumb.jpg"
+                                        alt="Сертифікат: Сучасний урок математики" loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Сучасний урок математики</h4>
+                                    <p>Сумський ОІППО</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 30 год.</span>
+                                        <span>📅 Лютий 2025</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ 2024 ============ -->
+                <div class="cert-year" data-year="2024">
+                    <button class="cert-year-toggle" onclick="toggleYear(this)" aria-expanded="false">
+                        <span class="cert-year-label">
+                            <span class="cert-year-num">2024</span>
+                            <span class="cert-year-meta">5 сертифікатів · 96 год.</span>
+                        </span>
+                        <span class="cert-year-icon">▾</span>
+                    </button>
+
+                    <div class="cert-year-content">
+                        <div class="cert-mini-grid">
+                            <!-- картки 2024 -->
+                            <article class="cert-mini" data-full="certificates/full/cert-2024-01.jpg"
+                                data-title="Курс «Сучасні методи викладання математики»" data-org="EdEra / МОН України"
+                                data-hours="0" data-date="Травень 2024">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/thumbs/cert-2024-01-thumb.jpg" alt="" loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Сучасні методи викладання математики</h4>
+                                    <p>EdEra / МОН України</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 30 год.</span>
+                                        <span>📅 Травень 2024</span>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- ... решта карток 2024 ... -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ 2023 ============ -->
+                <div class="cert-year" data-year="2023">
+                    <button class="cert-year-toggle" onclick="toggleYear(this)" aria-expanded="false">
+                        <span class="cert-year-label">
+                            <span class="cert-year-num">2023</span>
+                            <span class="cert-year-meta">7 сертифікатів · 290 год.</span>
+                        </span>
+                        <span class="cert-year-icon">▾</span>
+                    </button>
+
+                    <div class="cert-year-content">
+                        <div class="cert-mini-grid">
+                            <!-- картки 2023 -->
+                            <article class="cert-mini" data-full="certificates/2023/full/cert-2023-02-13.png"
+                                data-title="Java Spring-Summer" data-org="EPAM UNIVERSITY PROGRAM" data-hours="196"
+                                data-date="Лютий 2023">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2023/thumbs/cert-2023-02-13-thumb.png " alt=""
+                                        loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Java Spring-Summer</h4>
+                                    <p>EPAM UNIVERSITY PROGRAM</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 196 год.</span>
+                                        <span>📅 Лютий 2023</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="cert-mini" data-full="certificates/2023/full/cert-2023-04-19.jpg"
+                                data-org="КЗ СОР &quot;Лебединський педагогічний фаховий коледж імені А.С. Макаренка&quot;"
+                                data-hours="2" data-date="Квітень 2023">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2023/thumbs/cert-2023-04-19-thumb.jpg" alt="" loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Використання цифрових технологій в освітньому процесі</h4>
+                                    <p>КЗ СОР "Лебединський педагогічний фаховий коледж імені А.С. Макаренка"</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 2 год.</span>
+                                        <span>📅 Квітень 2023</span>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <article class="cert-mini" data-full="certificates/2023/full/cert-2023-11-08.jpg"
+                                data-title="Цифрові технології як засіб подолання освітніх втрат в умовах сьогодення"
+                                data-org="КЗ СОР &quot;Лебединський педагогічний фаховий коледж імені А.С. Макаренка&quot;"
+                                data-hours="2" data-date="Листопад 2023">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2023/thumbs/cert-2023-11-08-thumb.jpg" alt="" loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Цифрові технології як засіб подолання освітніх втрат в умовах сьогодення</h4>
+                                    <p>КЗ СОР "Лебединський педагогічний фаховий коледж імені А.С. Макаренка"</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 2 год.</span>
+                                        <span>📅 Листопад 2023</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="cert-mini" data-full="certificates/2023/full/cert-2026-10-15.png"
+                                data-title="Професійна компетентність педагога Нової української школи в контексті освіти впродовж життя"
+                                data-org="КЗ СОІППО" data-hours="30" data-date="Листопад 2023">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2023/thumbs/cert-2026-10-15-thumb.png" alt="" loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Професійна компетентність педагога Нової української школи в контексті освіти
+                                        впродовж життя</h4>
+                                    <p>КЗ СОР "КЗ СОІППО"</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 30 год.</span>
+                                        <span>📅 Листопад 2023</span>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <article class="cert-mini" data-full="certificates/2023/full/cert-2023-12-02.png"
+                                data-title="Наздоженемо: курс подолання освітніх втрат з математики"
+                                data-org="ГС Освіторія" data-hours="15" data-date="Грудень 2023">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2023/thumbs/cert-2023-12-02-thumb.png " alt=""
+                                        loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Наздоженемо: курс подолання освітніх втрат з математики</h4>
+                                    <p>ГС "Освіторія"</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 15 год.</span>
+                                        <span>📅 Грудень 2023</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="cert-mini" data-full="certificates/2023/full/cert-2023-12-02-II.png"
+                                data-title="Наздоженемо: практичні аспекти подолання освітніх втрат з математики"
+                                data-org="ГС Освіторія" data-hours="15" data-date="Грудень 2023">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2023/thumbs/cert-2023-12-02-II-thumb.png" alt=""
+                                        loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Наздоженемо: практичні аспекти подолання освітніх втрат з математики</h4>
+                                    <p>ГС "Освіторія"</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 15 год.</span>
+                                        <span>📅 Грудень 2023</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="cert-mini" data-full="certificates/2023/full/cert-2023-12-04.jpg"
+                                data-title="Тренінги щодо подолання освітніх втрат &quot;Наздоженемо&quot;"
+                                data-org="СДПУ імені А.С. Макаренка" data-hours="30" data-date="Грудень 2023">
+                                <div class="cert-mini-thumb">
+                                    <img src="certificates/2023/thumbs/cert-2023-12-04-thumb.jpg" alt="" loading="lazy">
+                                    <span class="cert-mini-zoom">🔍</span>
+                                </div>
+                                <div class="cert-mini-body">
+                                    <h4>Тренінги щодо подолання освітніх втрат &quot;Наздоженемо&quot;</h4>
+                                    <p>СДПУ імені А.С. Макаренка</p>
+                                    <div class="cert-mini-meta">
+                                        <span>⏱ 30 год.</span>
+                                        <span>📅 Грудень 2023</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- МОДАЛЬНЕ ВІКНО (одне на всю сторінку) -->
+        <div class="cert-modal" id="certModal" onclick="closeCertModal(event)">
+            <button class="cert-modal-close" onclick="closeCertModal(event, true)" aria-label="Закрити">✕</button>
+            <div class="cert-modal-content" onclick="event.stopPropagation()">
+                <img id="certModalImage" src="" alt="">
+                <div class="cert-modal-info">
+                    <h3 id="certModalTitle"></h3>
+                    <p id="certModalOrg" class="cert-modal-org"></p>
+                    <div class="cert-modal-meta">
+                        <span id="certModalHours"></span>
+                        <span id="certModalDate"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer>
@@ -47,5 +431,7 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/certificates.js"></script>
 </body>
+
 </html>
