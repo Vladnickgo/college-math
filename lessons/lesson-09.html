@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заняття 15-16. Арифметичний корінь n-го степеня, його властивості | Математика 10 клас</title>
-    <meta name="description" content="Арифметичний корінь n-го степеня, його властивості — конспект заняття з математики для 10 класу. Розділ І. Функції, їхні властивості і графіки">
+    <meta name="description"
+        content="Арифметичний корінь n-го степеня, його властивості — конспект заняття з математики для 10 класу. Розділ І. Функції, їхні властивості і графіки">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/lesson.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tables.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <script>
         MathJax = {
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
@@ -16,6 +21,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 </head>
+
 <body>
     <header>
         <div class="container header-inner">
@@ -57,7 +63,7 @@
         <div class="lesson-header">
             <div class="lesson-meta-badges">
                 <span class="badge badge-num">Заняття 15-16</span>
-                <span class="badge badge-date">26.10</span>
+                <!-- <span class="badge badge-date"></span> -->
                 <span class="badge badge-practice">Практичне</span>
                 <span class="badge badge-hours">2 год.</span>
             </div>
@@ -70,9 +76,8 @@
             <a href="#plan">План</a>
             <a href="#theory">Теорія</a>
             <a href="#examples">Приклади</a>
-            
-            <a href="#tasks"></a>
-            <a href="#homework"></a>
+            <a href="#tasks">Завдання</a>
+            <a href="#homework">Домашнє</a>
             <a href="#literature">Література</a>
         </nav>
 
@@ -80,74 +85,268 @@
             <h2>🎯 Мета заняття</h2>
             <div class="meta-grid">
                 <div class="meta-card">
-                    <h4>Навчальна</h4>
-                    <p class="placeholder-note">📝 Заповніть навчальну мету.</p>
+                    <!-- <h4>Навчальна</h4> -->
+                    <p>Формувати поняття кореня \(n\)-го степеня та арифметичного кореня \(n\)-го степеня. Ознайомити з
+                        тотожностями, властивостями та правилами розв'язування рівнянь вигляду \(x^n = a\).</p>
                 </div>
-                <div class="meta-card">
+                <!-- <div class="meta-card">
                     <h4>Розвивальна</h4>
-                    <p class="placeholder-note">📝 Заповніть розвивальну мету.</p>
+                    <p>Розвивати вміння аналізувати, порівнювати, робити висновки. Розширити математичний кругозір
+                        шляхом вивчення історії виникнення знака радикала.</p>
                 </div>
                 <div class="meta-card">
                     <h4>Виховна</h4>
-                    <p class="placeholder-note">📝 Заповніть виховну мету.</p>
-                </div>
+                    <p>Виховувати наполегливість під час розв'язування вправ, самостійність та математичну культуру
+                        запису.</p>
+                </div> -->
             </div>
         </section>
 
         <section id="plan" class="lesson-section">
             <h2>📋 План заняття</h2>
             <ol class="lesson-plan-list">
-                <li>Організаційний момент <span class="time">2 хв</span></li>
-                <li>Актуалізація опорних знань <span class="time">5 хв</span></li>
-                <li>Вивчення нового матеріалу <span class="time">40 хв</span></li>
-                <li>Розв'язування типових вправ <span class="time">25 хв</span></li>
-                <li>Підсумок заняття, рефлексія <span class="time">5 хв</span></li>
-                <li>Домашнє завдання <span class="time">3 хв</span></li>
+                <li>Поняття кореня n-го степеня</li>
+                <li>Арифметичний корінь n-го степеня</li>
+                <li>Тотожності та область визначення</li>
+                <li>Розв'язування рівнянь вигляду $x^n = a$</li>
+
             </ol>
         </section>
 
-        
-        <section id="theory" class="lesson-section">
+        <section id="theory" class="lesson-section page-break">
             <h2>📖 Теоретичний матеріал</h2>
-            <p class="placeholder-note">📝 Додайте теоретичний матеріал (означення, властивості, формули).</p>
+
+            <h3>1. Поняття кореня n-го степеня</h3>
+            <p><strong>Квадратним коренем</strong> із числа \(a\) називають таке число, квадрат якого дорівнює \(a\).
+            <p class="example"><strong> Наприклад,</strong></p>
+            <p> числа \(4\) і \(-4\) є квадратними коренями із числа \(16\), бо \(4^2 = 16\)
+                і \((-4)^2 =
+                16\).</p>
+            <p>Квадратного кореня із числа \(-9\) не існує, бо немає числа, квадрат якого дорівнює \(-9\).</p>
+
+            <div class="definition">
+                <strong>Коренем \(n\)-го степеня із числа \(a\)</strong> називають таке число, \(n\)-й степінь
+                якого
+                дорівнює \(a\).
+            </div>
+            <p><strong>Наприклад:</strong></p>
+            <p>корінь третього степеня із числа \(64\) дорівнює \(4\), оскільки
+                \(4^3 = 64\).</p>
+            <p>Числа \(3\) і \(-3\) є коренями четвертого степеня із числа \(81\), бо \(3^4 = 81\) і
+                \((-3)^4 =
+                81\).</p>
+            <p>Коренем п'ятого степеня із числа \(-32\) є число \(-2\), оскільки \((-2)^5 = -32\).</p>
+
+            <h3 class="page-break">2. Арифметичний корінь n-го степеня</h3>
+            <p>Арифметичним квадратним коренем з невід'ємного числа \(a\) називають таке невід'ємне число,
+                квадрат якого
+                дорівнює \(a\). Аналогічно дається означення і для \(n\)-го степеня.</p>
+
+            <div class="definition">
+                <strong>Арифметичним коренем \(n\)-го степеня з невід'ємного числа \(a\)</strong> називають
+                невід'ємне
+                число, \(n\)-й степінь якого дорівнює \(a\).<br><br>
+                Позначають: \(\sqrt[n]{a}\), <br>
+                де \(n\) — показник кореня, <br>
+                \(a\) — підкореневий вираз. <br>
+                Знак кореня \(\sqrt{\quad}\) називають <em>радикалом</em>.
+            </div>
+            <p>Якщо \(n=2\), маємо арифметичний квадратний корінь \(\sqrt{a}\) (показник не пишуть). Якщо
+                \(n=3\), маємо
+                арифметичний кубічний корінь \(\sqrt[3]{a}\).</p>
+
+            <h3 class="page-break">3. Тотожності та область визначення</h3>
+            <p>З означення випливає, що для будь-якого \(a \ge 0\), \(n \in \mathbb{N}\), \(n \ge 2\) маємо
+                тотожність:
+            </p>
+            <div class="definition" style="text-align: center; font-size: 1.2rem;">
+                \((\sqrt[n]{a})^n = a\)
+            </div>
+            <p>Наприклад: \((\sqrt[7]{17})^7 = 17\); \((-4\sqrt[4]{8})^4 = (-1)^4 \cdot (\sqrt[4]{8})^4 = 1
+                \cdot 8 =
+                8\).</p>
+
+            <p>Для коренів <strong>непарного</strong> степеня з від'ємних чисел використовують тотожність:</p>
+            <div class="definition" style="text-align: center; font-size: 1.2rem;">
+                \(\sqrt[n]{-a} = -\sqrt[n]{a}\) (для непарних \(n\))
+            </div>
+            <p>Отже, вираз \(\sqrt[n]{a}\) має зміст:</p>
+            <ul class="def-list">
+                <li>при парному \(n\) — лише для \(a \ge 0\);</li>
+                <li>при непарному \(n\) — для будь-якого значення \(a\).</li>
+            </ul>
+
+            <h3 class="page-break">4. Розв'язування рівнянь вигляду \(x^n = a\)</h3>
+            <p>Розглянемо рівняння \(x^n = a\), де \(a \in \mathbb{R}\), \(n \in \mathbb{N}\), \(n \ge 2\):</p>
+            <ul class="def-list">
+                <li>Якщо \(n\) — <strong>парне</strong> і \(a > 0\), рівняння має два корені: \(x =
+                    \sqrt[n]{a}\) та \(x
+                    = -\sqrt[n]{a}\).</li>
+                <li>Якщо \(n\) — <strong>парне</strong> і \(a = 0\), рівняння має єдиний корінь \(x = 0\).</li>
+                <li>Якщо \(n\) — <strong>парне</strong> і \(a < 0\), рівняння коренів не має.</li>
+                <li>Якщо \(n\) — <strong>непарне</strong>, рівняння має єдиний корінь \(x = \sqrt[n]{a}\) (для
+                    будь-якого \(a\)).</li>
+            </ul>
         </section>
 
-        <section id="examples" class="lesson-section">
-            <h2>💡 Розібрані приклади</h2>
-            <p class="placeholder-note">📝 Додайте розібрані приклади у блоках <code>&lt;div class="example-box"&gt;</code>.</p>
+        <section id="examples" class="lesson-section page-break">
+            <h2 class="page-break">💡 Приклади</h2>
+
+            <div class="example-box">
+                <p><strong>Приклад 1 (Задача 1).</strong> Знайти значення виразів:</p>
+                <p>1) \(\sqrt[3]{27} = 3\), бо \(3 > 0\) і \(3^3 = 27\);</p>
+                <p>2) \(\sqrt[4]{16} = 2\), бо \(2 > 0\) і \(2^4 = 16\);</p>
+                <p>3) \(\sqrt[5]{\frac{1}{32}} = \frac{1}{2}\), бо \(\frac{1}{2} > 0\) і \(\left(\frac{1}{2}\right)^5 =
+                    \frac{1}{32}\);</p>
+                <p>4) \(\sqrt[7]{0} = 0\), бо \(0 \ge 0\) і \(0^7 = 0\).</p>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 2 (Задача 2).</strong> Знайти значення виразу: $$(\sqrt[5]{3^4 + 5^2 + 137}).$$</p>
+
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    Спочатку знайдемо значення підкореневого виразу, а потім добудемо
+                    корінь 5-го степеня:</p>
+                    <p>\(\sqrt[5]{3^4 + 5^2 + 137} = \sqrt[5]{81 + 25 + 137} = \sqrt[5]{243} = 3\).</p>
+                    <p><em>Відповідь:</em> 3.</p>
+                </details><br><br>
+
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 3 (Задача 3).</strong> При яких значеннях \(x\) має зміст вираз:</p>
+                <p>1) \(\sqrt[7]{x+2}\); </p>
+                <details>
+                    <summary>
+                        <strong>Розв'язання:</strong>
+                    </summary>
+                    <p style="padding-left: 15px;">Корінь 7-го (непарного) степеня існує для будь-якого значення
+                        підкореневого виразу.
+                    <p style="padding-left: 15px;">Тому вираз має зміст для будь-якого значення \(x\).</p>
+                    <p><em>Відповідь:</em> \(x \in \mathbb{R}\).</p>
+                </details><br><br>
+                <p>2) \(\sqrt[4]{2x-10}\)?</p>
+                <p></p>
+                <details>
+                    <summary>
+                        <strong>Розв'язання:</strong>
+                    </summary>
+                    <p>Корінь 4-го (парного) степеня має зміст лише тоді, коли підкореневий вираз невід'ємний.</p>
+                    <p style="padding-left: 15px;">Розв'яжемо нерівність:</p>
+                    <p style="padding-left: 15px;"> \(2x - 10 \ge 0\),</p>
+                    <p style="padding-left: 15px;">звідки \(x \ge 5\).</p>
+                    <p><em>Відповідь:</em> \(x \ge 5\).</p>
+                </details><br><br>
+
+
+
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 4 (Задача 5).</strong> Розв'язати рівняння:</p>
+                <p>1) \(x^4 = 81\);</p>
+                <details>
+                    <summary>
+                        <strong>Розв'язання:</strong>
+                    </summary>
+                    <p>\(x = \pm\sqrt[4]{81} = \pm 3\).</p>
+                </details><br><br>
+                <p>2) \(x^6 = -1\); </p>
+                <details>
+                    <summary>
+                        <strong>Розв'язання:</strong>
+                    </summary>
+                    <p>Оскільки \(n=6\) (парне), а \(a=-1 < 0\), то коренів немає.</p>
+
+                </details><br><br>
+                <p>3) \(x^5 = 19\);</p>
+                <details>
+                    <summary>
+                        <strong>Розв'язання:</strong>
+                    </summary>
+                    <p>Оскільки \(n=5\) (непарне), то рівняння має єдиний корінь \(x = \sqrt[5]{19}\)
+                        (ірраціональне число).</p>
+
+                </details><br><br>
+                <p>4) \((2x - 1)^8 = 1\).</p>
+                <details>
+                    <summary>
+                        <strong>Розв'язання:</strong>
+                    </summary>
+                    <p>Маємо:</p>
+                    <p style="padding-left: 15px;"> \(2x - 1 = \sqrt[8]{1}\) або \(2x - 1 = -\sqrt[8]{1}\).<br>
+                        \(2x - 1 = 1 \Rightarrow x = 1\);<br>
+                        \(2x - 1 = -1 \Rightarrow x = 0\).<br>
+                        Отже, рівняння має два корені: 0 і 1.</p>
+                </details><br><br>
+
+            </div>
         </section>
-        
 
-        
-
-        <section id="tasks" class="lesson-section">
-            <h2>✏️ </h2>
+        <section id="tasks" class="lesson-section page-break">
+            <h2>✏️ Завдання для самостійної роботи</h2>
             <ol class="tasks-list">
-                <li>Завдання 1</li>
-                <li>Завдання 2</li>
-                <li>Завдання 3</li>
+                <li>
+                    <p><strong>Чи має зміст вираз (впр. 3.1):</strong></p>
+                    <p>1) \(\sqrt[3]{19}\);</p>
+                    <p>2) \(\sqrt[4]{-1}\);</p>
+                    <p>3) \(\sqrt[6]{8}\);</p>
+                    <p>4) \(\sqrt[5]{-17}\)?</p>
+                </li>
+                <li class="page-break">
+                    <p><strong>Знайдіть значення виразу (впр. 3.6):</strong></p>
+                    <p>1) \(\sqrt{0,25}\);</p>
+                    <p>2) \(\sqrt[3]{64}\);</p>
+                    <p>3) \(\sqrt[4]{1}\);</p>
+                    <p>4) \(\sqrt[5]{-\frac{1}{32}}\).</p>
+                </li>
+                <li class="page-break">
+                    <p><strong>Обчисліть (впр. 3.17):</strong></p>
+                    <p>1) \((\sqrt{5})^2\);</p>
+                    <p>2) \((\sqrt[3]{7})^3\);</p>
+                    <p>3) \((-\sqrt[6]{2})^6\);</p>
+                    <p>4) \((\sqrt[4]{17})^4\).</p>
+                </li>
+                <li class="page-break">
+                    <p><strong>Розв'яжіть рівняння (впр. 3.19):</strong></p>
+                    <p>1) \(x^3 = 64\);</p>
+                    <p>2) \(x^6 = 1\);</p>
+                    <p>3) \(x^6 = -1\);</p>
+                    <p>4) \(x^5 = -17\).</p>
+                </li>
+                <li class="page-break">
+                    <p><strong>При яких значеннях \(x\) має зміст вираз (впр. 3.26):</strong></p>
+                    <p>1) \(\sqrt[6]{2x - x^2}\);</p>
+                    <p>2) \(\sqrt[5]{x^2 - 2x - 3}\).</p>
+                </li>
             </ol>
         </section>
 
-        <section id="homework" class="lesson-section">
-            <h2></h2>
+        <section id="homework" class="lesson-section page-break">
+            <h2>🏠 Домашнє завдання</h2>
             <div class="homework-box">
-                <p class="placeholder-note">📝 Заповніть вміст.</p>
+                <p>1. Опрацювати § 3 підручника (Істер О. С., с. 22–27).</p>
+                <p>2. Виконати письмово вправи:</p>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>№ 3.7 (1, 2, 4)</li>
+                    <li>№ 3.20 (1, 3, 5)</li>
+                    <li>№ 3.28 (1, 4)</li>
+                </ul>
+                <p>3. <em>Додатково (для охочих):</em> Розв'язати рівняння з вип. 3.34 (1) \(x^8 - 15x^4 - 16 = 0\)
+                    (використати метод заміни змінної).</p>
             </div>
         </section>
 
         <section id="literature" class="lesson-section">
             <h2>📚 Література</h2>
             <ul class="lit-list-lesson">
-                
-                <li>Мерзляк А. Г., Номіровський Д. А., Полонський В. Б., Якір М. С. Математика : алгебра і початки аналізу та геометрія : рівень стандарту : підручник для 10 класу ЗЗСО. Харків : Гімназія, 2018.</li>
-                
-
-                <li>Істер О. С. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10 кл. Київ : Генеза, 2018. 384 с.</li>
-                
-
-                <li>Бевз Г. П., Бевз В. Г. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10 кл. Київ : Освіта, 2018. 288 с.</li>
-                
+                <li>Істер О. С. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10
+                    кл. Київ : Генеза, 2018. 384 с.</li>
+                <li>Мерзляк А. Г., Номіровський Д. А., Полонський В. Б., Якір М. С. Математика : алгебра і початки
+                    аналізу та геометрія : рівень стандарту : підручник для 10 класу ЗЗСО. Харків : Гімназія, 2018.</li>
+                <li>Бевз Г. П., Бевз В. Г. Математика : алгебра і початки аналізу та геометрія, рівень стандарту :
+                    підруч. для 10 кл. Київ : Освіта, 2018. 288 с.</li>
             </ul>
         </section>
 
@@ -179,4 +378,5 @@
 
     <script src="../js/script.js"></script>
 </body>
+
 </html>

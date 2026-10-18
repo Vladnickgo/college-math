@@ -687,3 +687,24 @@ footer strong { color: white; }
     .tab { padding: 10px 15px; font-size: 0.85rem; }
     .literature { padding: 22px; }
 }
+
+/* @media print {
+    header, footer, .breadcrumbs-wrap, .lesson-nav, .lesson-pager, .burger {
+        display: none !important;
+    }
+    body { font-size: 11pt; color: #000; }
+    .lesson-header { border: none; background: none; padding: 0; margin-bottom: 20px; text-align: center; }
+    .lesson-header h1 { font-size: 20pt; }
+    .meta-grid, .lesson-plan-list, .tasks-list, .example-box, .definition {
+        page-break-inside: avoid; 
+    }
+    a { text-decoration: none; color: #000; }
+    /* Ensure MathJax renders properly */
+    /* mjx-container { page-break-inside: avoid; }
+} */
+
+  /* Примусові розриви сторінок */
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+}
