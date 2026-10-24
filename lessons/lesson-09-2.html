@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заняття 15-16.  Властивості арифметичного кореня n-го степеня | Математика 10 клас
+    <title>Заняття 15-16. Властивості арифметичного кореня n-го степеня | Математика 10 клас
     </title>
     <meta name="description"
-        content="Властивості арифметичного кореня n-го степеня">
+        content="Властивості арифметичного кореня n-го степеня — конспект заняття з математики для 10 класу">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/lesson.css">
     <link
@@ -53,7 +53,7 @@
                 <span>›</span>
                 <a href="lessons.html">Конспекти занять</a>
                 <span>›</span>
-                <span>Заняття 23-24</span>
+                <span>Заняття 15-16</span>
             </nav>
         </div>
     </div>
@@ -63,12 +63,11 @@
         <div class="lesson-header">
             <div class="lesson-meta-badges">
                 <span class="badge badge-num">Заняття 15-16</span>
-                <span class="badge badge-date"></span>
-                <span class="badge badge-lecture">Практичне заняття</span>
+                <span class="badge badge-practice">Практичне заняття</span>
                 <span class="badge badge-hours">2 год.</span>
             </div>
             <h1>Властивості арифметичного кореня n-го степеня</h1>
-            <p class="lesson-subtitle">Розділ І. Функції їх властивості ш графіки</p>
+            <p class="lesson-subtitle">Розділ І. Функції, їхні властивості та графіки</p>
         </div>
 
         <nav class="lesson-nav">
@@ -76,9 +75,8 @@
             <a href="#plan">План</a>
             <a href="#theory">Теорія</a>
             <a href="#examples">Приклади</a>
-
-            <a href="#tasks"></a>
-            <a href="#homework"></a>
+            <a href="#tasks">Завдання</a>
+            <a href="#homework">Домашнє</a>
             <a href="#literature">Література</a>
         </nav>
 
@@ -87,75 +85,267 @@
             <div class="meta-grid">
                 <div class="meta-card">
                     <h4>Навчальна</h4>
-                    <p class="placeholder-note">📝 Заповніть навчальну мету.</p>
+                    <p>Формувати знання про властивості арифметичного кореня n-го степеня (корінь з добутку, дробу,
+                        степеня, кореня). Виконувати тотожні перетворення ірраціональних виразів: винесення
+                        множника з-під знака кореня, внесення множника під знак кореня, звільнення від ірраціональності
+                        у знаменнику дробу.</p>
                 </div>
-                <div class="meta-card">
+                <!-- <div class="meta-card">
                     <h4>Розвивальна</h4>
-                    <p class="placeholder-note">📝 Заповніть розвивальну мету.</p>
+                    <p>Розвивати вміння аналізувати, порівнювати, робити висновки. Розширити математичний кругозір
+                        шляхом вивчення історії виникнення знака радикала.</p>
                 </div>
                 <div class="meta-card">
                     <h4>Виховна</h4>
-                    <p class="placeholder-note">📝 Заповніть виховну мету.</p>
-                </div>
+                    <p>Виховувати наполегливість під час розв'язування вправ, самостійність та математичну культуру
+                        запису.</p>
+                </div> -->
             </div>
         </section>
 
         <section id="plan" class="lesson-section">
             <h2>📋 План заняття</h2>
             <ol class="lesson-plan-list">
-                <li>Організаційний момент <span class="time">2 хв</span></li>
-                <li>Актуалізація опорних знань <span class="time">5 хв</span></li>
-                <li>Вивчення нового матеріалу <span class="time">40 хв</span></li>
-                <li>Розв'язування типових вправ <span class="time">25 хв</span></li>
-                <li>Підсумок заняття, рефлексія <span class="time">5 хв</span></li>
-                <li>Домашнє завдання <span class="time">3 хв</span></li>
+                <li>Корінь з добутку і дробу <span class="time">7 хв</span></li>
+                <li>Корінь із степеня <span class="time">5 хв</span></li>
+                <li>Корінь із кореня <span class="time">5 хв</span></li>
+                <li>Перетворення ірраціональних виразів <span class="time">10 хв</span></li>
+                <li>Розв'язування типових вправ <span class="time">13 хв</span></li>
+                <li>Підсумок заняття, рефлексія <span class="time">3 хв</span></li>
+                <li>Домашнє завдання <span class="time">2 хв</span></li>
             </ol>
         </section>
 
         <section id="theory" class="lesson-section page-break">
-           
+            <h2>📖 Теоретичний матеріал</h2>
+
+            <h3>1. Корінь з добутку і дробу</h3>
+
+            <p>З курсу алгебри 8 класу ми знаємо, що:</p>
+            <ul class="def-list">
+                <li>коли \(a \ge 0\) і \(b \ge 0\), то \(\sqrt{ab} = \sqrt{a} \cdot \sqrt{b}\);</li>
+                <li>коли \(a \ge 0\) і \(b > 0\), то \(\frac{\sqrt{a}}{\sqrt{b}} = \sqrt{\frac{a}{b}}\).</li>
+            </ul>
+
+            <p>Такі самі властивості має й арифметичний корінь n-го степеня для \(n > 2\).</p>
+
+            <div class="definition">
+                <p><strong>Теорема 1 (про корінь n-го степеня з добутку).</strong></p>
+                <p>Корінь n-го степеня з добутку двох невід'ємних чисел дорівнює добутку коренів n-го степеня із цих
+                    чисел,</p>
+                <p>тобто якщо \(a \ge 0\) і \(b \ge 0\), то</p>
+                    $$\sqrt[n]{ab} = \sqrt[n]{a} \cdot \sqrt[n]{b}.$$
+            </div>
+
+            <p>Теорему можна поширити і на випадок, коли множників під знаком кореня більше двох.</p>
+
+            <div class="definition">
+                <strong>Теорема 2 (про корінь n-го степеня з дробу).</strong> Корінь n-го степеня з дробу, чисельник
+                якого невід'ємний, а знаменник додатний, дорівнює частці коренів n-го степеня з чисельника і
+                знаменника, тобто якщо \(a \ge 0\) і \(b > 0\), то
+                $$\sqrt[n]{\frac{a}{b}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}}.$$
+            </div>
+
+            <p><strong>Наприклад:</strong> \(\sqrt[4]{\frac{1}{256}} = \frac{\sqrt[4]{1}}{\sqrt[4]{256}} =
+                \frac{1}{4}\);
+                \(\sqrt[3]{\frac{125}{8}} = \frac{\sqrt[3]{125}}{\sqrt[3]{8}} = \frac{5}{2} = 2\frac{1}{2}\).</p>
+
+            <h3 class="page-break">2. Корінь із степеня</h3>
+
+            <div class="definition">
+                <strong>Теорема 3 (про корінь n-го степеня із степеня).</strong> Для будь-якого дійсного \(a\) і
+                натурального \(n\), \(n \ge 2\):
+                <ul class="def-list">
+                    <li>якщо \(n\) — парне, то \(\sqrt[n]{a^n} = |a|\);</li>
+                    <li>якщо \(n\) — непарне, то \(\sqrt[n]{a^n} = a\).</li>
+                </ul>
+            </div>
+
+            <p><strong>Наприклад:</strong> \(\sqrt[8]{9^8} = |9| = 9\); \(\sqrt[6]{(-2)^6} = |-2| = 2\);
+                \(\sqrt[9]{7^9} = 7\); \(\sqrt[5]{2^{10}} = \sqrt[5]{(2^2)^5} = 4\).</p>
+
+            <h3 class="page-break">3. Корінь із кореня</h3>
+
+            <div class="definition">
+                <strong>Теорема 4.</strong> Якщо \(n\) і \(k\) — натуральні числа і \(a > 0\), то
+                $$\sqrt[n]{\sqrt[k]{a}} = \sqrt[nk]{a}.$$
+            </div>
+
+            <p><strong>Наприклад:</strong> \(\sqrt[4]{\sqrt{2}} = \sqrt[8]{2}\); \(\sqrt[3]{\sqrt{36}} = \sqrt[6]{36} =
+                \sqrt[3]{6}\).</p>
+
+            <div class="definition">
+                <strong>Теорема 6.</strong> Якщо \(n\) — натуральне число, \(k\) — ціле число і \(a > 0\), то
+                $$(\sqrt[n]{a})^k = \sqrt[n]{a^k}.$$
+            </div>
+
+            <h3 class="page-break">4. Перетворення ірраціональних виразів</h3>
+
+            <p>Властивості арифметичного кореня n-го степеня використовують для тотожних перетворень виразів:
+                винесення множника з-під знака кореня, внесення множника під знак кореня, спрощення ірраціональних
+                виразів.</p>
+
+            <p><strong>Винесення множника з-під знака кореня.</strong> Використовують формулу:</p>
+            <div class="definition" style="text-align: center; font-size: 1.2rem;">
+                \(\sqrt[n]{a^n \cdot b} = a\sqrt[n]{b}\) (для \(a \ge 0\)).
+            </div>
+
+            <p><strong>Внесення множника під знак кореня.</strong> Використовують формулу:</p>
+            <div class="definition" style="text-align: center; font-size: 1.2rem;">
+                \(a\sqrt[n]{b} = \sqrt[n]{a^n \cdot b}\) (для \(a \ge 0\)).
+            </div>
+
+            <p><strong>Звільнення від ірраціональності у знаменнику дробу.</strong> Використовують властивості
+                коренів та формули скороченого множення.</p>
         </section>
 
-        <section id="examples" class="lesson-section">
-            <h2>💡 Розібрані приклади</h2>
-            <p class="placeholder-note">📝 Додайте розібрані приклади у блоках
-                <code>&lt;div class="example-box"&gt;</code>.</p>
+        <section id="examples" class="lesson-section page-break">
+            <h2>💡 Приклади</h2>
+
+            <div class="example-box">
+                <p><strong>Приклад 1 (Задача 1).</strong> Винести множник з-під знака кореня:</p>
+                <p>1) \(\sqrt[3]{108}\);</p>
+                <p>2) \(\sqrt[5]{x^{11}}\).</p>
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>1) \(\sqrt[3]{108} = \sqrt[3]{27 \cdot 4} = \sqrt[3]{27} \cdot \sqrt[3]{4} = 3\sqrt[3]{4}\);</p>
+                    <p>2) \(\sqrt[5]{x^{11}} = \sqrt[5]{x^{10} \cdot x} = \sqrt[5]{(x^2)^5 \cdot x} = x^2\sqrt[5]{x}\).
+                    </p>
+                    <p><em>Відповідь:</em> 1) \(3\sqrt[3]{4}\); 2) \(x^2\sqrt[5]{x}\).</p>
+                </details>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 2 (Задача 2).</strong> Внести множник під знак кореня:</p>
+                <p>1) \(2\sqrt[3]{3}\);</p>
+                <p>2) \(-3\sqrt[5]{6}\);</p>
+                <p>3) \(m\sqrt[5]{2}\), якщо \(m \ge 0\);</p>
+                <p>4) \(a\sqrt[4]{b}\), якщо \(a < 0\).</p>
+                        <details>
+                            <summary><strong>Розв'язання:</strong></summary>
+                            <p>1) \(2\sqrt[3]{3} = \sqrt[3]{2^3 \cdot 3} = \sqrt[3]{24}\);</p>
+                            <p>2) \(-3\sqrt[5]{6} = -\sqrt[5]{3^5 \cdot 6} = -\sqrt[5]{1458}\);</p>
+                            <p>3) \(m\sqrt[5]{2} = \sqrt[5]{m^5 \cdot 2} = \sqrt[5]{2m^5}\);</p>
+                            <p>4) \(a\sqrt[4]{b} = -\sqrt[4]{a^4 \cdot b}\) (оскільки \(a < 0\)).</p>
+                                    <p><em>Відповідь:</em> 1) \(\sqrt[3]{24}\); 2) \(-\sqrt[5]{1458}\); 3)
+                                        \(\sqrt[5]{2m^5}\);
+                                        4) \(-\sqrt[4]{a^4b}\).</p>
+                        </details>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 3 (Задача 3).</strong> Спростити вираз: \(\sqrt[3]{5\sqrt{5}}\).</p>
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>Внесемо множник 5 під знак квадратного кореня та застосуємо теореми 4 і 6:</p>
+                    <p>\(\sqrt[3]{5\sqrt{5}} = \sqrt[3]{\sqrt{5^2 \cdot 5}} = \sqrt[3]{\sqrt{125}} = \sqrt[6]{125} =
+                        \sqrt[6]{5^3} = \sqrt{5}\).</p>
+                    <p><em>Відповідь:</em> \(\sqrt{5}\).</p>
+                </details>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 4 (Задача 4).</strong> Скоротити дріб: \(\frac{\sqrt[6]{a} +
+                    \sqrt[6]{b}}{\sqrt[3]{a} - \sqrt[3]{b}}\).</p>
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>Використаємо формулу різниці квадратів. Оскільки \(\sqrt[3]{a} = (\sqrt[6]{a})^2\) і
+                        \(\sqrt[3]{b} = (\sqrt[6]{b})^2\), маємо:</p>
+                    <p>\(\frac{\sqrt[6]{a} + \sqrt[6]{b}}{\sqrt[3]{a} - \sqrt[3]{b}} = \frac{\sqrt[6]{a} +
+                        \sqrt[6]{b}}{(\sqrt[6]{a})^2 - (\sqrt[6]{b})^2} = \frac{\sqrt[6]{a} + \sqrt[6]{b}}{(\sqrt[6]{a}
+                        - \sqrt[6]{b})(\sqrt[6]{a} + \sqrt[6]{b})} = \frac{1}{\sqrt[6]{a} - \sqrt[6]{b}}\).</p>
+                    <p><em>Відповідь:</em> \(\frac{1}{\sqrt[6]{a} - \sqrt[6]{b}}\).</p>
+                </details>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 5 (Задача 5).</strong> Звільнитися від ірраціональності у знаменнику дробу:</p>
+                <p>1) \(\frac{1}{\sqrt[4]{4}}\);</p>
+                <p>2) \(\frac{10}{\sqrt[4]{4} + 1}\).</p>
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>1) \(\frac{1}{\sqrt[4]{4}} = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}\);</p>
+                    <p>2) Помножимо чисельник і знаменник дробу \(\frac{10}{\sqrt[4]{4} + 1}\) на неповний квадрат
+                        різниці чисел \(\sqrt[4]{4}\) і \(1\), матимемо:</p>
+                    <p>\(\frac{10}{\sqrt[4]{4} + 1} = \frac{10(\sqrt[4]{4^3} - \sqrt[4]{4^2} + \sqrt[4]{4} -
+                        1)}{(\sqrt[4]{4} + 1)(\sqrt[4]{4^3} - \sqrt[4]{4^2} + \sqrt[4]{4} - 1)} = \frac{10(\sqrt[4]{64}
+                        - \sqrt[4]{16} + \sqrt[4]{4} - 1)}{4 - 1} = \frac{10(\sqrt[4]{64} - 2 + \sqrt[4]{4} - 1)}{3} =
+                        \frac{10(\sqrt[4]{64} + \sqrt[4]{4} - 3)}{3}\).</p>
+                    <p><em>Відповідь:</em> 1) \(\frac{\sqrt{2}}{2}\); 2) \(\frac{10(\sqrt[4]{64} + \sqrt[4]{4} -
+                        3)}{3}\).</p>
+                </details>
+            </div>
         </section>
 
-
-
-
-        <section id="tasks" class="lesson-section">
-            <h2>✏️ </h2>
+        <section id="tasks" class="lesson-section page-break">
+            <h2>✏️ Завдання для самостійної роботи</h2>
             <ol class="tasks-list">
-                <li>Завдання 1</li>
-                <li>Завдання 2</li>
-                <li>Завдання 3</li>
+                <li>
+                    <p><strong>Чи правильно виконано обчислення (впр. 4.2):</strong></p>
+                    <p>1) \(\sqrt{100 \cdot 4} = \sqrt{100} \cdot \sqrt{4} = 10 \cdot 4 = 40\);</p>
+                    <p>2) \(\sqrt{\frac{1}{16}} = \frac{\sqrt{1}}{\sqrt{16}} = \frac{1}{2}\).</p>
+                </li>
+                <li class="page-break">
+                    <p><strong>Знайдіть значення виразу (впр. 4.9):</strong></p>
+                    <p>1) \(\sqrt{36 \cdot 49}\);</p>
+                    <p>2) \(\sqrt[3]{27 \cdot 64}\);</p>
+                    <p>3) \(\sqrt[4]{16 \cdot 256}\);</p>
+                    <p>4) \(\sqrt[4]{0,0001 \cdot 81}\);</p>
+                    <p>5) \(\sqrt[5]{\frac{1}{243} \cdot 32}\);</p>
+                    <p>6) \(\sqrt[6]{64 \cdot \frac{1}{729}}\).</p>
+                </li>
+                <li class="page-break">
+                    <p><strong>Обчисліть (впр. 4.13):</strong></p>
+                    <p>1) \(\sqrt[8]{2^8}\);</p>
+                    <p>2) \(\sqrt[6]{(-3)^6}\);</p>
+                    <p>3) \(\sqrt[7]{2^{14}}\);</p>
+                    <p>4) \(\sqrt[5]{3^{15}}\).</p>
+                </li>
+                <li class="page-break">
+                    <p><strong>Винесіть множник з-під знака кореня (впр. 4.15):</strong></p>
+                    <p>1) \(\sqrt[3]{64m}\);</p>
+                    <p>2) \(\sqrt[3]{3000}\);</p>
+                    <p>3) \(\sqrt[4]{81p}\);</p>
+                    <p>4) \(\sqrt[4]{32}\);</p>
+                    <p>5) \(\sqrt[5]{486}\);</p>
+                    <p>6) \(\sqrt[5]{50c}\).</p>
+                </li>
+                <li class="page-break">
+                    <p><strong>Звільніться від ірраціональності у знаменнику дробу (впр. 4.19):</strong></p>
+                    <p>1) \(\frac{1}{\sqrt{7}}\);</p>
+                    <p>2) \(\frac{2}{\sqrt[3]{2}}\);</p>
+                    <p>3) \(\frac{9}{\sqrt[4]{27}}\);</p>
+                    <p>4) \(\frac{5}{\sqrt[3]{16}}\).</p>
+                </li>
             </ol>
         </section>
 
-        <section id="homework" class="lesson-section">
-            <h2></h2>
+        <section id="homework" class="lesson-section page-break">
+            <h2>🏠 Домашнє завдання</h2>
             <div class="homework-box">
-                <p class="placeholder-note">📝 Заповніть вміст.</p>
+                <p>1. Опрацювати § 4 підручника (Істер О. С., с. 36–40).</p>
+                <p>2. Виконати письмово вправи:</p>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>№ 4.2 (1, 2)</li>
+                    <li>№ 4.10 (1, 3)</li>
+                    <li>№ 4.16 (1, 2)</li>
+                    <li>№ 4.20 (1, 2)</li>
+                </ul>
+                <p>3. <em>Додатково (для охочих):</em> Виконати вправу 4.44 (1) — скоротити дріб
+                    \(\frac{\sqrt{a} + \sqrt{ab}}{\sqrt[4]{ab} + \sqrt{b}}\).</p>
             </div>
         </section>
 
         <section id="literature" class="lesson-section">
             <h2>📚 Література</h2>
             <ul class="lit-list-lesson">
-
-                <li>Мерзляк А. Г., Номіровський Д. А., Полонський В. Б., Якір М. С. Математика : алгебра і початки
-                    аналізу та геометрія : рівень стандарту : підручник для 10 класу ЗЗСО. Харків : Гімназія, 2018.</li>
-
-
                 <li>Істер О. С. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10
                     кл. Київ : Генеза, 2018. 384 с.</li>
-
-
+                <li>Мерзляк А. Г., Номіровський Д. А., Полонський В. Б., Якір М. С. Математика : алгебра і початки
+                    аналізу та геометрія : рівень стандарту : підручник для 10 класу ЗЗСО. Харків : Гімназія, 2018.
+                </li>
                 <li>Бевз Г. П., Бевз В. Г. Математика : алгебра і початки аналізу та геометрія, рівень стандарту :
                     підруч. для 10 кл. Київ : Освіта, 2018. 288 с.</li>
-
             </ul>
         </section>
 
