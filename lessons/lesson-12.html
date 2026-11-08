@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заняття 21. Розв'язування вправ | Математика 10 клас</title>
-    <meta name="description" content="Розв'язування вправ — конспект заняття з математики для 10 класу. Розділ І. Функції, їхні властивості і графіки">
+    <meta name="description"
+        content="Розв'язування вправ — конспект заняття з математики для 10 класу. Розділ І. Функції, їхні властивості і графіки">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/lesson.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tables.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsxgraph@1.5.0/distrib/jsxgraph.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsxgraph@1.5.0/distrib/jsxgraphcore.js" charset="UTF-8"></script>
     <script>
         MathJax = {
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
@@ -16,6 +23,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 </head>
+
 <body>
     <header>
         <div class="container header-inner">
@@ -70,9 +78,8 @@
             <a href="#plan">План</a>
             <a href="#theory">Теорія</a>
             <a href="#examples">Приклади</a>
-            
-            <a href="#tasks"></a>
-            <a href="#homework"></a>
+            <a href="#tasks">Завдання</a>
+            <a href="#homework">Домашнє</a>
             <a href="#literature">Література</a>
         </nav>
 
@@ -81,15 +88,18 @@
             <div class="meta-grid">
                 <div class="meta-card">
                     <h4>Навчальна</h4>
-                    <p class="placeholder-note">📝 Заповніть навчальну мету.</p>
+                    <p>Узагальнити та систематизувати знання про степеневу функцію, її властивості та графіки;
+                        відпрацювати навички розв'язування рівнянь вигляду \(x^\alpha = m\) та порівняння степеневих
+                        виразів.</p>
                 </div>
                 <div class="meta-card">
                     <h4>Розвивальна</h4>
-                    <p class="placeholder-note">📝 Заповніть розвивальну мету.</p>
+                    <p>Розвивати логічне мислення, вміння аналізувати, порівнювати та узагальнювати; розвивати графічну
+                        культуру та обчислювальні навички.</p>
                 </div>
                 <div class="meta-card">
                     <h4>Виховна</h4>
-                    <p class="placeholder-note">📝 Заповніть виховну мету.</p>
+                    <p>Виховувати самостійність, наполегливість, уважність та інтерес до математики.</p>
                 </div>
             </div>
         </section>
@@ -99,64 +109,229 @@
             <ol class="lesson-plan-list">
                 <li>Організаційний момент <span class="time">2 хв</span></li>
                 <li>Актуалізація опорних знань <span class="time">5 хв</span></li>
-                <li>Вивчення нового матеріалу <span class="time">40 хв</span></li>
-                <li>Розв'язування типових вправ <span class="time">25 хв</span></li>
+                <li>Розв'язування типових вправ <span class="time">30 хв</span></li>
                 <li>Підсумок заняття, рефлексія <span class="time">5 хв</span></li>
                 <li>Домашнє завдання <span class="time">3 хв</span></li>
             </ol>
         </section>
 
-        
         <section id="theory" class="lesson-section">
-            <h2>📖 Теоретичний матеріал</h2>
-            <p class="placeholder-note">📝 Додайте теоретичний матеріал (означення, властивості, формули).</p>
+            <h2>📖 Теоретичний матеріал (повторення)</h2>
+
+            <div class="definition">
+                <p><strong>Означення.</strong> Функцію вигляду \(y = x^\alpha\), де \(\alpha\) — деяке стале число,
+                    називають <strong>степеневою</strong>.</p>
+            </div>
+
+            <h3>Властивості степеневої функції \(y = x^\alpha\)</h3>
+
+            <div class="table-wrap">
+                <table class="lesson-table">
+                    <thead>
+                        <tr>
+                            <th>\(\alpha\)</th>
+                            <th>Область визначення</th>
+                            <th>Парність</th>
+                            <th>Монотонність</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>\(\alpha = 0\)</td>
+                            <td>\(x \neq 0\)</td>
+                            <td>парна</td>
+                            <td>стала \(y = 1\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\alpha > 0\), неціле</td>
+                            <td>\([0; +\infty)\)</td>
+                            <td>ні парна, ні непарна</td>
+                            <td>зростає на \([0; +\infty)\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\alpha < 0\), неціле</td>
+                            <td>\((0; +\infty)\)</td>
+                            <td>ні парна, ні непарна</td>
+                            <td>спадає на \((0; +\infty)\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Розв'язування рівняння \(x^\alpha = m\)</h3>
+            <ul>
+                <li>Якщо \(m < 0\), то рівняння <strong>коренів не має</strong> (степінь з дробовим показником завжди
+                        додатний).</li>
+                <li>Якщо \(m = 0\) і \(\alpha > 0\), то рівняння має єдиний розв'язок: \(x = 0\).</li>
+                <li>Якщо \(m = 0\) і \(\alpha < 0\), то рівняння <strong>розв'язків не має</strong>.</li>
+                <li>Якщо \(m > 0\), то рівняння має <strong>єдиний корінь</strong>: \(x = m^{\frac{1}{\alpha}}\).</li>
+            </ul>
+
+            <h3>Порівняння степеневих виразів</h3>
+            <p>Для порівняння виразів вигляду \(a^\alpha\) і \(b^\alpha\) використовують властивості степеневої функції:
+            </p>
+            <ul>
+                <li>Якщо \(\alpha > 0\), то більшій основі відповідає більше значення степеня (функція зростає).</li>
+                <li>Якщо \(\alpha < 0\), то більшій основі відповідає менше значення степеня (функція спадає).</li>
+            </ul>
+
+            <h3>Формули скороченого множення та заміна змінної</h3>
+            <p>Для рівнянь, що зводяться до квадратних, використовують заміну \(t = x^n\). Наприклад, рівняння \(x^4 -
+                5x^2 + 4 = 0\) зводиться до квадратного заміною \(t = x^2\).</p>
+
+            <div class="figure-block">
+                <div id="jsxbox1" class="jxgbox" style="width: 100%; max-width: 400px; height: 250px;"></div>
+                <p class="figure-caption"><strong>Мал. 21.1.</strong> Графіки функцій \(y = x^{\frac{1}{2}}\) та \(y =
+                    x^{-\frac{1}{2}}\)</p>
+            </div>
         </section>
 
         <section id="examples" class="lesson-section">
             <h2>💡 Розібрані приклади</h2>
-            <p class="placeholder-note">📝 Додайте розібрані приклади у блоках <code>&lt;div class="example-box"&gt;</code>.</p>
+
+            <div class="example-box">
+                <p><strong>Приклад 1.</strong> Обчислити:</p>
+                <p>1) \(25^{\frac{1}{2}}\);</p>
+                <p>2) \(64^{\frac{1}{3}}\);</p>
+                <p>3) \(36^{1{,}5}\);</p>
+                <p>4) \(32^{-\frac{4}{5}}\).</p>
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>1) \(25^{\frac{1}{2}} = \sqrt{25} = 5\);</p>
+                    <p>2) \(64^{\frac{1}{3}} = \sqrt[3]{64} = 4\);</p>
+                    <p>3) \(36^{1{,}5} = 36^{\frac{3}{2}} = \sqrt{36^3} = \sqrt{46656} = 216\);</p>
+                    <p>4) \(32^{-\frac{4}{5}} = \sqrt[5]{32^{-4}} = \sqrt[5]{\frac{1}{32^4}} =
+                        \frac{1}{\sqrt[5]{1048576}} = \frac{1}{16}\).</p>
+                </details>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 2.</strong> Розв'язати рівняння:</p>
+                <p>1) \(x^4 = 81\);</p>
+                <p>2) \(x^6 = -1\);</p>
+                <p>3) \(x^5 = 19\);</p>
+                <p>4) \((2x - 1)^8 = 1\).</p>
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>1) \(x^4 = 81\). Оскільки показник степеня парний, то \(x = \pm\sqrt[4]{81} = \pm 3\).</p>
+                    <p><em>Відповідь:</em> \(3; -3\).</p>
+                    <p>2) \(x^6 = -1\). Оскільки \(x^6 \ge 0\) для будь-якого \(x\), то рівняння коренів не має.</p>
+                    <p><em>Відповідь:</em> коренів немає.</p>
+                    <p>3) \(x^5 = 19\). Оскільки показник степеня непарний, то рівняння має єдиний корінь \(x =
+                        \sqrt[5]{19}\).</p>
+                    <p><em>Відповідь:</em> \(\sqrt[5]{19}\).</p>
+                    <p>4) \((2x - 1)^8 = 1\). Маємо: \(2x - 1 = \sqrt[8]{1}\) або \(2x - 1 = -\sqrt[8]{1}\); \(2x - 1 =
+                        1\) або \(2x - 1 = -1\); \(x = 1\) або \(x = 0\).</p>
+                    <p><em>Відповідь:</em> \(0; 1\).</p>
+                </details>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 3.</strong> Порівняти числа:</p>
+                <p>1) \(7^{1{,}2}\) і \(7{,}2^{1{,}2}\);</p>
+                <p>2) \(1{,}8^{-0{,}4}\) і \(2^{-0{,}4}\).</p>
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>1) Розглянемо степеневу функцію \(y = x^{1{,}2}\). Оскільки показник \(1{,}2 > 0\), то функція
+                        зростає на \((0; +\infty)\). Оскільки \(7 < 7{,}2\), то \(7^{1{,}2} < 7{,}2^{1{,}2}\).</p>
+                            <p>2) Розглянемо функцію \(y = x^{-0{,}4}\). Оскільки показник \(-0{,}4 < 0\), то функція
+                                    спадає на \((0; +\infty)\). Оскільки \(1{,}8 < 2\), то \(1{,}8^{-0{,}4}>
+                                    2^{-0{,}4}\).</p>
+                </details>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 4.</strong> Розв'язати рівняння:</p>
+                <p>1) \((x - 3)^2 = 5\);</p>
+                <p>2) \((x + 1)^{0{,}5} = 0\);</p>
+                <p>3) \((x - 2)^{-\frac{1}{3}} = 0\);</p>
+                <p>4) \((x^2 - 2)^{0{,}5} = \sqrt{7}\).</p>
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>1) \((x - 3)^2 = 5\). Оскільки показник парний, то \(x - 3 = \sqrt{5}\) або \(x - 3 =
+                        -\sqrt{5}\). Звідси \(x = 3 + \sqrt{5}\) або \(x = 3 - \sqrt{5}\).</p>
+                    <p><em>Відповідь:</em> \(3 \pm \sqrt{5}\).</p>
+                    <p>2) \((x + 1)^{0{,}5} = 0\). Маємо \(x + 1 = 0\), звідси \(x = -1\).</p>
+                    <p><em>Відповідь:</em> \(-1\).</p>
+                    <p>3) \((x - 2)^{-\frac{1}{3}} = 0\). Оскільки \(m = 0\) і \(\alpha = -\frac{1}{3} < 0\), то
+                            рівняння розв'язків не має.</p>
+                            <p><em>Відповідь:</em> \(\varnothing\).</p>
+                            <p>4) \((x^2 - 2)^{0{,}5} = \sqrt{7}\). Маємо \(x^2 - 2 = 7\), звідси \(x^2 = 9\), \(x = \pm
+                                3\).</p>
+                            <p><em>Відповідь:</em> \(3; -3\).</p>
+                </details>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 5.</strong> Розв'язати рівняння \(x^4 - 5x^2 + 4 = 0\).</p>
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>Зробимо заміну \(t = x^2\), \(t \ge 0\). Тоді рівняння набуває вигляду \(t^2 - 5t + 4 = 0\). За
+                        теоремою Вієта \(t_1 = 1\), \(t_2 = 4\).</p>
+                    <p>Повертаємося до заміни:</p>
+                    <p>1) \(x^2 = 1\), звідси \(x = \pm 1\);</p>
+                    <p>2) \(x^2 = 4\), звідси \(x = \pm 2\).</p>
+                    <p><em>Відповідь:</em> \(1; -1; 2; -2\).</p>
+                </details>
+            </div>
         </section>
-        
 
-        
-
-        <section id="tasks" class="lesson-section">
-            <h2>✏️ </h2>
+        <section id="tasks" class="lesson-section page-break">
+            <h2>✏️ Завдання для самостійної роботи</h2>
             <ol class="tasks-list">
-                <li>Завдання 1</li>
-                <li>Завдання 2</li>
-                <li>Завдання 3</li>
+                <li>
+                    <p>(Вправа 6.6) Розв'яжіть рівняння:</p>
+                    <p>1) \(x^{\frac{1}{3}} = 2\);</p>
+                    <p>2) \(x^{0{,}25} = 0\);</p>
+                    <p>3) \(x^6 = 1\);</p>
+                    <p>4) \(x^2 = 3\).</p>
+                </li>
+                <li>
+                    <p>(Вправа 6.12) Розв'яжіть рівняння:</p>
+                    <p>1) \((x - 3)^\frac{1}{2} = 5\);</p>
+                    <p>2) \((x + 1)^{0{,}5} = 0\);</p>
+                    <p>3) \((x - 2)^{-\frac{1}{3}} = 0\);</p>
+                    <p>4) \((x^2 - 2)^{0{,}5} = \sqrt{7}\);</p>
+                    <p>5) \((x^2 - 6x)^\frac{1}{3} = 3\);</p>
+                    <p>6) \((x^2 + x)^{-1} = \frac{1}{2}\).</p>
+                </li>
+                <li>
+                    <p>(Вправа 6.14) Порівняйте числа:</p>
+                    <p>1) \(7^{1{,}2}\) і \(7{,}2^{1{,}2}\);</p>
+                    <p>2) \(1{,}8^{-0{,}4}\) і \(2^{-0{,}4}\).</p>
+                </li>
+                <li>
+                    <p>(Вправа 6.20) Розв'яжіть рівняння \(x^\frac{1}{2} + x^\frac{1}{4} - 6 = 0\).</p>
+                </li>
             </ol>
         </section>
 
-        <section id="homework" class="lesson-section">
-            <h2></h2>
+        <section id="homework" class="lesson-section page-break">
+            <h2>🏠 Домашнє завдання</h2>
             <div class="homework-box">
-                <p class="placeholder-note">📝 Заповніть вміст.</p>
+                <p>1. Опрацювати § 6 підручника (с. 57–61).</p>
+                <p>2. Виконати вправи: 6.7, 6.13, 6.15, 6.21 (с. 64–65).</p>
             </div>
         </section>
 
         <section id="literature" class="lesson-section">
             <h2>📚 Література</h2>
             <ul class="lit-list-lesson">
-                
-                <li>Мерзляк А. Г., Номіровський Д. А., Полонський В. Б., Якір М. С. Математика : алгебра і початки аналізу та геометрія : рівень стандарту : підручник для 10 класу ЗЗСО. Харків : Гімназія, 2018.</li>
-                
-
-                <li>Істер О. С. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10 кл. Київ : Генеза, 2018. 384 с.</li>
-                
-
-                <li>Бевз Г. П., Бевз В. Г. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10 кл. Київ : Освіта, 2018. 288 с.</li>
-                
+                <li>Мерзляк А. Г., Номіровський Д. А., Полонський В. Б., Якір М. С. Математика : алгебра і початки
+                    аналізу та геометрія : рівень стандарту : підручник для 10 класу ЗЗСО. Харків : Гімназія, 2018.</li>
+                <li>Істер О. С. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10
+                    кл. Київ : Генеза, 2018. 384 с.</li>
+                <li>Бевз Г. П., Бевз В. Г. Математика : алгебра і початки аналізу та геометрія, рівень стандарту :
+                    підруч. для 10 кл. Київ : Освіта, 2018. 288 с.</li>
             </ul>
         </section>
 
         <nav class="lesson-pager">
-            <a href="lesson-19.html" class="pager-btn pager-prev">
+            <a href="lesson-11.html" class="pager-btn pager-prev">
                 <span>← Попереднє заняття</span>
                 <strong>Степеневі функції</strong>
             </a>
-            <a href="lesson-22.html" class="pager-btn pager-next">
+            <a href="lesson-13.html" class="pager-btn pager-next">
                 <span>Наступне заняття →</span>
                 <strong>Тематичний залік</strong>
             </a>
@@ -171,12 +346,27 @@
                 <p>м. Путивль, Сумська область</p>
             </div>
             <div>
-                <p>© 2025 Сайт викладача математики</p>
-                <p><a href="mailto:math.rudnev@example.com">math.rudnev@example.com</a></p>
+                <p>© 2026 Сайт викладача математики</p>
+                <p><a href="https://www.putped.edu.ua/">putped.edu.ua</a></p>
             </div>
         </div>
     </footer>
 
     <script src="../js/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Графік y = sqrt(x) та y = 1/sqrt(x)
+            const board1 = JXG.JSXGraph.initBoard('jsxbox1', {
+                boundingbox: [-1, 6, 9, -1],
+                axis: true,
+                showCopyright: false,
+                grid: true
+            });
+            board1.create('functiongraph', [function (x) { return Math.sqrt(x); }], { strokeColor: '#2563eb', strokeWidth: 2, name: 'y = x^(1/2)' });
+            board1.create('functiongraph', [function (x) { return 1 / Math.sqrt(x); }], { strokeColor: '#dc2626', strokeWidth: 2, name: 'y = x^(-1/2)' });
+        });
+    </script>
 </body>
+
 </html>

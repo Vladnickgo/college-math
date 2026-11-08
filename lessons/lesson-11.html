@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заняття 19-20. Степеневі функції, їхні властивості і графіки | Математика 10 клас</title>
-    <meta name="description" content="Степеневі функції, їхні властивості і графіки — конспект заняття з математики для 10 класу. Розділ І. Функції, їхні властивості і графіки">
+    <meta name="description"
+        content="Степеневі функції, їхні властивості і графіки — конспект заняття з математики для 10 класу. Розділ І. Функції, їхні властивості і графіки">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/lesson.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tables.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Підключення JSXGraph для графіків -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsxgraph@1.5.0/distrib/jsxgraph.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsxgraph@1.5.0/distrib/jsxgraphcore.js" charset="UTF-8"></script>
+
     <script>
         MathJax = {
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
@@ -16,6 +27,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 </head>
+
 <body>
     <header>
         <div class="container header-inner">
@@ -70,9 +82,8 @@
             <a href="#plan">План</a>
             <a href="#theory">Теорія</a>
             <a href="#examples">Приклади</a>
-            
-            <a href="#tasks"></a>
-            <a href="#homework"></a>
+            <a href="#tasks">Завдання</a>
+            <a href="#homework">Домашнє</a>
             <a href="#literature">Література</a>
         </nav>
 
@@ -81,73 +92,651 @@
             <div class="meta-grid">
                 <div class="meta-card">
                     <h4>Навчальна</h4>
-                    <p class="placeholder-note">📝 Заповніть навчальну мету.</p>
+                    <p>Сформувати поняття степеневої функції, її властивостей та графіків для різних показників
+                        \(\alpha\); навчити розв'язувати рівняння вигляду \(x^\alpha = m\).</p>
                 </div>
                 <div class="meta-card">
                     <h4>Розвивальна</h4>
-                    <p class="placeholder-note">📝 Заповніть розвивальну мету.</p>
+                    <p>Розвивати вміння аналізувати, порівнювати та узагальнювати властивості функцій; розвивати
+                        графічну культуру та просторову уяву.</p>
                 </div>
                 <div class="meta-card">
                     <h4>Виховна</h4>
-                    <p class="placeholder-note">📝 Заповніть виховну мету.</p>
+                    <p>Виховувати уважність, самостійність, наполегливість у досягненні мети та інтерес до вивчення
+                        математики.</p>
                 </div>
             </div>
         </section>
 
-        <section id="plan" class="lesson-section">
+        <section id="plan" class="lesson-section page-break">
             <h2>📋 План заняття</h2>
             <ol class="lesson-plan-list">
-                <li>Організаційний момент <span class="time">2 хв</span></li>
-                <li>Актуалізація опорних знань <span class="time">5 хв</span></li>
-                <li>Вивчення нового матеріалу <span class="time">40 хв</span></li>
-                <li>Розв'язування типових вправ <span class="time">25 хв</span></li>
-                <li>Підсумок заняття, рефлексія <span class="time">5 хв</span></li>
-                <li>Домашнє завдання <span class="time">3 хв</span></li>
+                <li>Поняття степеневої функції \(y = x^\alpha\).</li>
+                <li>Функція \(y = x^\alpha\), якщо \(\alpha = 0\).</li>
+                <li>Функція \(y = x^\alpha\), де \(\alpha\) — ціле від'ємне число.</li>
+                <li>Функція \(y = x^\alpha\), де \(\alpha\) — не ціле додатне число.</li>
+                <li>Функція \(y = x^\alpha\), де \(\alpha\) — не ціле від'ємне число.</li>
+                <li>Узагальнення властивостей степеневих функцій (таблиця).</li>
+                <li>Рівняння \(x^\alpha = m\), де \(\alpha\) — не ціле, \(\alpha \in \mathbb{R}\).</li>
             </ol>
         </section>
 
-        
-        <section id="theory" class="lesson-section">
-            <h2>📖 Теоретичний матеріал</h2>
-            <p class="placeholder-note">📝 Додайте теоретичний матеріал (означення, властивості, формули).</p>
+        <section id="theory" class="lesson-section page-break">
+            <h2 class="page-break">📖 Теоретичний матеріал</h2>
+
+            <div class="definition">
+                <p><strong>Означення.</strong> Функцію вигляду \(y = x^\alpha\), де \(\alpha\) — деяке стале число,
+                    називають <strong>степеневою</strong>.</p>
+            </div>
+
+            <h3>1. Функція \(y = x^\alpha\), якщо \(\alpha = 0\)</h3>
+            <p>Нехай \(\alpha = 0\).</p>
+            <p>Тоді маємо функцію \(y = x^0\), яка визначена для всіх значень \(x\), крім 0, бо
+                вираз \(0^0\) не має змісту.</p>
+            <div class="figure-block">
+                <div id="jsxbox1" class="jxgbox" style="width: 300px; height: 200px;"></div>
+                <p class="figure-caption"><strong>Мал. 6.1.</strong> Графік функції \(y = x^0\)</p>
+            </div>
+            <p>Оскільки \(x^0 = 1\) при \(x \neq 0\), то функція набуває лише одного
+                значення: \(y = 1\).</p>
+            <p>Графіком є пряма \(y = 1\) з «виколотою» точкою \((0; 1)\) (мал. 6.1).</p>
+
+            <h3 class="page-break">2. Функція \(y = x^\alpha\), де \(\alpha\) — ціле від'ємне число</h3>
+            <p>Тепер розглянемо випадок, коли показник степеня \(\alpha\) — ціле від'ємне число (наприклад, \(-1, -2,
+                -3\) тощо).</p>
+            <p>У цьому випадку функція також визначена для всіх значень \(x\), крім 0.</p>
+
+            <h4><strong>Випадок 1: \(\alpha = -1\)</strong></h4>
+            <p>Маємо функцію \(y = x^{-1}\), яку можна записати як \(y = \frac{1}{x}\).</p>
+            <div class="figure-block">
+                <div id="jsxbox2" class="jxgbox" style="width: 300px; height: 200px;"></div>
+                <p class="figure-caption"><strong>Мал. 6.2.</strong> Графік функції \(y = x^{-1}\)</p>
+            </div>
+            <p>Графіком є гіпербола. Ось її властивості:</p>
+
+            <div class="example-box">
+                <ol>
+                    <li>Функція <strong>спадає</strong> на кожному з проміжків
+                        \((-\infty; 0)\) і \((0; +\infty)\).</li>
+                    <li>Вона є <strong>непарною</strong>, тому її графік симетричний
+                        відносно початку координат.</li>
+                </ol>
+            </div>
+            <p>Ті самі властивості має функція \(y = x^\alpha\) для будь-якого цілого від'ємного
+                <strong>непарного</strong> \(\alpha\) (тобто \(-1, -3, -5\) ...).
+            </p>
+
+            <h4 class="page-break"><strong>Випадок 2: \(\alpha = -2\)</strong></h4>
+            <p>Маємо функцію \(y = x^{-2}\), яку можна записати як \(y = \dfrac{1}{x^2}\).</p>
+            <div class="figure-block">
+                <div id="jsxbox3" class="jxgbox" style="width: 300px; height: 200px;"></div>
+                <p class="figure-caption"><strong>Мал. 6.4.</strong> Графік функції \(y = x^{-2}\)</p>
+            </div>
+            <p>Ця функція поводиться інакше:</p>
+            <div class="example-box">
+                <ol>
+                    <li>Вона є <strong>парною</strong>, тому її графік симетричний відносно осі ординат.</li>
+                    <li>Функція <strong>зростає</strong> на проміжку \((-\infty; 0)\) і <strong>спадає</strong> на
+                        проміжку
+                        \((0; +\infty)\).</li>
+                </ol>
+            </div>
+
+            <p>Ті самі властивості має функція \(y = x^\alpha\) для будь-якого від'ємного <strong>парного</strong> числа
+                \(\alpha\) (тобто \(-2, -4, -6\) ...).</p>
+
+            <h3 class="page-break">3. Функція \(y = x^\alpha\), де \(\alpha\) — неціле додатне число</h3>
+            <h4>1. Показник степеня — це додатний дріб</h4>
+            <p class="example-box">Наприклад, \(y=x^\frac{1}{2}, y=x^\frac{3}{4}, y=x^{1,5}\)</p>
+            <p>У цьому випадку областю визначення функції є проміжок \([0; +\infty)\).</p>
+            <p>Оскільки область визначення не є симетричною відносно нуля (ми не можемо взяти від'ємне \(x\)), то
+                функція — <strong>ні парна, ні непарна</strong>.</p>
+
+            <div class="figure-block">
+                <div id="jsxbox4" class="jxgbox" style="width: 300px; height: 200px;"></div>
+                <p class="figure-caption"><strong>Мал. 6.7.</strong> Графік функції \(y = x^\alpha\), \(0 < \alpha < 1\)
+                        (наприклад, \(y=\sqrt{x}\))</p>
+            </div>
+
+            <p>На малюнку 6.7 показано випадок, коли \(0 < \alpha < 1\). А на малюнку 6.8 — коли \(\alpha> 1\).</p>
+            <p>У кожному із цих випадків функція <strong>зростає</strong> на проміжку \([0; +\infty)\).</p>
+
+            <div class="figure-block">
+                <div id="jsxbox5" class="jxgbox" style="width: 300px; height: 200px;"></div>
+                <p class="figure-caption"><strong>Мал. 6.8.</strong> Графік функції \(y = x^\alpha\), \(\alpha > 1\),
+                    \(\alpha\) — неціле (наприклад, \(y = x^{\frac{3}{2}}\))</p>
+            </div>
+
+            <h3 class="page-break">4. Функція \(y = x^\alpha\), де \(\alpha\) — неціле від'ємне число</h3>
+            <h4>Випадок: \(\alpha\) — це від'ємний дріб</h4>
+            <div class="example-box">
+                <p>Наприклад, \(y=x^{-\frac{1}{2}}\) або</p>
+                <p style="padding-left: 80pt;">\(y=x^{-\frac{2}{3}}\).</p>
+
+            </div>
+
+            <div class="figure-block">
+                <div id="jsxbox6" class="jxgbox" style="width: 300px; height: 200px;"></div>
+                <p class="figure-caption"><strong>Мал. 6.9.</strong> Графік функції \(y = x^{-\frac{2}{3}}\)</p>
+            </div>
+            <div class="example-box">
+                <p>1. Областю визначення є проміжок \((0; +\infty)\).</p>
+                <p>2. Функція <strong>ні парна, ні непарна</strong>.</p>
+                <p>3. Головна властивість: на всьому проміжку \((0; +\infty)\) функція <strong>спадає</strong>.</p>
+
+            </div>
+
+            <h3 class="page-break">6. Рівняння \(x^\alpha = m\), де \(\alpha\) — неціле, \(\alpha \in \mathbb{R}\)</h3>
+            <p>Розв'язування таких рівнянь залежить від того, чому дорівнює число \(m\):</p>
+            <ul>
+                <li>Якщо <strong>\(m < 0\)</strong>, то рівняння <strong>коренів не має</strong> (адже степінь з
+                            дробовим показником завжди додатний).</li>
+                <li>Якщо <strong>\(m = 0\)</strong> і \(\alpha > 0\), то рівняння має єдиний розв'язок: <strong>\(x =
+                        0\)</strong>.</li>
+                <li>Якщо <strong>\(m = 0\)</strong> і \(\alpha < 0\), то рівняння <strong>розв'язків не має</strong>.
+                </li>
+                <li>Якщо <strong>\(m > 0\)</strong>, то рівняння має <strong>єдиний корінь</strong>. Щоб його знайти,
+                    треба обидві частини рівняння піднести до степеня \(\frac{1}{\alpha}\).</li>
+            </ul>
+            <p>Отже, формула для розв'язку: <strong>\(x = m^{\frac{1}{\alpha}}\)</strong>.</p>
+
+            <div class="lesson-content">
+                <div class="lesson-block">
+                    <div class="item-card">
+                        <h1>Розв'язування таких рівнянь залежить від того, чому дорівнює число \(m\):</h1>
+                        <div class="subcard-wrapper">
+                            <div class="subcard">
+                                <h2><strong>Якщо <strong>\(m < 0\)</strong></strong></h2>
+                                <p>Рівняння <strong>коренів не має</strong> (степінь з дробовим показником завжди
+                                    додатний).</p>
+                                <p><strong>Наприклад:</strong> </p>
+                                <p>$$x^\frac{1}{2}=-5$$</p>
+                            </div>
+                            <div class="subcard">
+                                <h2>Якщо <strong>\(m = 0\)</strong> і \(\alpha > 0\)</h2>
+                                <p>Рівняння має <strong>єдиний</strong> розв'язок:</p>
+                                $$x = 0$$
+                                <p><strong>Наприклад:</strong></p>
+                                <p>$$x^\frac{1}{2}=0$$</p>
+                            </div>
+                            <div class="subcard">
+                                <h2>Якщо <strong>\(m = 0\)</strong> і \(\alpha &lt; 0\)</h2>
+                                <p>Рівняння має <strong>розв'язків не має</strong>:</p>
+                                $$x \in \emptyset$$
+                                <p><strong>Наприклад:</strong></p>
+                                <p>$$x^\frac{1}{2}=0$$</p>
+                            </div>
+                            <div class="subcard">
+                                <h2>Якщо <strong>\(m > 0\)</strong> </h2>
+                                <p>Рівняння має <strong>єдиний</strong> розв'язок:</p>
+                                $$x = m^\frac{1}{\alpha}$$
+                                <p><strong>Наприклад:</strong></p>
+                                <p>$$x^\frac{3}{2}=2$$</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            </div>
         </section>
 
         <section id="examples" class="lesson-section">
             <h2>💡 Розібрані приклади</h2>
-            <p class="placeholder-note">📝 Додайте розібрані приклади у блоках <code>&lt;div class="example-box"&gt;</code>.</p>
+
+            <div class="example-box">
+                <p><strong>Приклад 1.</strong> Розв'яжемо рівняння:</p>
+                <p>1) \(x^{\frac{1}{3}} = 2\);</p>
+                <p>2) \(x^{\frac{4}{3}} = 5\);</p>
+                <p>3) \(x^{-\frac{2}{3}} = 4\).</p>
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>1) Піднесемо обидві частини рівняння до степеня 3:</p>
+                    <p>\(\left(x^{\frac{1}{3}}\right)^3 = 2^3 \Rightarrow x = 8\).</p>
+                    <p><em>Відповідь:</em> 8.</p>
+
+                    <p>2) Піднесемо обидві частини до степеня \(\frac{3}{4}\):</p>
+                    <p>\(\left(x^{\frac{4}{3}}\right)^{\frac{3}{4}} = 5^{\frac{3}{4}} \Rightarrow x = \sqrt[4]{125}\).
+                    </p>
+                    <p><em>Відповідь:</em> \(\sqrt[4]{125}\).</p>
+
+                    <p>3) Піднесемо обидві частини до степеня \(-\frac{3}{2}\):</p>
+                    <p>\(\left(x^{-\frac{2}{3}}\right)^{-\frac{3}{2}} = 4^{-\frac{3}{2}} \Rightarrow x =
+                        \left(2^2\right)^{-\frac{3}{2}} = 2^{-3} = \frac{1}{8}\).</p>
+                    <p><em>Відповідь:</em> \(\frac{1}{8}\).</p>
+                </details>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 2.</strong> Побудувати графік функції \(y = x^{\frac{3}{2}}\) та записати її
+                    властивості.</p>
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>1) Область визначення: \(x \in [0; +\infty)\).</p>
+                    <p>2) Область значень: \(y \in [0; +\infty)\).</p>
+                    <p>3) Функція ні парна, ні непарна.</p>
+                    <p>4) Функція зростає на проміжку \([0; +\infty)\).</p>
+                    <p>5) Графік проходить через точки \((0; 0)\), \((1; 1)\), \((4; 8)\).</p>
+                    <p>(Див. мал. 6.8)</p>
+                </details>
+            </div>
         </section>
-        
 
-        
-
-        <section id="tasks" class="lesson-section">
-            <h2>✏️ </h2>
+        <section id="tasks" class="lesson-section page-break">
+            <h2>✏️ Завдання для самостійної роботи</h2>
             <ol class="tasks-list">
-                <li>Завдання 1</li>
-                <li>Завдання 2</li>
-                <li>Завдання 3</li>
+                <li>
+                    <p>(Вправа 6.4)</p>
+                    <p><strong>Схематично побудуйте графік функції та запишіть її властивості:</strong></p>
+                    <p> 1) \(y = x^{-5}\); </p>
+                    <div class="figure-block">
+                        <div id="jsxbox7" class="jxgbox" style="width: 400px; height: 400px;"></div>
+                        <p class="figure-caption"><strong></strong> Графік функції</p>
+                    </div>
+                    <p class="page-break">2) \(y = x^{\frac{3}{4}}\).</p>
+                    <div class="figure-block">
+                        <div id="jsxbox8" class="jxgbox" style="width: 400px; height: 400px;"></div>
+                        <p class="figure-caption"><strong></strong> Графік функції</p>
+                    </div>
+                </li>
+                <li class="page-break">
+                    <p>(Вправа 6.6) Розв'яжіть рівняння:</p>
+                    <p>1) \(x^{\frac{1}{3}} = 2\);</p>
+                    <figure>
+                        <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                            <!--horizontal grid-->
+                            <line x1="5" y1="0" x2="315" y2="0" stroke="lightgray" />
+                            <line x1="5" y1="25" x2="315" y2="25" stroke="lightgray" />
+                            <line x1="5" y1="50" x2="315" y2="50" stroke="lightgray" />
+                            <line x1="5" y1="75" x2="315" y2="75" stroke="lightgray" />
+                            <line x1="5" y1="100" x2="315" y2="100" stroke="lightgray" />
+                            <line x1="5" y1="125" x2="315" y2="125" stroke="lightgray" />
+                            <line x1="5" y1="150" x2="315" y2="150" stroke="lightgray" />
+                            <line x1="5" y1="175" x2="315" y2="175" stroke="lightgray" />
+                            <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                            <line x1="5" y1="225" x2="315" y2="225" stroke="lightgray" />
+                            <line x1="5" y1="250" x2="315" y2="250" stroke="lightgray" />
+                            <line x1="5" y1="275" x2="315" y2="275" stroke="lightgray" />
+                            <line x1="5" y1="300" x2="315" y2="300" stroke="lightgray" />
+                            <!--vertical grid-->
+                            <line x1="0" y1="0" x2="0" y2="300" stroke="lightgray" />
+                            <line x1="25" y1="0" x2="25" y2="300" stroke="lightgray" />
+                            <line x1="50" y1="0" x2="50" y2="300" stroke="lightgray" />
+                            <line x1="75" y1="0" x2="75" y2="300" stroke="lightgray" />
+                            <line x1="100" y1="0" x2="100" y2="300" stroke="lightgray" />
+                            <line x1="125" y1="0" x2="125" y2="300" stroke="lightgray" />
+                            <line x1="150" y1="0" x2="150" y2="300" stroke="lightgray" />
+                            <line x1="175" y1="0" x2="175" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="300" y1="0" x2="300" y2="300" stroke="lightgray" />
+                        </svg>
+                    </figure>
+
+                    <p>2) \(x^{0,25} = 0\);</p>
+                    <figure>
+                        <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                            <!--horizontal grid-->
+                            <line x1="5" y1="0" x2="315" y2="0" stroke="lightgray" />
+                            <line x1="5" y1="25" x2="315" y2="25" stroke="lightgray" />
+                            <line x1="5" y1="50" x2="315" y2="50" stroke="lightgray" />
+                            <line x1="5" y1="75" x2="315" y2="75" stroke="lightgray" />
+                            <line x1="5" y1="100" x2="315" y2="100" stroke="lightgray" />
+                            <line x1="5" y1="125" x2="315" y2="125" stroke="lightgray" />
+                            <line x1="5" y1="150" x2="315" y2="150" stroke="lightgray" />
+                            <line x1="5" y1="175" x2="315" y2="175" stroke="lightgray" />
+                            <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                            <line x1="5" y1="225" x2="315" y2="225" stroke="lightgray" />
+                            <line x1="5" y1="250" x2="315" y2="250" stroke="lightgray" />
+                            <line x1="5" y1="275" x2="315" y2="275" stroke="lightgray" />
+                            <line x1="5" y1="300" x2="315" y2="300" stroke="lightgray" />
+                            <!--vertical grid-->
+                            <line x1="0" y1="0" x2="0" y2="300" stroke="lightgray" />
+                            <line x1="25" y1="0" x2="25" y2="300" stroke="lightgray" />
+                            <line x1="50" y1="0" x2="50" y2="300" stroke="lightgray" />
+                            <line x1="75" y1="0" x2="75" y2="300" stroke="lightgray" />
+                            <line x1="100" y1="0" x2="100" y2="300" stroke="lightgray" />
+                            <line x1="125" y1="0" x2="125" y2="300" stroke="lightgray" />
+                            <line x1="150" y1="0" x2="150" y2="300" stroke="lightgray" />
+                            <line x1="175" y1="0" x2="175" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="300" y1="0" x2="300" y2="300" stroke="lightgray" />
+                        </svg>
+                    </figure>
+                    <p>3) \(x^6 = 1\);</p>
+                    <figure>
+                        <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                            <!--horizontal grid-->
+                            <line x1="5" y1="0" x2="315" y2="0" stroke="lightgray" />
+                            <line x1="5" y1="25" x2="315" y2="25" stroke="lightgray" />
+                            <line x1="5" y1="50" x2="315" y2="50" stroke="lightgray" />
+                            <line x1="5" y1="75" x2="315" y2="75" stroke="lightgray" />
+                            <line x1="5" y1="100" x2="315" y2="100" stroke="lightgray" />
+                            <line x1="5" y1="125" x2="315" y2="125" stroke="lightgray" />
+                            <line x1="5" y1="150" x2="315" y2="150" stroke="lightgray" />
+                            <line x1="5" y1="175" x2="315" y2="175" stroke="lightgray" />
+                            <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                            <line x1="5" y1="225" x2="315" y2="225" stroke="lightgray" />
+                            <line x1="5" y1="250" x2="315" y2="250" stroke="lightgray" />
+                            <line x1="5" y1="275" x2="315" y2="275" stroke="lightgray" />
+                            <line x1="5" y1="300" x2="315" y2="300" stroke="lightgray" />
+                            <!--vertical grid-->
+                            <line x1="0" y1="0" x2="0" y2="300" stroke="lightgray" />
+                            <line x1="25" y1="0" x2="25" y2="300" stroke="lightgray" />
+                            <line x1="50" y1="0" x2="50" y2="300" stroke="lightgray" />
+                            <line x1="75" y1="0" x2="75" y2="300" stroke="lightgray" />
+                            <line x1="100" y1="0" x2="100" y2="300" stroke="lightgray" />
+                            <line x1="125" y1="0" x2="125" y2="300" stroke="lightgray" />
+                            <line x1="150" y1="0" x2="150" y2="300" stroke="lightgray" />
+                            <line x1="175" y1="0" x2="175" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="300" y1="0" x2="300" y2="300" stroke="lightgray" />
+                        </svg>
+                    </figure>
+                    <p>4) \(x^2 = 3\).</p>
+                    <figure>
+                        <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                            <!--horizontal grid-->
+                            <line x1="5" y1="0" x2="315" y2="0" stroke="lightgray" />
+                            <line x1="5" y1="25" x2="315" y2="25" stroke="lightgray" />
+                            <line x1="5" y1="50" x2="315" y2="50" stroke="lightgray" />
+                            <line x1="5" y1="75" x2="315" y2="75" stroke="lightgray" />
+                            <line x1="5" y1="100" x2="315" y2="100" stroke="lightgray" />
+                            <line x1="5" y1="125" x2="315" y2="125" stroke="lightgray" />
+                            <line x1="5" y1="150" x2="315" y2="150" stroke="lightgray" />
+                            <line x1="5" y1="175" x2="315" y2="175" stroke="lightgray" />
+                            <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                            <line x1="5" y1="225" x2="315" y2="225" stroke="lightgray" />
+                            <line x1="5" y1="250" x2="315" y2="250" stroke="lightgray" />
+                            <line x1="5" y1="275" x2="315" y2="275" stroke="lightgray" />
+                            <line x1="5" y1="300" x2="315" y2="300" stroke="lightgray" />
+                            <!--vertical grid-->
+                            <line x1="0" y1="0" x2="0" y2="300" stroke="lightgray" />
+                            <line x1="25" y1="0" x2="25" y2="300" stroke="lightgray" />
+                            <line x1="50" y1="0" x2="50" y2="300" stroke="lightgray" />
+                            <line x1="75" y1="0" x2="75" y2="300" stroke="lightgray" />
+                            <line x1="100" y1="0" x2="100" y2="300" stroke="lightgray" />
+                            <line x1="125" y1="0" x2="125" y2="300" stroke="lightgray" />
+                            <line x1="150" y1="0" x2="150" y2="300" stroke="lightgray" />
+                            <line x1="175" y1="0" x2="175" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="300" y1="0" x2="300" y2="300" stroke="lightgray" />
+                        </svg>
+                    </figure>
+                </li>
+                <li class="page-break">Розв'яжіть рівняння: 1) \((x - 3)^2 = 5\);
+                    <figure>
+                        <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                            <!--horizontal grid-->
+                            <line x1="5" y1="0" x2="315" y2="0" stroke="lightgray" />
+                            <line x1="5" y1="25" x2="315" y2="25" stroke="lightgray" />
+                            <line x1="5" y1="50" x2="315" y2="50" stroke="lightgray" />
+                            <line x1="5" y1="75" x2="315" y2="75" stroke="lightgray" />
+                            <line x1="5" y1="100" x2="315" y2="100" stroke="lightgray" />
+                            <line x1="5" y1="125" x2="315" y2="125" stroke="lightgray" />
+                            <line x1="5" y1="150" x2="315" y2="150" stroke="lightgray" />
+                            <line x1="5" y1="175" x2="315" y2="175" stroke="lightgray" />
+                            <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                            <line x1="5" y1="225" x2="315" y2="225" stroke="lightgray" />
+                            <line x1="5" y1="250" x2="315" y2="250" stroke="lightgray" />
+                            <line x1="5" y1="275" x2="315" y2="275" stroke="lightgray" />
+                            <line x1="5" y1="300" x2="315" y2="300" stroke="lightgray" />
+                            <!--vertical grid-->
+                            <line x1="0" y1="0" x2="0" y2="300" stroke="lightgray" />
+                            <line x1="25" y1="0" x2="25" y2="300" stroke="lightgray" />
+                            <line x1="50" y1="0" x2="50" y2="300" stroke="lightgray" />
+                            <line x1="75" y1="0" x2="75" y2="300" stroke="lightgray" />
+                            <line x1="100" y1="0" x2="100" y2="300" stroke="lightgray" />
+                            <line x1="125" y1="0" x2="125" y2="300" stroke="lightgray" />
+                            <line x1="150" y1="0" x2="150" y2="300" stroke="lightgray" />
+                            <line x1="175" y1="0" x2="175" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="300" y1="0" x2="300" y2="300" stroke="lightgray" />
+                        </svg>
+                    </figure>
+                    2) \((x + 1)^{0,5} = 0\);
+                    <figure>
+                        <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                            <!--horizontal grid-->
+                            <line x1="5" y1="0" x2="315" y2="0" stroke="lightgray" />
+                            <line x1="5" y1="25" x2="315" y2="25" stroke="lightgray" />
+                            <line x1="5" y1="50" x2="315" y2="50" stroke="lightgray" />
+                            <line x1="5" y1="75" x2="315" y2="75" stroke="lightgray" />
+                            <line x1="5" y1="100" x2="315" y2="100" stroke="lightgray" />
+                            <line x1="5" y1="125" x2="315" y2="125" stroke="lightgray" />
+                            <line x1="5" y1="150" x2="315" y2="150" stroke="lightgray" />
+                            <line x1="5" y1="175" x2="315" y2="175" stroke="lightgray" />
+                            <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                            <line x1="5" y1="225" x2="315" y2="225" stroke="lightgray" />
+                            <line x1="5" y1="250" x2="315" y2="250" stroke="lightgray" />
+                            <line x1="5" y1="275" x2="315" y2="275" stroke="lightgray" />
+                            <line x1="5" y1="300" x2="315" y2="300" stroke="lightgray" />
+                            <!--vertical grid-->
+                            <line x1="0" y1="0" x2="0" y2="300" stroke="lightgray" />
+                            <line x1="25" y1="0" x2="25" y2="300" stroke="lightgray" />
+                            <line x1="50" y1="0" x2="50" y2="300" stroke="lightgray" />
+                            <line x1="75" y1="0" x2="75" y2="300" stroke="lightgray" />
+                            <line x1="100" y1="0" x2="100" y2="300" stroke="lightgray" />
+                            <line x1="125" y1="0" x2="125" y2="300" stroke="lightgray" />
+                            <line x1="150" y1="0" x2="150" y2="300" stroke="lightgray" />
+                            <line x1="175" y1="0" x2="175" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="300" y1="0" x2="300" y2="300" stroke="lightgray" />
+                        </svg>
+                    </figure>
+                    3) \((x - 2)^{-\frac{1}{3}} =
+                    0\);
+                    <figure>
+                        <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                            <!--horizontal grid-->
+                            <line x1="5" y1="0" x2="315" y2="0" stroke="lightgray" />
+                            <line x1="5" y1="25" x2="315" y2="25" stroke="lightgray" />
+                            <line x1="5" y1="50" x2="315" y2="50" stroke="lightgray" />
+                            <line x1="5" y1="75" x2="315" y2="75" stroke="lightgray" />
+                            <line x1="5" y1="100" x2="315" y2="100" stroke="lightgray" />
+                            <line x1="5" y1="125" x2="315" y2="125" stroke="lightgray" />
+                            <line x1="5" y1="150" x2="315" y2="150" stroke="lightgray" />
+                            <line x1="5" y1="175" x2="315" y2="175" stroke="lightgray" />
+                            <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                            <line x1="5" y1="225" x2="315" y2="225" stroke="lightgray" />
+                            <line x1="5" y1="250" x2="315" y2="250" stroke="lightgray" />
+                            <line x1="5" y1="275" x2="315" y2="275" stroke="lightgray" />
+                            <line x1="5" y1="300" x2="315" y2="300" stroke="lightgray" />
+                            <!--vertical grid-->
+                            <line x1="0" y1="0" x2="0" y2="300" stroke="lightgray" />
+                            <line x1="25" y1="0" x2="25" y2="300" stroke="lightgray" />
+                            <line x1="50" y1="0" x2="50" y2="300" stroke="lightgray" />
+                            <line x1="75" y1="0" x2="75" y2="300" stroke="lightgray" />
+                            <line x1="100" y1="0" x2="100" y2="300" stroke="lightgray" />
+                            <line x1="125" y1="0" x2="125" y2="300" stroke="lightgray" />
+                            <line x1="150" y1="0" x2="150" y2="300" stroke="lightgray" />
+                            <line x1="175" y1="0" x2="175" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="300" y1="0" x2="300" y2="300" stroke="lightgray" />
+                        </svg>
+                    </figure>
+                    4) \((x^2 - 2)^{0,5} = \sqrt{7}\). <figure>
+                        <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                            <!--horizontal grid-->
+                            <line x1="5" y1="0" x2="315" y2="0" stroke="lightgray" />
+                            <line x1="5" y1="25" x2="315" y2="25" stroke="lightgray" />
+                            <line x1="5" y1="50" x2="315" y2="50" stroke="lightgray" />
+                            <line x1="5" y1="75" x2="315" y2="75" stroke="lightgray" />
+                            <line x1="5" y1="100" x2="315" y2="100" stroke="lightgray" />
+                            <line x1="5" y1="125" x2="315" y2="125" stroke="lightgray" />
+                            <line x1="5" y1="150" x2="315" y2="150" stroke="lightgray" />
+                            <line x1="5" y1="175" x2="315" y2="175" stroke="lightgray" />
+                            <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                            <line x1="5" y1="225" x2="315" y2="225" stroke="lightgray" />
+                            <line x1="5" y1="250" x2="315" y2="250" stroke="lightgray" />
+                            <line x1="5" y1="275" x2="315" y2="275" stroke="lightgray" />
+                            <line x1="5" y1="300" x2="315" y2="300" stroke="lightgray" />
+                            <!--vertical grid-->
+                            <line x1="0" y1="0" x2="0" y2="300" stroke="lightgray" />
+                            <line x1="25" y1="0" x2="25" y2="300" stroke="lightgray" />
+                            <line x1="50" y1="0" x2="50" y2="300" stroke="lightgray" />
+                            <line x1="75" y1="0" x2="75" y2="300" stroke="lightgray" />
+                            <line x1="100" y1="0" x2="100" y2="300" stroke="lightgray" />
+                            <line x1="125" y1="0" x2="125" y2="300" stroke="lightgray" />
+                            <line x1="150" y1="0" x2="150" y2="300" stroke="lightgray" />
+                            <line x1="175" y1="0" x2="175" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="300" y1="0" x2="300" y2="300" stroke="lightgray" />
+                        </svg>
+                    </figure> (Вправа 6.12)
+                </li>
+                <li class="page-break">Порівняйте числа: 1) \(7^{1,2}\) і \(7,2^{1,2}\);
+                    <figure>
+                        <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                            <!--horizontal grid-->
+                            <line x1="5" y1="0" x2="315" y2="0" stroke="lightgray" />
+                            <line x1="5" y1="25" x2="315" y2="25" stroke="lightgray" />
+                            <line x1="5" y1="50" x2="315" y2="50" stroke="lightgray" />
+                            <line x1="5" y1="75" x2="315" y2="75" stroke="lightgray" />
+                            <line x1="5" y1="100" x2="315" y2="100" stroke="lightgray" />
+                            <line x1="5" y1="125" x2="315" y2="125" stroke="lightgray" />
+                            <line x1="5" y1="150" x2="315" y2="150" stroke="lightgray" />
+                            <line x1="5" y1="175" x2="315" y2="175" stroke="lightgray" />
+                            <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                            <line x1="5" y1="225" x2="315" y2="225" stroke="lightgray" />
+                            <line x1="5" y1="250" x2="315" y2="250" stroke="lightgray" />
+                            <line x1="5" y1="275" x2="315" y2="275" stroke="lightgray" />
+                            <line x1="5" y1="300" x2="315" y2="300" stroke="lightgray" />
+                            <!--vertical grid-->
+                            <line x1="0" y1="0" x2="0" y2="300" stroke="lightgray" />
+                            <line x1="25" y1="0" x2="25" y2="300" stroke="lightgray" />
+                            <line x1="50" y1="0" x2="50" y2="300" stroke="lightgray" />
+                            <line x1="75" y1="0" x2="75" y2="300" stroke="lightgray" />
+                            <line x1="100" y1="0" x2="100" y2="300" stroke="lightgray" />
+                            <line x1="125" y1="0" x2="125" y2="300" stroke="lightgray" />
+                            <line x1="150" y1="0" x2="150" y2="300" stroke="lightgray" />
+                            <line x1="175" y1="0" x2="175" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="300" y1="0" x2="300" y2="300" stroke="lightgray" />
+                        </svg>
+                    </figure>
+                    2) \(1,8^{-0,4}\) і \(2^{-0,4}\).
+                    <figure>
+                        <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                            <!--horizontal grid-->
+                            <line x1="5" y1="0" x2="315" y2="0" stroke="lightgray" />
+                            <line x1="5" y1="25" x2="315" y2="25" stroke="lightgray" />
+                            <line x1="5" y1="50" x2="315" y2="50" stroke="lightgray" />
+                            <line x1="5" y1="75" x2="315" y2="75" stroke="lightgray" />
+                            <line x1="5" y1="100" x2="315" y2="100" stroke="lightgray" />
+                            <line x1="5" y1="125" x2="315" y2="125" stroke="lightgray" />
+                            <line x1="5" y1="150" x2="315" y2="150" stroke="lightgray" />
+                            <line x1="5" y1="175" x2="315" y2="175" stroke="lightgray" />
+                            <line x1="5" y1="200" x2="315" y2="200" stroke="lightgray" />
+                            <line x1="5" y1="225" x2="315" y2="225" stroke="lightgray" />
+                            <line x1="5" y1="250" x2="315" y2="250" stroke="lightgray" />
+                            <line x1="5" y1="275" x2="315" y2="275" stroke="lightgray" />
+                            <line x1="5" y1="300" x2="315" y2="300" stroke="lightgray" />
+                            <!--vertical grid-->
+                            <line x1="0" y1="0" x2="0" y2="300" stroke="lightgray" />
+                            <line x1="25" y1="0" x2="25" y2="300" stroke="lightgray" />
+                            <line x1="50" y1="0" x2="50" y2="300" stroke="lightgray" />
+                            <line x1="75" y1="0" x2="75" y2="300" stroke="lightgray" />
+                            <line x1="100" y1="0" x2="100" y2="300" stroke="lightgray" />
+                            <line x1="125" y1="0" x2="125" y2="300" stroke="lightgray" />
+                            <line x1="150" y1="0" x2="150" y2="300" stroke="lightgray" />
+                            <line x1="175" y1="0" x2="175" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="200" y1="0" x2="200" y2="300" stroke="lightgray" />
+                            <line x1="225" y1="0" x2="225" y2="300" stroke="lightgray" />
+                            <line x1="250" y1="0" x2="250" y2="300" stroke="lightgray" />
+                            <line x1="275" y1="0" x2="275" y2="300" stroke="lightgray" />
+                            <line x1="300" y1="0" x2="300" y2="300" stroke="lightgray" />
+                        </svg>
+                    </figure>
+                    (Вправа 6.14)
+                </li>
             </ol>
         </section>
 
-        <section id="homework" class="lesson-section">
-            <h2></h2>
+        <section id="homework" class="lesson-section page-break">
+            <h2>🏠 Домашнє завдання</h2>
             <div class="homework-box">
-                <p class="placeholder-note">📝 Заповніть вміст.</p>
+                <p>1. Опрацювати § 6 підручника (с. 57–61).</p>
+                <p>2. Виконати вправи: 6.5, 6.7, 6.10, 6.13, 6.15 (с. 64–65).</p>
             </div>
         </section>
 
         <section id="literature" class="lesson-section">
             <h2>📚 Література</h2>
             <ul class="lit-list-lesson">
-                
-                <li>Мерзляк А. Г., Номіровський Д. А., Полонський В. Б., Якір М. С. Математика : алгебра і початки аналізу та геометрія : рівень стандарту : підручник для 10 класу ЗЗСО. Харків : Гімназія, 2018.</li>
-                
-
-                <li>Істер О. С. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10 кл. Київ : Генеза, 2018. 384 с.</li>
-                
-
-                <li>Бевз Г. П., Бевз В. Г. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10 кл. Київ : Освіта, 2018. 288 с.</li>
-                
+                <li>Мерзляк А. Г., Номіровський Д. А., Полонський В. Б., Якір М. С. Математика : алгебра і початки
+                    аналізу та геометрія : рівень стандарту : підручник для 10 класу ЗЗСО. Харків : Гімназія, 2018.</li>
+                <li>Істер О. С. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10
+                    кл. Київ : Генеза, 2018. 384 с.</li>
+                <li>Бевз Г. П., Бевз В. Г. Математика : алгебра і початки аналізу та геометрія, рівень стандарту :
+                    підруч. для 10 кл. Київ : Освіта, 2018. 288 с.</li>
             </ul>
         </section>
 
@@ -171,12 +760,51 @@
                 <p>м. Путивль, Сумська область</p>
             </div>
             <div>
-                <p>© 2025 Сайт викладача математики</p>
+                <p>© 2026 Сайт викладача математики</p>
                 <p><a href="https://www.putped.edu.ua/">putped.edu.ua</a></p>
             </div>
         </div>
     </footer>
 
     <script src="../js/script.js"></script>
+
+    <!-- Скрипт для ініціалізації графіків JSXGraph -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Графік y = x^0 (мал. 6.1)
+            const board1 = JXG.JSXGraph.initBoard('jsxbox1', { boundingbox: [-5, 5, 5, -5], axis: true, showCopyright: false });
+            board1.create('functiongraph', [function (x) { return 1; }], { strokeColor: '#2563eb', strokeWidth: 2 });
+            board1.create('point', [0, 1], { name: '', size: 3, fillColor: 'white', strokeColor: '#2563eb', strokeWidth: 2 }); // виколота точка
+
+            // Графік y = x^{-1} (мал. 6.2)
+            const board2 = JXG.JSXGraph.initBoard('jsxbox2', { boundingbox: [-8, 6, 8, -6], axis: true, showCopyright: false });
+            board2.create('functiongraph', [function (x) { return 1 / x; }], { strokeColor: '#2563eb', strokeWidth: 2 });
+
+            // Графік y = x^{-2} (мал. 6.4)
+            const board3 = JXG.JSXGraph.initBoard('jsxbox3', { boundingbox: [-8, 6, 8, -6], axis: true, showCopyright: false });
+            board3.create('functiongraph', [function (x) { return 1 / (x * x); }], { strokeColor: '#2563eb', strokeWidth: 2 });
+
+            // Графік y = sqrt(x) (мал. 6.7)
+            const board4 = JXG.JSXGraph.initBoard('jsxbox4', { boundingbox: [-2, 6, 6, -2], axis: true, showCopyright: false });
+            board4.create('functiongraph', [function (x) { return Math.sqrt(x); }], { strokeColor: '#2563eb', strokeWidth: 2 });
+
+            // Графік y = x^(3/2) (мал. 6.8)
+            const board5 = JXG.JSXGraph.initBoard('jsxbox5', { boundingbox: [-1, 4, 6, -1], axis: true, showCopyright: false });
+            board5.create('functiongraph', [function (x) { return Math.pow(x, 1.5); }], { strokeColor: '#2563eb', strokeWidth: 2 });
+
+            // Графік y = x^{-1/2} (мал. 6.10)
+            const board6 = JXG.JSXGraph.initBoard('jsxbox6', { boundingbox: [-1, 6, 9, -1], axis: true, showCopyright: false });
+            board6.create('functiongraph', [function (x) { return 1 / Math.sqrt(x); }], { strokeColor: '#2563eb', strokeWidth: 2 });
+
+            // Графік y = x^{-5} (мал. 6.11)
+            const board7 = JXG.JSXGraph.initBoard('jsxbox7', { boundingbox: [-6, 6, 6, -6], axis: true, showCopyright: false });
+            board7.create('functiongraph', [function (x) { return 1 / Math.pow(x, 5); }], { strokeColor: '#2563eb', strokeWidth: 2 });
+
+            // Графік y = x^{-5} (мал. 6.11)
+            const board8 = JXG.JSXGraph.initBoard('jsxbox8', { boundingbox: [-6, 6, 6, -6], axis: true, showCopyright: false });
+            board8.create('functiongraph', [function (x) { return 1 / Math.pow(x, 0.75); }], { strokeColor: '#2563eb', strokeWidth: 2 });
+        });
+    </script>
 </body>
+
 </html>
