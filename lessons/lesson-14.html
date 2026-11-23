@@ -70,9 +70,8 @@
             <a href="#plan">План</a>
             <a href="#theory">Теорія</a>
             <a href="#examples">Приклади</a>
-            
-            <a href="#tasks"></a>
-            <a href="#homework"></a>
+            <a href="#tasks">Завдання</a>
+            <a href="#homework">Домашнє</a>
             <a href="#literature">Література</a>
         </nav>
 
@@ -81,15 +80,15 @@
             <div class="meta-grid">
                 <div class="meta-card">
                     <h4>Навчальна</h4>
-                    <p class="placeholder-note">📝 Заповніть навчальну мету.</p>
+                    <p>Сформувати уявлення про стереометрію як розділ геометрії, основні поняття стереометрії (точку, пряму, площину), плоскі та просторові фігури; ознайомити з аксіомами стереометрії (група аксіом \(C\)) та найпростішими наслідками з них; навчити зображати площини та застосовувати аксіоми й наслідки до розв'язування базових стереометричних задач.</p>
                 </div>
                 <div class="meta-card">
                     <h4>Розвивальна</h4>
-                    <p class="placeholder-note">📝 Заповніть розвивальну мету.</p>
+                    <p>Розвивати просторову уяву, логічне та абстрактне мислення, уміння аналізувати взаємне розміщення точок, прямих і площин у просторі, будувати доведення та обґрунтовувати твердження.</p>
                 </div>
                 <div class="meta-card">
                     <h4>Виховна</h4>
-                    <p class="placeholder-note">📝 Заповніть виховну мету.</p>
+                    <p>Виховувати математичну культуру запису та виконання просторових рисунків, уважність, наполегливість і відповідальність за результати навчальної діяльності.</p>
                 </div>
             </div>
         </section>
@@ -97,57 +96,673 @@
         <section id="plan" class="lesson-section">
             <h2>📋 План заняття</h2>
             <ol class="lesson-plan-list">
-                <li>Організаційний момент <span class="time">2 хв</span></li>
-                <li>Актуалізація опорних знань <span class="time">5 хв</span></li>
-                <li>Вивчення нового матеріалу <span class="time">40 хв</span></li>
-                <li>Розв'язування типових вправ <span class="time">25 хв</span></li>
-                <li>Підсумок заняття, рефлексія <span class="time">5 хв</span></li>
-                <li>Домашнє завдання <span class="time">3 хв</span></li>
+                <li>Предмет стереометрії <span class="time"></span></li>
+                <li>Основні поняття стереометрії <span class="time"></span></li>
+                <li>Аксіоми стереометрії (група аксіом \(C\)) <span class="time"></span></li>
+                <li>Найпростіші наслідки з аксіом стереометрії <span class="time"></span></li>
+                <li>Найпростіші задачі з геометричними тілами <span class="time"></span></li>
             </ol>
         </section>
 
-        
-        <section id="theory" class="lesson-section">
+        <section id="theory" class="lesson-section page-break">
             <h2>📖 Теоретичний матеріал</h2>
-            <p class="placeholder-note">📝 Додайте теоретичний матеріал (означення, властивості, формули).</p>
+
+            <h3>1. Предмет стереометрії</h3>
+            <p>Шкільний курс геометрії складається з планіметрії і стереометрії. У курсі планіметрії 7–9 класів ми вивчали властивості <em>плоских геометричних фігур</em>, тобто фігур, усі точки яких лежать в одній площині (відрізок, коло, трикутник тощо).</p>
+
+            <div class="definition">
+                <p><strong>Означення.</strong></p>
+                <p><strong>Стереометрія</strong> — це розділ геометрії, який вивчає властивості геометричних фігур у просторі.</p>
+            </div>
+
+            <p>Термін «стереометрія» походить від грец. <em>«стереос»</em> — просторовий, <em>«метрео»</em> — міряти.</p>
+            <p>У стереометрії розглядають як властивості фігур, всі точки яких лежать в одній площині, — <em>плоских фігур</em>, так і властивості фігур, у яких не всі точки лежать в одній площині, — <em>просторових фігур</em>, які ще називають <em>геометричними тілами</em>.</p>
+            <p>У курсі математики основної школи ми вже ознайомилися з геометричними тілами — прямокутним паралелепіпедом, кубом, пірамідою, циліндром, конусом та кулею (мал. 1.1).</p>
+
+            <div class="figure-block">
+                <svg width="680" height="150" viewBox="0 0 680 150" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Куб -->
+                    <rect x="20" y="45" width="68" height="68" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="20" y1="45" x2="48" y2="23" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="88" y1="45" x2="116" y2="23" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="88" y1="113" x2="116" y2="91" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="48" y1="23" x2="116" y2="23" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="116" y1="23" x2="116" y2="91" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="48" y1="23" x2="48" y2="91" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                    <line x1="48" y1="91" x2="116" y2="91" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                    <line x1="20" y1="113" x2="48" y2="91" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                    <text x="68" y="138" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="14" fill="#1e293b">куб</text>
+
+                    <!-- Циліндр -->
+                    <ellipse cx="195" cy="30" rx="32" ry="11" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="163" y1="30" x2="163" y2="103" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="227" y1="30" x2="227" y2="103" stroke="#1e293b" stroke-width="1.6"/>
+                    <path d="M 163 103 A 32 11 0 0 0 227 103" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                    <path d="M 163 103 A 32 11 0 0 1 227 103" fill="none" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                    <text x="195" y="138" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="14" fill="#1e293b">циліндр</text>
+
+                    <!-- Піраміда -->
+                    <line x1="325" y1="22" x2="270" y2="113" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="325" y1="22" x2="335" y2="116" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="325" y1="22" x2="382" y2="100" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="270" y1="113" x2="335" y2="116" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="335" y1="116" x2="382" y2="100" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="325" y1="22" x2="312" y2="90" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                    <line x1="270" y1="113" x2="312" y2="90" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                    <line x1="312" y1="90" x2="382" y2="100" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                    <text x="325" y="138" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="14" fill="#1e293b">піраміда</text>
+
+                    <!-- Конус -->
+                    <line x1="465" y1="22" x2="425" y2="103" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="465" y1="22" x2="505" y2="103" stroke="#1e293b" stroke-width="1.6"/>
+                    <path d="M 425 103 A 40 12 0 0 0 505 103" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                    <path d="M 425 103 A 40 12 0 0 1 505 103" fill="none" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                    <text x="465" y="138" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="14" fill="#1e293b">конус</text>
+
+                    <!-- Куля -->
+                    <circle cx="600" cy="68" r="44" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                    <path d="M 556 68 A 44 13 0 0 0 644 68" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                    <path d="M 556 68 A 44 13 0 0 1 644 68" fill="none" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                    <text x="600" y="138" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="14" fill="#1e293b">куля</text>
+                </svg>
+                <p class="figure-caption"><strong>Мал. 1.1.</strong> Геометричні тіла</p>
+            </div>
+
+            <p>Предмети, що нас оточують, зазвичай повторюють форму просторових фігур або їх комбінацій. Тому геометрія, зокрема стереометрія, має і прикладне (практичне) значення. Геометричні задачі доводиться розв'язувати в архітектурі та будівництві, геодезії і машинобудуванні, інших галузях науки й техніки.</p>
+
+            <h3 class="page-break">2. Основні поняття стереометрії</h3>
+            <p>Основними (<em>неозначуваними, первісними</em>) поняттями в стереометрії є поняття <strong>точки</strong>, <strong>прямої</strong> і <strong>площини</strong>.</p>
+            <ul class="def-list">
+                <li><strong>Точка.</strong> Уявлення про точку дає, наприклад, слід на папері від дотику добре загостреного олівця, слід на дошці від дотику крейди тощо. Позначати точки будемо великими латинськими літерами \(A, B, C, D, \dots\).</li>
+                <li><strong>Пряма.</strong> Уявлення про пряму дає промінь світла, струна на гітарі, розмітка між двома смугами прямолінійної дороги тощо. Пряму уявляють нескінченною в обидва боки. Позначати прямі будемо малими латинськими літерами \(a, b, c, d, \dots\) або двома великими латинськими літерами за назвами двох точок цієї прямої: \(AB, CD, MN, \dots\).</li>
+                <li><strong>Площина.</strong> Уявлення про площину дає поверхня стола, футбольне поле, віконна шибка, стеля тощо. Площину в геометрії вважають рівною та необмеженою, вона не має краю та не має товщини. На малюнку площину прийнято зображати у вигляді паралелограма (мал. 1.2) або довільної замкненої області (мал. 1.3). При цьому отримують зображення лише частини площини. Позначати площини можна малими грецькими літерами \(\alpha\) (альфа), \(\beta\) (бета), \(\gamma\) (гама), \(\dots\).</li>
+            </ul>
+
+            <div class="figure-block">
+                <svg width="520" height="125" viewBox="0 0 520 125" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Мал. 1.2 -->
+                    <polygon points="30,82 185,82 235,28 80,28" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                    <text x="64" y="73" font-family="Times New Roman, serif" font-style="italic" font-size="18" fill="#1e293b">α</text>
+                    <text x="132" y="112" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="14" font-weight="600" fill="#1e293b">Мал. 1.2</text>
+
+                    <!-- Мал. 1.3 -->
+                    <path d="M 305 55 C 305 22, 465 20, 475 55 C 485 88, 305 90, 305 55 Z" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                    <text x="444" y="61" font-family="Times New Roman, serif" font-style="italic" font-size="18" fill="#1e293b">β</text>
+                    <text x="390" y="112" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="14" font-weight="600" fill="#1e293b">Мал. 1.3</text>
+                </svg>
+                <p class="figure-caption"><strong>Мал. 1.2–1.3.</strong> Зображення площини на малюнку</p>
+            </div>
+
+            <h3 class="page-break">3. Аксіоми стереометрії</h3>
+            <p>Основні властивості найпростіших геометричних фігур у стереометрії формулюють за допомогою <em>аксіом</em>. Аксіоми є початковими істинними твердженнями. Усі аксіоми планіметрії, які відомі нам з 7 класу, справджуються і в стереометрії (коли мова йде про «дві точки» або «дві прямі», вважаємо, що ці точки або прямі — різні):</p>
+
+            <div class="definition">
+                <p><strong>Аксіоми планіметрії:</strong></p>
+                <ul class="def-list">
+                    <li><strong>I.</strong> Яка не була б пряма, існують точки, які їй належать, і точки, які їй не належать.</li>
+                    <li><strong>II.</strong> Через будь-які дві точки можна провести пряму і до того ж тільки одну.</li>
+                    <li><strong>III.</strong> З трьох точок на прямій одна і тільки одна лежить між двома іншими.</li>
+                    <li><strong>IV.</strong> Кожний відрізок має певну довжину, більшу за нуль.</li>
+                    <li><strong>V.</strong> Довжина відрізка дорівнює сумі довжин частин, на які він розбивається будь-якою його внутрішньою точкою.</li>
+                    <li><strong>VI.</strong> Кожний кут має певну градусну міру, більшу за нуль. Розгорнутий кут дорівнює \(180^\circ\).</li>
+                    <li><strong>VII.</strong> Градусна міра кута дорівнює сумі градусних мір кутів, на які він розбивається будь-яким променем, що проходить між його сторонами.</li>
+                    <li><strong>VIII.</strong> На площині через точку, що не лежить на даній прямій, можна провести лише одну пряму, паралельну даній.</li>
+                </ul>
+            </div>
+
+            <p>Оскільки в планіметрії усі фігури, які ми розглядали, лежали в одній площині, а в стереометрії вони можуть лежати в різних площинах, остання аксіома, яку називають <em>аксіомою паралельності прямих</em>, потребує уточнення.</p>
+            <p>Нове поняття — <em>площина</em> — потребує ще й розширення системи аксіом, тобто доповнення стереометрії аксіомами, що відображають властивості точок, прямих і площин у просторі. Тому розглянемо нову групу аксіом — <strong>групу аксіом \(C\)</strong>.</p>
+
+            <div class="definition">
+                <p><strong>Аксіома \(C_{\text{I}}\).</strong></p>
+                <p>Яка б не була площина, існують точки, які їй належать, і які їй не належать.</p>
+            </div>
+
+            <p>На малюнку 1.4 точки \(M\) і \(N\) належать площині \(\alpha\) (площина \(\alpha\) проходить через ці точки), а точки \(C\), \(K\) і \(L\) — не належать цій площині. Для запису, як і у планіметрії, будемо використовувати символи \(\in\) і \(\notin\). Тому твердження «точка \(M\) належить площині \(\alpha\)» можна записати так: \(M \in \alpha\), а «точка \(C\) не належить площині \(\alpha\)» — так: \(C \notin \alpha\).</p>
+
+            <div class="definition">
+                <p><strong>Аксіома \(C_{\text{II}}\).</strong></p>
+                <p>Якщо дві точки прямої належать площині, то всі точки прямої належать цій площині.</p>
+            </div>
+
+            <div class="figure-block">
+                <svg width="680" height="175" viewBox="0 0 680 175" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Мал. 1.4 -->
+                    <path d="M 28 74 C 28 42, 162 42, 162 74 C 162 106, 28 106, 28 74 Z" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                    <text x="40" y="78" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α</text>
+                    <!-- Ліва пряма через C(95,22) і M(80,58) -->
+                    <line x1="104" y1="4" x2="80" y2="58" stroke="#1e293b" stroke-width="1.5"/>
+                    <line x1="80" y1="58" x2="62" y2="98" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="4,4"/>
+                    <line x1="62" y1="98" x2="44" y2="138" stroke="#1e293b" stroke-width="1.5"/>
+                    <!-- Права пряма через C(95,22) і N(110,58) -->
+                    <line x1="86" y1="4" x2="110" y2="58" stroke="#1e293b" stroke-width="1.5"/>
+                    <line x1="110" y1="58" x2="128" y2="98" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="4,4"/>
+                    <line x1="128" y1="98" x2="146" y2="138" stroke="#1e293b" stroke-width="1.5"/>
+                    <!-- Точки Мал. 1.4 -->
+                    <circle cx="95" cy="22" r="2.8" fill="#1e293b"/>
+                    <text x="103" y="25" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                    <circle cx="80" cy="58" r="2.8" fill="#1e293b"/>
+                    <text x="61" y="61" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">M</text>
+                    <circle cx="110" cy="58" r="2.8" fill="#1e293b"/>
+                    <text x="118" y="61" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">N</text>
+                    <circle cx="52" cy="120" r="2.8" fill="#1e293b"/>
+                    <text x="61" y="124" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">K</text>
+                    <circle cx="138" cy="120" r="2.8" fill="#1e293b"/>
+                    <text x="147" y="124" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">L</text>
+                    <text x="95" y="164" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="600" fill="#1e293b">Мал. 1.4</text>
+
+                    <!-- Мал. 1.5 -->
+                    <polygon points="182,110 315,110 355,54 222,54" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                    <text x="204" y="103" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α</text>
+                    <line x1="218" y1="96" x2="322" y2="66" stroke="#1e293b" stroke-width="1.6"/>
+                    <text x="228" y="83" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">m</text>
+                    <circle cx="252" cy="86" r="2.8" fill="#1e293b"/>
+                    <text x="246" y="76" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                    <circle cx="290" cy="75" r="2.8" fill="#1e293b"/>
+                    <text x="284" y="65" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">D</text>
+                    <text x="268" y="164" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="600" fill="#1e293b">Мал. 1.5</text>
+
+                    <!-- Мал. 1.6 -->
+                    <polygon points="368,110 492,110 528,54 404,54" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                    <text x="388" y="103" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α</text>
+                    <line x1="428" y1="22" x2="452" y2="80" stroke="#1e293b" stroke-width="1.6"/>
+                    <line x1="452" y1="80" x2="464" y2="110" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="4,4"/>
+                    <line x1="464" y1="110" x2="477" y2="140" stroke="#1e293b" stroke-width="1.6"/>
+                    <text x="438" y="32" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">n</text>
+                    <circle cx="452" cy="80" r="2.8" fill="#1e293b"/>
+                    <text x="460" y="82" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">K</text>
+                    <text x="448" y="164" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="600" fill="#1e293b">Мал. 1.6</text>
+
+                    <!-- Мал. 1.7 -->
+                    <polygon points="538,110 645,110 672,58 565,58" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                    <text x="556" y="103" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α</text>
+                    <line x1="565" y1="32" x2="668" y2="32" stroke="#1e293b" stroke-width="1.6"/>
+                    <text x="582" y="24" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">n</text>
+                    <text x="605" y="164" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="600" fill="#1e293b">Мал. 1.7</text>
+                </svg>
+                <p class="figure-caption"><strong>Мал. 1.4–1.7.</strong> Взаємне розміщення точок, прямих і площини</p>
+            </div>
+
+            <p>У цьому випадку кажуть, що <em>пряма належить площині</em>, або <em>площина проходить через пряму</em>. На малюнку 1.5 точки \(C\) і \(D\) прямої \(m\) належать площині \(\alpha\), тому і пряма \(m\), що проходить через ці точки, належить площині \(\alpha\). Для зручності замість «пряма \(m\) належить площині \(\alpha\)» будемо писати: \(m \subset \alpha\). Запис \(n \not\subset \alpha\) означатиме, що пряма \(n\) не належить площині \(\alpha\), тобто існує така точка прямої \(n\), яка не належить площині \(\alpha\) (мал. 1.6 та мал. 1.7). На малюнку 1.6 пряма \(n\) і площина \(\alpha\) мають одну спільну точку \(K\). У цьому випадку кажуть, що <em>пряма \(n\) перетинає площину \(\alpha\) в точці \(K\)</em>. Це записують так: \(n \cap \alpha = K\).</p>
+            <p>Аксіома \(C_{\text{II}}\) має різні практичні застосування. Одне з них — перевірка «рівності» лінійки: якщо край лінійки рівний, то при прикладанні до плоскої поверхні стола він усіма своїми точками прилягає до неї, а якщо нерівний — у деяких місцях утворюється просвіт.</p>
+
+            <p>Якщо через пряму \(m\) проходять дві різні площини \(\alpha\) і \(\beta\), то кажуть, що <em>площини \(\alpha\) і \(\beta\) перетинаються по прямій \(m\)</em> (мал. 1.8), і записують так: \(\alpha \cap \beta = m\).</p>
+
+            <div class="definition">
+                <p><strong>Аксіома \(C_{\text{III}}\).</strong></p>
+                <p>Якщо дві площини мають спільну точку, то вони перетинаються по прямій, що проходить через цю точку.</p>
+            </div>
+
+            <div class="definition">
+                <p><strong>Аксіома \(C_{\text{IV}}\).</strong></p>
+                <p>Через будь-які три точки, що не лежать на одній прямій, можна провести площину, і до того ж тільки одну.</p>
+            </div>
+
+            <div class="figure-block">
+                <svg width="540" height="205" viewBox="0 0 540 205" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Мал. 1.8 -->
+                    <!-- Площина alpha -->
+                    <line x1="25" y1="120" x2="185" y2="120" stroke="#1e293b" stroke-width="1.5"/>
+                    <line x1="25" y1="120" x2="85" y2="70" stroke="#1e293b" stroke-width="1.5"/>
+                    <line x1="185" y1="120" x2="245" y2="70" stroke="#1e293b" stroke-width="1.5"/>
+                    <line x1="85" y1="70" x2="127" y2="70" stroke="#1e293b" stroke-width="1.5"/>
+                    <line x1="127" y1="70" x2="192" y2="70" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="4,4"/>
+                    <line x1="192" y1="70" x2="245" y2="70" stroke="#1e293b" stroke-width="1.5"/>
+                    <text x="46" y="113" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α</text>
+
+                    <!-- Площина beta -->
+                    <line x1="145" y1="16" x2="200" y2="50" stroke="#1e293b" stroke-width="1.5"/>
+                    <!-- Ліве ребро beta -->
+                    <line x1="145" y1="16" x2="116" y2="105" stroke="#1e293b" stroke-width="1.5"/>
+                    <line x1="116" y1="105" x2="111" y2="120" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="4,4"/>
+                    <line x1="111" y1="120" x2="105" y2="140" stroke="#1e293b" stroke-width="1.5"/>
+                    <!-- Праве ребро beta -->
+                    <line x1="200" y1="50" x2="192" y2="75" stroke="#1e293b" stroke-width="1.5"/>
+                    <line x1="192" y1="75" x2="177" y2="120" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="4,4"/>
+                    <line x1="177" y1="120" x2="160" y2="174" stroke="#1e293b" stroke-width="1.5"/>
+                    <!-- Нижнє ребро beta -->
+                    <line x1="105" y1="140" x2="160" y2="174" stroke="#1e293b" stroke-width="1.5"/>
+                    <text x="148" y="36" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">β</text>
+
+                    <!-- Пряма перетину m і точка P -->
+                    <line x1="94" y1="114" x2="210" y2="68" stroke="#1e293b" stroke-width="1.7"/>
+                    <text x="122" y="96" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">m</text>
+                    <circle cx="155" cy="90" r="2.8" fill="#1e293b"/>
+                    <text x="162" y="97" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">P</text>
+                    <text x="135" y="196" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="600" fill="#1e293b">Мал. 1.8</text>
+
+                    <!-- Мал. 1.9 (Тринога на площині alpha) -->
+                    <polygon points="300,165 485,165 518,112 333,112" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                    <text x="472" y="157" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α</text>
+                    <!-- Тримач і штатив -->
+                    <rect x="386" y="14" width="46" height="36" rx="4" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                    <circle cx="394" cy="32" r="3" fill="none" stroke="#1e293b" stroke-width="1.3"/>
+                    <line x1="409" y1="50" x2="409" y2="66" stroke="#1e293b" stroke-width="2"/>
+                    <rect x="403" y="64" width="12" height="8" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                    <!-- Три ніжки -->
+                    <line x1="406" y1="72" x2="366" y2="152" stroke="#1e293b" stroke-width="1.8"/>
+                    <line x1="409" y1="72" x2="411" y2="132" stroke="#1e293b" stroke-width="1.8"/>
+                    <line x1="412" y1="72" x2="452" y2="152" stroke="#1e293b" stroke-width="1.8"/>
+                    <!-- Точки опори A, B, C -->
+                    <circle cx="366" cy="152" r="2.8" fill="#1e293b"/>
+                    <text x="351" y="155" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">A</text>
+                    <circle cx="411" cy="132" r="2.8" fill="#1e293b"/>
+                    <text x="418" y="135" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">B</text>
+                    <circle cx="452" cy="152" r="2.8" fill="#1e293b"/>
+                    <text x="460" y="155" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                    <text x="410" y="196" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="600" fill="#1e293b">Мал. 1.9</text>
+                </svg>
+                <p class="figure-caption"><strong>Мал. 1.8–1.9.</strong> Перетин площин та практична ілюстрація аксіоми \(C_{\text{IV}}\)</p>
+            </div>
+
+            <p>На малюнку 1.8 площини \(\alpha\) і \(\beta\) мають спільну точку \(P\), тобто \(P\) належить як площині \(\alpha\), так і площині \(\beta\). Аксіома \(C_{\text{III}}\) стверджує, що тоді площини \(\alpha\) і \(\beta\) перетинаються по прямій \(m\), причому точка \(P\), в свою чергу, належатиме цій прямій \(m\).</p>
+            <p>Практичною ілюстрацією аксіоми \(C_{\text{IV}}\) є, наприклад, стійкість на підлозі будь-якої триноги (табурета на трьох ніжках, фотоштатива тощо). Три точки \(A, B, C\), які є кінцями триноги, завжди можна розмістити у площині підлоги \(\alpha\) (мал. 1.9), таку площину називають трьома її точками — площиною \(ABC\) і позначають \((ABC)\). Якщо ж узяти чотири довільні точки, то через них може не проходити жодна площина (наприклад, стілець із чотирма ніжками різної довжини спиратиметься на три точки підлоги, а кінець четвертої ніжки не лежатиме у цій площині, тому стілець хитатиметься).</p>
+
+            <h3 class="page-break">4. Найпростіші наслідки з аксіом стереометрії</h3>
+
+            <div class="definition">
+                <p><strong>Теорема 1 (про існування і єдиність площини, що проходить через пряму і точку, що їй не належить).</strong></p>
+                <p>Через пряму і точку, що їй не належить, можна провести площину, і до того ж тільки одну.</p>
+            </div>
+
+            <p><strong>Доведення.</strong> Розглянемо пряму \(a\) і точку \(M\), \(M \notin a\) (мал. 1.10).</p>
+            <p>1) Позначимо на прямій \(a\) довільні точки \(C\) і \(D\). Точки \(C\), \(D\) і \(M\) не лежать на одній прямій, тому через них за аксіомою \(C_{\text{IV}}\) можна провести площину \(\alpha\). Точки \(C\) і \(D\) лежать у площині \(\alpha\), а тому за аксіомою \(C_{\text{II}}\) вся пряма \(a\) належить площині \(\alpha\). Отже, площина \(\alpha\) проходить через пряму \(a\) і точку \(M\).</p>
+            <p>2) Доведемо, що така площина єдина. Припустимо, що через пряму \(a\) і точку \(M\) проходить ще якась площина \(\alpha_1\). Але тоді ця площина має проходити і через точки \(C\) і \(D\), що лежать на прямій \(a\). Маємо, що через точки \(C\), \(D\) і \(M\), які не лежать на одній прямій, проходять дві різні площини, \(\alpha\) і \(\alpha_1\), що суперечить аксіомі \(C_{\text{IV}}\). Отже, наше припущення хибне, а тому через пряму \(a\) і точку \(M\), що їй не належить, проходить єдина площина \(\alpha\). \(\blacksquare\)</p>
+
+            <div class="definition">
+                <p><strong>Теорема 2 (про існування і єдиність площини, яка проходить через дві прямі, що перетинаються).</strong></p>
+                <p>Через дві прямі, що перетинаються, можна провести площину, і до того ж тільки одну.</p>
+            </div>
+
+            <p><strong>Доведення.</strong> Розглянемо прямі \(a\) і \(b\), причому \(a \cap b = C\) (мал. 1.11). Позначимо на прямій \(b\) точку \(M\), а на прямій \(a\) — точку \(D\), обидві відмінні від точки \(C\). Маємо три точки \(M\), \(C\) і \(D\), які не лежать на одній прямій, а тому далі доведення аналогічне до доведення попередньої теореми. \(\blacksquare\)</p>
+
+            <div class="figure-block">
+                <svg width="540" height="145" viewBox="0 0 540 145" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Мал. 1.10 -->
+                    <polygon points="20,105 200,105 245,35 65,35" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                    <text x="215" y="51" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α</text>
+                    <line x1="56" y1="92" x2="185" y2="44" stroke="#1e293b" stroke-width="1.6"/>
+                    <text x="64" y="80" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">a</text>
+                    <circle cx="95" cy="78" r="2.8" fill="#1e293b"/>
+                    <text x="89" y="68" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                    <circle cx="146" cy="59" r="2.8" fill="#1e293b"/>
+                    <text x="140" y="49" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">D</text>
+                    <circle cx="154" cy="88" r="2.8" fill="#1e293b"/>
+                    <text x="162" y="92" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">M</text>
+                    <text x="132" y="134" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="600" fill="#1e293b">Мал. 1.10</text>
+
+                    <!-- Мал. 1.11 -->
+                    <polygon points="285,105 465,105 510,35 330,35" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                    <text x="480" y="51" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α</text>
+                    <line x1="322" y1="92" x2="440" y2="44" stroke="#1e293b" stroke-width="1.6"/>
+                    <text x="326" y="81" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">a</text>
+                    <line x1="330" y1="65" x2="464" y2="93" stroke="#1e293b" stroke-width="1.6"/>
+                    <text x="454" y="83" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">b</text>
+                    <circle cx="362" cy="72" r="2.8" fill="#1e293b"/>
+                    <text x="357" y="90" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                    <circle cx="405" cy="58" r="2.8" fill="#1e293b"/>
+                    <text x="398" y="48" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">D</text>
+                    <circle cx="426" cy="85" r="2.8" fill="#1e293b"/>
+                    <text x="422" y="76" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">M</text>
+                    <text x="397" y="134" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="600" fill="#1e293b">Мал. 1.11</text>
+                </svg>
+                <p class="figure-caption"><strong>Мал. 1.10–1.11.</strong> До доведення теорем 1 і 2</p>
+            </div>
+
+            <div class="example-box">
+                <p><strong>Способи задання площини.</strong> З аксіоми \(C_{\text{IV}}\) та теорем 1 і 2 випливає, що площину можна задавати:</p>
+                <ol>
+                    <li>трьома точками, що не лежать на одній прямій;</li>
+                    <li>прямою і точкою, що їй не належить;</li>
+                    <li>двома прямими, що перетинаються.</li>
+                </ol>
+            </div>
         </section>
 
-        <section id="examples" class="lesson-section">
+        <section id="examples" class="lesson-section page-break">
             <h2>💡 Розібрані приклади</h2>
-            <p class="placeholder-note">📝 Додайте розібрані приклади у блоках <code>&lt;div class="example-box"&gt;</code>.</p>
+
+            <div class="example-box">
+                <p><strong>Приклад 1 (Задача 1).</strong> Довести, що через три точки, які лежать на одній прямій, можна провести площину. Скільки існує таких площин?</p>
+
+                <div class="figure-block">
+                    <svg width="260" height="205" viewBox="0 0 260 205" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Площина alpha_1 -->
+                        <line x1="20" y1="145" x2="185" y2="145" stroke="#1e293b" stroke-width="1.5"/>
+                        <line x1="20" y1="145" x2="75" y2="90" stroke="#1e293b" stroke-width="1.5"/>
+                        <line x1="185" y1="145" x2="240" y2="90" stroke="#1e293b" stroke-width="1.5"/>
+                        <line x1="75" y1="90" x2="133" y2="90" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="4,4"/>
+                        <line x1="133" y1="90" x2="240" y2="90" stroke="#1e293b" stroke-width="1.5"/>
+                        <text x="38" y="138" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α₁</text>
+
+                        <!-- Площина alpha_2 -->
+                        <line x1="115" y1="16" x2="42" y2="108" stroke="#1e293b" stroke-width="1.5"/>
+                        <line x1="42" y1="108" x2="78" y2="145" stroke="#1e293b" stroke-width="1.5"/>
+                        <line x1="115" y1="16" x2="188" y2="90" stroke="#1e293b" stroke-width="1.5"/>
+                        <line x1="188" y1="90" x2="144" y2="145" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="4,4"/>
+                        <line x1="144" y1="145" x2="115" y2="182" stroke="#1e293b" stroke-width="1.5"/>
+                        <line x1="78" y1="145" x2="115" y2="182" stroke="#1e293b" stroke-width="1.5"/>
+                        <text x="66" y="102" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α₂</text>
+
+                        <!-- Пряма a та точки A, B, C, M1, M2 -->
+                        <line x1="78" y1="145" x2="143" y2="80" stroke="#1e293b" stroke-width="1.7"/>
+                        <text x="143" y="98" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">a</text>
+                        <circle cx="88" cy="135" r="2.8" fill="#1e293b"/>
+                        <text x="72" y="136" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">A</text>
+                        <circle cx="106" cy="117" r="2.8" fill="#1e293b"/>
+                        <text x="90" y="118" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">B</text>
+                        <circle cx="124" cy="99" r="2.8" fill="#1e293b"/>
+                        <text x="108" y="100" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+
+                        <circle cx="195" cy="112" r="2.8" fill="#1e293b"/>
+                        <text x="172" y="115" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">M₁</text>
+                        <circle cx="106" cy="54" r="2.8" fill="#1e293b"/>
+                        <text x="114" y="58" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">M₂</text>
+                    </svg>
+                    <p class="figure-caption"><strong>Мал. 1.12</strong></p>
+                </div>
+
+                <details>
+                    <summary><strong>Доведення:</strong></summary>
+                    <p>Нехай точки \(A\), \(B\) і \(C\) лежать на одній прямій — прямій \(a\) (мал. 1.12).</p>
+                    <p>1) За аксіомою \(C_{\text{I}}\) існує точка, що прямій \(a\) не належить, назвемо її \(M_1\). За теоремою 1 через пряму \(a\) і точку \(M_1\) можна провести площину, назвемо її \(\alpha_1\). Вона проходитиме через три дані точки.</p>
+                    <p>2) За аксіомою \(C_{\text{I}}\) існують точки, які не належать площині \(\alpha_1\). Розглянемо точку \(M_2\), яка не належить площині \(\alpha_1\), а тому не належить і прямій \(a\), оскільки \(a \subset \alpha_1\). Тоді через пряму \(a\) і точку \(M_2\) можна провести площину \(\alpha_2\). Ця площина також, як і площина \(\alpha_1\), проходить через три дані точки.</p>
+                    <p>Міркуючи аналогічно, можна дійти висновку, що існує безліч площин, які проходять через три точки, що лежать на одній прямій.</p>
+                    <p><em>Відповідь:</em> безліч.</p>
+                </details>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 2 (Задача 2).</strong> Дано площину \(\alpha\) і паралелограм \(ABCD\). Чи може площині \(\alpha\) належати:</p>
+                <p>1) тільки одна вершина паралелограма;</p>
+                <p>2) тільки дві вершини паралелограма;</p>
+                <p>3) тільки три вершини паралелограма?</p>
+
+                <div class="figure-block">
+                    <svg width="640" height="175" viewBox="0 0 640 175" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Мал. 1.13 -->
+                        <path d="M 45 120 C 45 92, 155 92, 155 120 C 155 148, 45 148, 45 120 Z" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                        <text x="132" y="128" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α</text>
+                        <polygon points="88,124 68,74 96,20 116,70" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                        <circle cx="88" cy="124" r="2.6" fill="#1e293b"/>
+                        <text x="73" y="132" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">A</text>
+                        <text x="53" y="76" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">B</text>
+                        <text x="92" y="15" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                        <text x="122" y="73" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">D</text>
+                        <text x="100" y="166" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="600" fill="#1e293b">Мал. 1.13</text>
+
+                        <!-- Мал. 1.14 -->
+                        <path d="M 332 95 C 305 78, 220 82, 220 114 C 220 146, 345 146, 345 114 C 345 109, 343 104, 340 100" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                        <path d="M 278 86 C 300 84, 322 88, 336 97" fill="none" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="4,4"/>
+                        <text x="234" y="106" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α</text>
+                        <polygon points="255,126 285,88 378,66 348,104" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                        <circle cx="255" cy="126" r="2.6" fill="#1e293b"/>
+                        <circle cx="285" cy="88" r="2.6" fill="#1e293b"/>
+                        <text x="242" y="134" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">A</text>
+                        <text x="268" y="88" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">B</text>
+                        <text x="383" y="64" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                        <text x="353" y="112" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">D</text>
+                        <text x="300" y="166" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="600" fill="#1e293b">Мал. 1.14</text>
+
+                        <!-- Мал. 1.15 -->
+                        <path d="M 430 106 C 430 62, 595 62, 595 106 C 595 148, 430 148, 430 106 Z" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                        <text x="525" y="140" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">α</text>
+                        <polygon points="455,118 495,76 598,74 558,116" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                        <line x1="455" y1="118" x2="598" y2="74" stroke="#1e293b" stroke-width="1.4"/>
+                        <line x1="495" y1="76" x2="558" y2="116" stroke="#1e293b" stroke-width="1.4"/>
+                        <circle cx="455" cy="118" r="2.5" fill="#1e293b"/>
+                        <circle cx="495" cy="76" r="2.5" fill="#1e293b"/>
+                        <circle cx="558" cy="116" r="2.5" fill="#1e293b"/>
+                        <circle cx="526" cy="96" r="2.5" fill="#1e293b"/>
+                        <text x="441" y="124" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">A</text>
+                        <text x="484" y="72" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">B</text>
+                        <text x="603" y="74" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                        <text x="562" y="126" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">D</text>
+                        <text x="522" y="89" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">O</text>
+                        <text x="520" y="166" text-anchor="middle" font-family="Open Sans, sans-serif" font-size="13" font-weight="600" fill="#1e293b">Мал. 1.15</text>
+                    </svg>
+                    <p class="figure-caption"><strong>Мал. 1.13–1.15.</strong> Взаємне розміщення площини \(\alpha\) та паралелограма \(ABCD\)</p>
+                </div>
+
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>У випадках 1) і 2) може (мал. 1.13 та 1.14).</p>
+                    <p>3) Припустимо, що три вершини паралелограма \(A\), \(B\) і \(D\) належать площині \(\alpha\), а вершина \(C\) — ні (мал. 1.15). Проведемо діагоналі паралелограма \(AC\) і \(BD\). Нехай \(O\) — точка їх перетину. Оскільки \(B \in \alpha\) і \(D \in \alpha\), то \(BD \subset \alpha\), а тому \(O \in \alpha\). Оскільки \(A \in \alpha\) і \(O \in \alpha\), то \(AO \subset \alpha\). Але \(C \in AO\), тому \(C \in \alpha\). Маємо, що всі чотири вершини паралелограма належать площині \(\alpha\), що суперечить умові. Отже, наше припущення хибне, а тому тільки три із чотирьох вершин паралелограма \(ABCD\) не можуть належати площині \(\alpha\).</p>
+                    <p><em>Відповідь:</em> 1) так; 2) так; 3) ні.</p>
+                </details>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 3 (Задача 3).</strong> На малюнку 1.16 зображено прямокутний паралелепіпед \(ABCDA_1B_1C_1D_1\).</p>
+                <p>1) Чи належить точка \(C_1\) площині \(CDD_1\)?</p>
+                <p>2) У якій точці пряма \(AB\) перетинає площину \(B_1C_1C\)?</p>
+                <p>3) Яка площина проходить через точку \(B\) і пряму \(CD\)?</p>
+                <p>4) По якій прямій перетинаються площини \(ABC\) і \(A_1B_1B\)?</p>
+
+                <div class="figure-block">
+                    <svg width="215" height="160" viewBox="0 0 215 160" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Передня грань ADD1A1 -->
+                        <rect x="36" y="48" width="98" height="76" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                        <!-- Видимі ребра -->
+                        <line x1="36" y1="48" x2="74" y2="22" stroke="#1e293b" stroke-width="1.6"/>
+                        <line x1="134" y1="48" x2="172" y2="22" stroke="#1e293b" stroke-width="1.6"/>
+                        <line x1="134" y1="124" x2="172" y2="98" stroke="#1e293b" stroke-width="1.6"/>
+                        <line x1="74" y1="22" x2="172" y2="22" stroke="#1e293b" stroke-width="1.6"/>
+                        <line x1="172" y1="22" x2="172" y2="98" stroke="#1e293b" stroke-width="1.6"/>
+                        <!-- Невидимі ребра -->
+                        <line x1="74" y1="22" x2="74" y2="98" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                        <line x1="36" y1="124" x2="74" y2="98" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                        <line x1="74" y1="98" x2="172" y2="98" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                        <!-- Вершини -->
+                        <text x="20" y="130" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">A</text>
+                        <text x="136" y="137" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">D</text>
+                        <text x="177" y="103" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                        <text x="58" y="95" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">B</text>
+                        <text x="14" y="49" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">A₁</text>
+                        <text x="57" y="18" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">B₁</text>
+                        <text x="177" y="23" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C₁</text>
+                        <text x="139" y="58" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">D₁</text>
+                    </svg>
+                    <p class="figure-caption"><strong>Мал. 1.16.</strong> Прямокутний паралелепіпед \(ABCDA_1B_1C_1D_1\)</p>
+                </div>
+
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>1) Грань прямокутного паралелепіпеда \(CDD_1C_1\) належить площині \(CDD_1\). Тому точка \(C_1\) належить цій площині.</p>
+                    <p>2) Оскільки \(B \in AB\) і \(B \in (B_1C_1C)\), то \(AB \cap (B_1C_1C) = B\).</p>
+                    <p>3) Через точку \(B\) і пряму \(CD\) проходить площина \(BCD\).</p>
+                    <p>4) Оскільки \(AB \subset (ABC)\) і \(AB \subset (A_1B_1B)\), то \((ABC) \cap (A_1B_1B) = AB\).</p>
+                    <p><em>Відповідь:</em> 1) так; 2) \(B\); 3) \((BCD)\); 4) \(AB\).</p>
+                </details>
+            </div>
+
+            <div class="example-box page-break">
+                <p><strong>Приклад 4 (Задача 4).</strong> На малюнку 1.17 зображено трикутну піраміду \(ABCD\). Укажіть:</p>
+                <p>1) усі площини, яким належить пряма \(KL\);</p>
+                <p>2) точку перетину прямої \(BN\) з площиною \(CAD\);</p>
+                <p>3) пряму перетину площин \(DKB\) і \(ABC\).</p>
+
+                <div class="figure-block">
+                    <svg width="215" height="165" viewBox="0 0 215 165" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Ребра піраміди ABCD -->
+                        <line x1="105" y1="18" x2="36" y2="112" stroke="#1e293b" stroke-width="1.6"/>
+                        <line x1="105" y1="18" x2="96" y2="138" stroke="#1e293b" stroke-width="1.6"/>
+                        <line x1="105" y1="18" x2="174" y2="108" stroke="#1e293b" stroke-width="1.6"/>
+                        <line x1="36" y1="112" x2="96" y2="138" stroke="#1e293b" stroke-width="1.6"/>
+                        <line x1="96" y1="138" x2="174" y2="108" stroke="#1e293b" stroke-width="1.6"/>
+                        <line x1="36" y1="112" x2="174" y2="108" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                        <!-- Відрізки KL і LB -->
+                        <line x1="105" y1="18" x2="66" y2="125" stroke="#1e293b" stroke-width="1.5"/>
+                        <line x1="66" y1="125" x2="174" y2="108" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="4,4"/>
+                        <!-- Точки K, L, N, B -->
+                        <circle cx="87" cy="68" r="2.8" fill="#1e293b"/>
+                        <circle cx="66" cy="125" r="2.8" fill="#1e293b"/>
+                        <circle cx="110" cy="118" r="2.8" fill="#1e293b"/>
+                        <circle cx="174" cy="108" r="2.8" fill="#1e293b"/>
+                        <!-- Підписи -->
+                        <text x="100" y="13" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">D</text>
+                        <text x="19" y="117" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                        <text x="92" y="155" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">A</text>
+                        <text x="180" y="113" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">B</text>
+                        <text x="70" y="80" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">K</text>
+                        <text x="52" y="139" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">L</text>
+                        <text x="135" y="140" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">N</text>
+                    </svg>
+                    <p class="figure-caption"><strong>Мал. 1.17.</strong> Трикутна піраміда \(ABCD\)</p>
+                </div>
+
+                <details>
+                    <summary><strong>Розв'язання:</strong></summary>
+                    <p>1) \(KL \subset (ACD)\), \(KL \subset (DLB)\).</p>
+                    <p>2) Оскільки \(L \in BN\) і \(L \in (CAD)\), то \(BN \cap (CAD) = L\).</p>
+                    <p>3) Оскільки \(LB \subset (DKB)\) і \(LB \subset (ABC)\), то \((DKB) \cap (ABC) = LB\).</p>
+                    <p><em>Відповідь:</em> 1) \((ACD)\), \((DLB)\); 2) \(L\); 3) \(LB\).</p>
+                </details>
+            </div>
         </section>
-        
 
-        
-
-        <section id="tasks" class="lesson-section">
-            <h2>✏️ </h2>
+        <section id="tasks" class="lesson-section page-break">
+            <h2>✏️ Завдання для самостійної роботи</h2>
             <ol class="tasks-list">
-                <li>Завдання 1</li>
-                <li>Завдання 2</li>
-                <li>Завдання 3</li>
+                <li>
+                    <p><strong>(Впр. 1.1).</strong> Намалюйте площину \(\alpha\), точку \(M\), що належить цій площині, та точку \(N\), яка цій площині не належить. Запишіть відповідні твердження за допомогою символів.</p>
+                </li>
+                <li>
+                    <p><strong>(Впр. 1.6, усно).</strong> Які з тверджень істинні:</p>
+                    <p>1) будь-які дві точки завжди належать одній прямій;</p>
+                    <p>2) будь-які три точки завжди належать одній прямій;</p>
+                    <p>3) будь-які три точки завжди належать одній площині;</p>
+                    <p>4) будь-які чотири точки завжди належать одній площині?</p>
+                </li>
+                <li class="page-break">
+                    <p><strong>(Впр. 1.7).</strong> На малюнку 1.18 зображено куб \(ABCDA_1B_1C_1D_1\).</p>
+                    <div class="figure-block">
+                        <svg width="205" height="155" viewBox="0 0 205 155" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="35" y="46" width="80" height="80" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="35" y1="46" x2="70" y2="22" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="115" y1="46" x2="150" y2="22" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="115" y1="126" x2="150" y2="102" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="70" y1="22" x2="150" y2="22" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="150" y1="22" x2="150" y2="102" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="70" y1="22" x2="70" y2="102" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                            <line x1="35" y1="126" x2="70" y2="102" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                            <line x1="70" y1="102" x2="150" y2="102" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                            <text x="19" y="132" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">A</text>
+                            <text x="116" y="139" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">D</text>
+                            <text x="155" y="107" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                            <text x="54" y="99" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">B</text>
+                            <text x="13" y="47" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">A₁</text>
+                            <text x="54" y="18" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">B₁</text>
+                            <text x="155" y="23" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C₁</text>
+                            <text x="120" y="57" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">D₁</text>
+                        </svg>
+                        <p class="figure-caption"><strong>Мал. 1.18.</strong> Куб \(ABCDA_1B_1C_1D_1\)</p>
+                    </div>
+                    <p>1) Чи належить точка \(C\) площині \(ABD\)?</p>
+                    <p>2) Чи належить точка \(B\) площині \(DCC_1\)?</p>
+                    <p>3) У якій точці пряма \(AA_1\) перетинає площину \(ABC\)?</p>
+                    <p>4) Укажіть деяку пряму, що перетинає площину \(AA_1B\).</p>
+                    <p>5) Яка площина проходить через точку \(B\) і пряму \(C_1C\)?</p>
+                    <p>6) Укажіть деяку пряму, що належить площині \(A_1B_1C_1\).</p>
+                </li>
+                <li class="page-break">
+                    <p><strong>(Впр. 1.8).</strong> На малюнку 1.19 зображено трикутну піраміду \(SABC\), точку \(M\), що належить ребру \(AB\), та точку \(N\), що належить ребру \(SC\).</p>
+                    <div class="figure-block">
+                        <svg width="205" height="160" viewBox="0 0 205 160" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="95" y1="18" x2="36" y2="105" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="95" y1="18" x2="88" y2="140" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="95" y1="18" x2="165" y2="105" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="36" y1="105" x2="88" y2="140" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="88" y1="140" x2="165" y2="105" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="36" y1="105" x2="165" y2="105" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                            <circle cx="58" cy="120" r="2.8" fill="#1e293b"/>
+                            <circle cx="124" cy="54" r="2.8" fill="#1e293b"/>
+                            <text x="89" y="13" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">S</text>
+                            <text x="19" y="110" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">A</text>
+                            <text x="84" y="156" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">B</text>
+                            <text x="171" y="110" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                            <text x="38" y="128" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">M</text>
+                            <text x="131" y="52" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">N</text>
+                        </svg>
+                        <p class="figure-caption"><strong>Мал. 1.19.</strong> Трикутна піраміда \(SABC\)</p>
+                    </div>
+                    <p>1) Чи належить точка \(M\) площині \(ABC\)?</p>
+                    <p>2) Чи належить точка \(B\) площині \(SAC\)?</p>
+                    <p>3) У якій точці пряма \(SB\) перетинає площину \(ABC\)?</p>
+                    <p>4) Укажіть деяку пряму, що перетинає площину \(SBC\).</p>
+                    <p>5) Яка площина проходить через точку \(N\) і пряму \(SA\)?</p>
+                    <p>6) Укажіть деяку пряму, що належить площині \(SAB\).</p>
+                </li>
+                <li>
+                    <p><strong>(Впр. 1.9, усно).</strong> Чи можуть дві різні площини мати лише:</p>
+                    <p>1) одну спільну точку; &nbsp; 2) дві спільні точки; &nbsp; 3) три спільні точки; &nbsp; 4) 2010 спільних точок?</p>
+                </li>
+                <li>
+                    <p><strong>(Впр. 1.21).</strong> Прямі \(AB\) і \(CD\) перетинаються. Доведіть, що прямі \(AC\) і \(BD\) лежать в одній площині.</p>
+                </li>
+                <li class="page-break">
+                    <p><strong>(Впр. 1.30).</strong> На малюнку 1.20 зображено трикутну піраміду \(DABC\). Укажіть:</p>
+                    <div class="figure-block">
+                        <svg width="215" height="165" viewBox="0 0 215 165" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Ребра піраміди DABC -->
+                            <line x1="105" y1="16" x2="36" y2="105" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="105" y1="16" x2="88" y2="144" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="105" y1="16" x2="172" y2="105" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="36" y1="105" x2="88" y2="144" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="88" y1="144" x2="172" y2="105" stroke="#1e293b" stroke-width="1.6"/>
+                            <line x1="36" y1="105" x2="172" y2="105" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="5,4"/>
+                            <!-- Допоміжні відрізки TN, EC, TM -->
+                            <line x1="97" y1="74" x2="136" y2="57" stroke="#1e293b" stroke-width="1.5"/>
+                            <line x1="60" y1="123" x2="172" y2="105" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="4,4"/>
+                            <line x1="97" y1="74" x2="108" y2="115" stroke="#1e293b" stroke-width="1.4" stroke-dasharray="4,4"/>
+                            <!-- Точки E, T, N, M -->
+                            <circle cx="60" cy="123" r="2.6" fill="#1e293b"/>
+                            <circle cx="97" cy="74" r="2.6" fill="#1e293b"/>
+                            <circle cx="136" cy="57" r="2.6" fill="#1e293b"/>
+                            <circle cx="108" cy="115" r="2.6" fill="#1e293b"/>
+                            <!-- Підписи -->
+                            <text x="100" y="12" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">D</text>
+                            <text x="19" y="110" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">A</text>
+                            <text x="84" y="159" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">B</text>
+                            <text x="178" y="110" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">C</text>
+                            <text x="41" y="131" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">E</text>
+                            <text x="81" y="75" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">T</text>
+                            <text x="143" y="56" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">N</text>
+                            <text x="114" y="112" font-family="Times New Roman, serif" font-style="italic" font-size="16" fill="#1e293b">M</text>
+                        </svg>
+                        <p class="figure-caption"><strong>Мал. 1.20.</strong> Трикутна піраміда \(DABC\)</p>
+                    </div>
+                    <p>1) площини, яким належать прямі \(TE\), \(MN\), \(DB\), \(AB\), \(EC\) (враховуйте всі можливі випадки);</p>
+                    <p>2) точку перетину прямої \(DN\) з площиною \(ABC\); прямої \(CE\) із площиною \(ABD\);</p>
+                    <p>3) точки, що належать як площині \(ADB\), так і площині \(ABC\);</p>
+                    <p>4) пряму, по якій перетинаються площини \(DTC\) і \(ABC\).</p>
+                </li>
             </ol>
         </section>
 
-        <section id="homework" class="lesson-section">
-            <h2></h2>
+        <section id="homework" class="lesson-section page-break">
+            <h2>🏠 Домашнє завдання</h2>
             <div class="homework-box">
-                <p class="placeholder-note">📝 Заповніть вміст.</p>
+                <p>1. Опрацювати § 1 (частина ІІ «Геометрія») підручника (Істер О. С., с. 224–231).</p>
+                <p>2. Виконати письмово вправи:</p>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                    <li>№ 1.2</li>
+                    <li>№ 1.4</li>
+                    <li>№ 1.10</li>
+                    <li>№ 1.12</li>
+                    <li>№ 1.22</li>
+                    <li>№ 1.31</li>
+                </ul>
+                <p>3. <em>Додатково (для охочих):</em> Виконати вправу 1.41 (с. 235) — перевірити, чи правильно виконано малюнок 1.24, та обґрунтувати відповідь.</p>
             </div>
         </section>
 
         <section id="literature" class="lesson-section">
             <h2>📚 Література</h2>
             <ul class="lit-list-lesson">
-                
                 <li>Мерзляк А. Г., Номіровський Д. А., Полонський В. Б., Якір М. С. Математика : алгебра і початки аналізу та геометрія : рівень стандарту : підручник для 10 класу ЗЗСО. Харків : Гімназія, 2018.</li>
-                
-
                 <li>Істер О. С. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10 кл. Київ : Генеза, 2018. 384 с.</li>
-                
-
                 <li>Бевз Г. П., Бевз В. Г. Математика : алгебра і початки аналізу та геометрія, рівень стандарту : підруч. для 10 кл. Київ : Освіта, 2018. 288 с.</li>
-                
             </ul>
         </section>
 
